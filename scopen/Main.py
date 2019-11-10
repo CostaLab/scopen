@@ -10,14 +10,16 @@ def parse_args():
     parser = argparse.ArgumentParser(description='scOpen')
     parser.add_argument("--input", type=str, default=None,
                         help="Input name, can be a file name or a directory")
-    parser.add_argument("--input-format", type=str, default=None,
-                        help="Input format. Currently available: sparse, dense, 10X")
+    parser.add_argument("--input-format", type=str, default='dense',
+                        help="Input format. Currently available: sparse, dense, 10X."
+                             "Default: dense")
     parser.add_argument("--output-dir", type=str, default=os.getcwd(),
                         help="If specified, all output files will be written to that directory. "
                              "Default: current working directory")
     parser.add_argument("--output-prefix", type=str, default=None, help="Output filename")
-    parser.add_argument("--output-format", type=str, default=None,
-                        help="Input format. Currently available: sparse, dense, 10X, 10Xh5")
+    parser.add_argument("--output-format", type=str, default='dense',
+                        help="Input format. Currently available: sparse, dense, 10X, 10Xh5."
+                             "Default: dense")
     parser.add_argument("--n-components", type=int, default=30, help="Number of components. Default: 30")
     parser.add_argument("--max-iter", type=int, default=100)
     parser.add_argument("--min-rho", type=float, default=0.0)
