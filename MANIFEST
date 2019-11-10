@@ -2,6 +2,7 @@
 setup.py
 ./scopen/cdnmf_fast.c
 scopen/MF.py
-scopen/__main__.py
+scopen/Main.py
+scopen/Utils.py
+scopen/__init__.py
 scopen/__version__.py
-scopen/utils.py
