@@ -1,11 +1,8 @@
-from __future__ import print_function, division
-
-import sys
 import time
 import argparse
 
-from MF import bounded_non_negative_factorization
-from utils import *
+from .MF import bounded_non_negative_factorization
+from .Utils import *
 
 
 def parse_args():
@@ -52,8 +49,8 @@ def main():
     data = np.greater(data, 0)
     (m, n) = data.shape
 
-    print("Number of peaks: {}; number of cells {}".format(m, n), file=sys.stdout)
-    print("Sparsity before imputation: {}".format(1 - np.count_nonzero(data) / (m * n)), file=sys.stdout)
+    print("Number of peaks: {}; number of cells {}".format(m, n))
+    print("Sparsity before imputation: {}".format(1 - np.count_nonzero(data) / (m * n)))
 
     n_open_regions = np.log10(data.sum(axis=0))
     max_n_open_regions = np.max(n_open_regions)
@@ -100,12 +97,12 @@ def main():
     #         group['barcodes'] = columns
     #         group['data'] = m_hat
 
-    print("Sparsity after imputation: {}".format(1 - np.count_nonzero(m_hat) / (m * n)), file=sys.stdout)
+    print("Sparsity after imputation: {}".format(1 - np.count_nonzero(m_hat) / (m * n)))
     secs = time.time() - start
     m, s = divmod(secs, 60)
     h, m = divmod(m, 60)
 
-    print("[total time: ", "%dh %dm %ds" % (h, m, s), "]", sep="")
+    print("[total time: ", "%dh %dm %ds" % (h, m, s), "]")
 
 
 if __name__ == '__main__':

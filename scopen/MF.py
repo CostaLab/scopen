@@ -1,14 +1,8 @@
 """ Bounded Non-negative Matrix Factorization
 """
-
-from __future__ import division, print_function
-
 from math import sqrt
 import warnings
 import numbers
-
-import sys
-
 import numpy as np
 import scipy.sparse as sp
 
@@ -16,7 +10,7 @@ from sklearn.utils import check_random_state, check_array
 from sklearn.utils.extmath import randomized_svd, safe_sparse_dot, squared_norm
 from sklearn.exceptions import ConvergenceWarning
 
-from cdnmf_fast import _update_cdnmf_fast
+from .cdnmf_fast import _update_cdnmf_fast
 
 EPSILON = np.finfo(np.float16).eps
 
@@ -342,11 +336,11 @@ def _fit_coordinate_descent(X, W, H, tol=1e-8, max_iter=200, l2_reg_W=0, l2_reg_
             break
 
         if verbose:
-            print("violation:", violation / violation_init, file=sys.stdout)
+            print("violation:", violation / violation_init)
 
         if violation / violation_init <= tol:
             if verbose:
-                print("Converged at iteration", n_iter + 1, file=sys.stdout)
+                print("Converged at iteration", n_iter + 1)
             break
 
     return W, Ht.T, n_iter

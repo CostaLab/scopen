@@ -80,7 +80,7 @@ def get_data_from_10x_h5(filename):
         try:
             group = f.get_node(f.root, 'matrix')
         except tables.NoSuchNodeError:
-            print "Matrix group does not exist in this file."
+            print("Matrix group does not exist in this file.")
             return None
 
         feature_group = getattr(group, 'features').read()

@@ -2,7 +2,7 @@ import io
 import os
 import re
 
-from distutils.core import setup
+from setuptools import setup
 from Cython.Build import cythonize
 
 
@@ -29,10 +29,12 @@ setup(
     name='scOpen',
     version=current_version,
     packages=['scopen'],
+    author='Zhijian Li',
+    author_email='zhijian.li@rwth-aachen.de',
     ext_modules=cythonize(["./scopen/cdnmf_fast.pyx"]),
     entry_points={
         'console_scripts': [
-            'scopen = scopen.__main__:main'
+            'scopen = scopen.Main:main'
         ]},
     install_requires=['numpy',
                       'h5py',
@@ -40,5 +42,6 @@ setup(
                       'pandas',
                       'scipy',
                       'tables',
-                      'matplotlib']
+                      'matplotlib',
+                      'sklearn']
 )
