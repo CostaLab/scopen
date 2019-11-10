@@ -2,6 +2,9 @@
   <dictionary name="zhijianli">
     <words>
       <w>barcodes</w>
+      <w>matplotlib</w>
+      <w>scipy</w>
+      <w>scopen</w>
     </words>
   </dictionary>
 </component>
