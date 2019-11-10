@@ -10,7 +10,7 @@ from sklearn.utils import check_random_state, check_array
 from sklearn.utils.extmath import randomized_svd, safe_sparse_dot, squared_norm
 from sklearn.exceptions import ConvergenceWarning
 
-from .cdnmf_fast import _update_cdnmf_fast
+from cdnmf_fast import _update_cdnmf_fast
 
 EPSILON = np.finfo(np.float16).eps
 

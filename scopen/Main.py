@@ -3,6 +3,7 @@ import argparse
 
 from .MF import bounded_non_negative_factorization
 from .Utils import *
+from .__version__ import __version__
 
 
 def parse_args():
@@ -24,6 +25,9 @@ def parse_args():
     parser.add_argument("--alpha", type=float, default=1)
     parser.add_argument("--decimals", type=int, default=8)
     parser.add_argument("--verbose", type=int, default=0)
+
+    version_message = "Version: " + str(__version__)
+    parser.add_argument('--version', action='version', version=version_message)
 
     return parser.parse_args()
 

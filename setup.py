@@ -2,8 +2,28 @@ import io
 import os
 import re
 
-from setuptools import setup
-from Cython.Build import cythonize
+from distutils.core import setup
+from distutils.extension import Extension
+
+try:
+    from Cython.Distutils import build_ext
+except ImportError:
+    use_cython = False
+else:
+    use_cython = True
+
+cmdclass = {}
+ext_modules = []
+
+if use_cython:
+    ext_modules += [
+        Extension("cdnmf_fast", ["./scopen/cdnmf_fast.pyx"]),
+    ]
+    cmdclass.update({'build_ext': build_ext})
+else:
+    ext_modules += [
+        Extension("cdnmf_fast", ["./scopen/cdnmf_fast.c"]),
+    ]
 
 
 def read(*names, **kwargs):
@@ -31,17 +51,18 @@ setup(
     packages=['scopen'],
     author='Zhijian Li',
     author_email='zhijian.li@rwth-aachen.de',
-    ext_modules=cythonize(["./scopen/cdnmf_fast.pyx"]),
+    cmdclass=cmdclass,
+    ext_modules=ext_modules,
     entry_points={
         'console_scripts': [
             'scopen = scopen.Main:main'
         ]},
     install_requires=['numpy',
                       'h5py',
-                      'six>=1.10.0',
+                      'six',
                       'pandas',
                       'scipy',
                       'tables',
                       'matplotlib',
-                      'sklearn']
+                      'scikit-learn']
 )
