@@ -1,4 +1,4 @@
-# scopen
+# scOpen: estimate single cell open chromatin accessibility
 
 # Installation
 First some dependencies \
