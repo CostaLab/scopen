@@ -11,5 +11,5 @@ Alternatively (but not recommended), you can clone this repository: \
 `git clone hgit@github.com:CostaLab/scopen.git`
 
 and install manually \
-`cd scopen`
+`cd scopen` \
 `python setup install`
