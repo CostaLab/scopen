@@ -28,7 +28,7 @@ fin = pysam.AlignmentFile(bam_file, "rb")
 # write to a bam with wb
 fouts_dict = {}
 for cluster in clusters:
-    output_filename = os.path.join(output_location, "{}_{}.bam".format(cluster, output_prefix))
+    output_filename = os.path.join(output_location, "{}_{}.bam".format(output_prefix, cluster))
     fout = pysam.AlignmentFile(output_filename, "wb", template=fin)
     fouts_dict[cluster] = fout
 
