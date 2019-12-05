@@ -1,4 +1,4 @@
-# scOpen: estimate single cell open chromatin accessibility
+# scOpen: chromatin-accessibility estimation of single-cell ATAC data
 
 ## Installation
 First some dependencies \
