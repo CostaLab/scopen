@@ -12,7 +12,7 @@ Alternatively (but not recommended), you can clone this repository: \
 
 and install manually \
 `$ cd scopen` \
-`$ python setup install`
+`$ python setup.py install`
 
 ## Usage
 Download [here](https://costalab.ukaachen.de/open_data/scOpen/HematopoieticCells.txt) the count matrix from human 
