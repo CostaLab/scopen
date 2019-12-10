@@ -21,6 +21,7 @@ def parse_args():
                         help="Input format. Currently available: sparse, dense, 10X, 10Xh5."
                              "Default: dense")
     parser.add_argument("--n-components", type=int, default=30, help="Number of components. Default: 30")
+    parser.add_argument("--pct-nonzeros", type=float, default=None)
     parser.add_argument("--max-iter", type=int, default=100)
     parser.add_argument("--min-rho", type=float, default=0.0)
     parser.add_argument("--max-rho", type=float, default=0.5)
@@ -77,6 +78,10 @@ def main():
     np.clip(m_hat, 0, 1, out=m_hat)
     np.round(m_hat, decimals=args.decimals, out=m_hat)
 
+    if args.pct_nonzeros is not None:
+        threshold = np.percentile(m_hat, 100 - args.pct_nonzeros)
+        m_hat = np.greater(m_hat, threshold).astype(np.int8)
+
     df = pd.DataFrame(data=w_hat, index=peaks)
     df.to_csv(os.path.join(args.output_dir, "{}_peaks.txt".format(args.output_prefix)), sep="\t")
 
@@ -93,15 +98,6 @@ def main():
 
     elif args.output_format == "10X":
         write_data_to_10x(output_dir=args.output_dir, data=m_hat, barcodes=barcodes, peaks=peaks)
-
-    # elif args.output_format == "10X":
-    #     filename = os.path.join(args.output_dir, "{}.h5".format(args.output_prefix))
-    #
-    #     with h5py.File(output_filename, 'w') as f:
-    #         group = f.create_group('matrix')
-    #         group['name'] = peaks
-    #         group['barcodes'] = columns
-    #         group['data'] = m_hat
 
     print("Sparsity after imputation: {}".format(1 - np.count_nonzero(m_hat) / (m * n)))
     secs = time.time() - start
