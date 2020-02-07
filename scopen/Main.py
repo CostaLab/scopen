@@ -1,7 +1,7 @@
 import time
 import argparse
 
-from .MF import bounded_non_negative_factorization
+from .MF import non_negative_factorization
 from .Utils import *
 from .__version__ import __version__
 
@@ -21,12 +21,10 @@ def parse_args():
                         help="Input format. Currently available: sparse, dense, 10X, 10Xh5."
                              "Default: dense")
     parser.add_argument("--n-components", type=int, default=30, help="Number of components. Default: 30")
-    parser.add_argument("--pct-nonzeros", type=float, default=None)
-    parser.add_argument("--max-iter", type=int, default=100)
+    parser.add_argument("--max-iter", type=int, default=500)
     parser.add_argument("--min-rho", type=float, default=0.0)
     parser.add_argument("--max-rho", type=float, default=0.5)
     parser.add_argument("--alpha", type=float, default=1)
-    parser.add_argument("--decimals", type=int, default=8)
     parser.add_argument("--verbose", type=int, default=0)
 
     version_message = "Version: " + str(__version__)
@@ -56,31 +54,26 @@ def main():
     data = np.greater(data, 0)
     (m, n) = data.shape
 
-    print("Number of peaks: {}; number of cells {}".format(m, n))
-    print("Sparsity before imputation: {}".format(1 - np.count_nonzero(data) / (m * n)))
-
     n_open_regions = np.log10(data.sum(axis=0))
     max_n_open_regions = np.max(n_open_regions)
     min_n_open_regions = np.min(n_open_regions)
+
+    print("Number of peaks: {}; number of cells {}".format(m, n))
+    print("Number of non-zeros before imputation: {}".format(np.count_nonzero(data)))
 
     rho = args.min_rho + (args.max_rho - args.min_rho) * \
           (max_n_open_regions - n_open_regions) / (max_n_open_regions - min_n_open_regions)
 
     data = data[:, :] * (1 / (1 - rho))
 
-    w_hat, h_hat, _ = bounded_non_negative_factorization(X=data,
-                                                         n_components=args.n_components,
-                                                         alpha=args.alpha,
-                                                         max_iter=args.max_iter,
-                                                         verbose=args.verbose)
+    w_hat, h_hat, _ = non_negative_factorization(X=data,
+                                                 n_components=args.n_components,
+                                                 alpha=args.alpha,
+                                                 max_iter=args.max_iter,
+                                                 verbose=args.verbose)
     del data
     m_hat = np.dot(w_hat, h_hat)
     np.clip(m_hat, 0, 1, out=m_hat)
-    np.round(m_hat, decimals=args.decimals, out=m_hat)
-
-    if args.pct_nonzeros is not None:
-        threshold = np.percentile(m_hat, 100 - args.pct_nonzeros)
-        m_hat = np.greater(m_hat, threshold).astype(np.int8)
 
     df = pd.DataFrame(data=w_hat, index=peaks)
     df.to_csv(os.path.join(args.output_dir, "{}_peaks.txt".format(args.output_prefix)), sep="\t")
@@ -99,7 +92,6 @@ def main():
     elif args.output_format == "10X":
         write_data_to_10x(output_dir=args.output_dir, data=m_hat, barcodes=barcodes, peaks=peaks)
 
-    print("Sparsity after imputation: {}".format(1 - np.count_nonzero(m_hat) / (m * n)))
     secs = time.time() - start
     m, s = divmod(secs, 60)
     h, m = divmod(m, 60)

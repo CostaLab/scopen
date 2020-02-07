@@ -1,8 +1,12 @@
 """ Bounded Non-negative Matrix Factorization
 """
+
+from __future__ import division
+
 from math import sqrt
 import warnings
 import numbers
+
 import numpy as np
 import scipy.sparse as sp
 
@@ -218,7 +222,7 @@ def _initialize_nmf(X, n_components, init=None, eps=1e-6,
     return W, H
 
 
-def _update_coordinate_descent(X, W, Ht, l1_reg, l2_reg, shuffle,
+def _update_coordinate_descent(X, W, Ht, l2_reg, shuffle,
                                random_state):
     """Helper function for _fit_coordinate_descent
 
@@ -231,10 +235,6 @@ def _update_coordinate_descent(X, W, Ht, l1_reg, l2_reg, shuffle,
 
     HHt = np.dot(Ht.T, Ht)
     XHt = safe_sparse_dot(X, Ht)
-
-    # L1 regularization corresponds to decrease of each element of XHt
-    if l1_reg != 0.:
-        XHt -= l1_reg
 
     # L2 regularization corresponds to increase of the diagonal of HHt
     if l2_reg != 0.:
@@ -326,8 +326,8 @@ def _fit_coordinate_descent(X, W, H, tol=1e-8, max_iter=200, l2_reg_W=0, l2_reg_
         violation = 0.
 
         # Update W and H
-        violation += _update_coordinate_descent(X, W, Ht, 0, l2_reg_W, shuffle, rng)
-        violation += _update_coordinate_descent(X.T, Ht, W, 0, l2_reg_H, shuffle, rng)
+        violation += _update_coordinate_descent(X, W, Ht, l2_reg_W, shuffle, rng)
+        violation += _update_coordinate_descent(X.T, Ht, W, l2_reg_H, shuffle, rng)
 
         if n_iter == 0:
             violation_init = violation
@@ -336,7 +336,8 @@ def _fit_coordinate_descent(X, W, H, tol=1e-8, max_iter=200, l2_reg_W=0, l2_reg_
             break
 
         if verbose:
-            print("violation:", violation / violation_init)
+            obj = np.square(X - np.dot(W, Ht.T)).mean()
+            print("iteration: {}, objective: {}, violation: {}".format(n_iter, obj, violation / violation_init))
 
         if violation / violation_init <= tol:
             if verbose:
@@ -346,10 +347,10 @@ def _fit_coordinate_descent(X, W, H, tol=1e-8, max_iter=200, l2_reg_W=0, l2_reg_
     return W, Ht.T, n_iter
 
 
-def bounded_non_negative_factorization(X, n_components=None, init='random',
-                                       tol=1e-8, max_iter=200, alpha=0., random_state=None,
-                                       verbose=0, shuffle=False):
-    r"""Compute Bounded Non-negative Matrix Factorization (BNMF)
+def non_negative_factorization(X, n_components=None, init=None,
+                               tol=1e-8, max_iter=200, alpha=0., random_state=None,
+                               verbose=0, shuffle=False):
+    r"""Compute Non-negative Matrix Factorization (NMF)
 
     Find two non-negative matrices (W, H) whose product approximates the non-
     negative matrix X. This factorization can be used for example for
@@ -358,20 +359,14 @@ def bounded_non_negative_factorization(X, n_components=None, init='random',
     The objective function is::
 
         0.5 * ||X - WH||_Fro^2
-        + alpha * l1_ratio * ||vec(W)||_1
-        + alpha * l1_ratio * ||vec(H)||_1
-        + 0.5 * alpha * (1 - l1_ratio) * ||W||_Fro^2
-        + 0.5 * alpha * (1 - l1_ratio) * ||H||_Fro^2
+        + 0.5 * alpha * ||W||_Fro^2
+        + 0.5 * alpha * ||H||_Fro^2
 
     Where::
 
         ||A||_Fro^2 = \sum_{i,j} A_{ij}^2 (Frobenius norm)
         ||vec(A)||_1 = \sum_{i,j} abs(A_{ij}) (Elementwise L1 norm)
         0 <= W, H <= 1.0 / sqrt(n_components)
-
-    For multiplicative-update ('mu') solver, the Frobenius norm
-    (0.5 * ||X - WH||_Fro^2) can be changed into another beta-divergence loss,
-    by changing the beta_loss parameter.
 
     The objective function is minimized with an alternating minimization of W
     and H. If H is given and update_H=False, it solves for W only.
@@ -424,13 +419,6 @@ def bounded_non_negative_factorization(X, n_components=None, init='random',
 
     alpha : double, default: 0.
         Constant that multiplies the regularization terms.
-
-    l1_ratio : double, default: 0.
-        The regularization mixing parameter, with 0 <= l1_ratio <= 1.
-        For l1_ratio = 0 the penalty is an elementwise L2 penalty
-        (aka Frobenius Norm).
-        For l1_ratio = 1 it is an elementwise L1 penalty.
-        For 0 < l1_ratio < 1, the penalty is a combination of L1 and L2.
 
     random_state : int, RandomState instance or None, optional, default: None
         If int, random_state is the seed used by the random number generator;
