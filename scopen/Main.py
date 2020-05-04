@@ -10,20 +10,20 @@ def parse_args():
     parser = argparse.ArgumentParser(description='scOpen')
     parser.add_argument("--input", type=str, default=None,
                         help="Input name, can be a file name or a directory")
-    parser.add_argument("--input-format", type=str, default='dense',
+    parser.add_argument("--input_format", type=str, default='dense',
                         help="Input format. Currently available: sparse, dense, 10X."
                              "Default: dense")
-    parser.add_argument("--output-dir", type=str, default=os.getcwd(),
+    parser.add_argument("--output_dir", type=str, default=os.getcwd(),
                         help="If specified, all output files will be written to that directory. "
                              "Default: current working directory")
-    parser.add_argument("--output-prefix", type=str, default=None, help="Output filename")
-    parser.add_argument("--output-format", type=str, default='dense',
+    parser.add_argument("--output_prefix", type=str, default=None, help="Output filename")
+    parser.add_argument("--output_format", type=str, default='dense',
                         help="Input format. Currently available: sparse, dense, 10X, 10Xh5."
                              "Default: dense")
-    parser.add_argument("--n-components", type=int, default=30, help="Number of components. Default: 30")
-    parser.add_argument("--max-iter", type=int, default=500)
-    parser.add_argument("--min-rho", type=float, default=0.0)
-    parser.add_argument("--max-rho", type=float, default=0.5)
+    parser.add_argument("--n_components", type=int, default=30, help="Number of components. Default: 30")
+    parser.add_argument("--max_iter", type=int, default=500)
+    parser.add_argument("--min_rho", type=float, default=0.0)
+    parser.add_argument("--max_rho", type=float, default=0.5)
     parser.add_argument("--alpha", type=float, default=1)
     parser.add_argument("--verbose", type=int, default=0)
 
@@ -61,8 +61,10 @@ def main():
     print("Number of peaks: {}; number of cells {}".format(m, n))
     print("Number of non-zeros before imputation: {}".format(np.count_nonzero(data)))
 
-    rho = args.min_rho + (args.max_rho - args.min_rho) * \
-          (max_n_open_regions - n_open_regions) / (max_n_open_regions - min_n_open_regions)
+    #rho = args.min_rho + (args.max_rho - args.min_rho) * \
+    #      (max_n_open_regions - n_open_regions) / (max_n_open_regions - min_n_open_regions)
+
+    rho = 0.5
 
     data = data[:, :] * (1 / (1 - rho))
 
