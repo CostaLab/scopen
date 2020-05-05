@@ -24,6 +24,9 @@ def parse_args():
     parser.add_argument("--max_iter", type=int, default=500)
     parser.add_argument("--min_rho", type=float, default=0.0)
     parser.add_argument("--max_rho", type=float, default=0.5)
+    parser.add_argument("--rho", type=float, default=None,
+                        help='If set, will use this number as dropout rate.'
+                             'Default: None')
     parser.add_argument("--alpha", type=float, default=1)
     parser.add_argument("--verbose", type=int, default=0)
 
@@ -61,8 +64,11 @@ def main():
     print("Number of peaks: {}; number of cells {}".format(m, n))
     print("Number of non-zeros before imputation: {}".format(np.count_nonzero(data)))
 
-    rho = args.min_rho + (args.max_rho - args.min_rho) * \
-          (max_n_open_regions - n_open_regions) / (max_n_open_regions - min_n_open_regions)
+    if args.rho is None:
+        rho = args.min_rho + (args.max_rho - args.min_rho) * \
+              (max_n_open_regions - n_open_regions) / (max_n_open_regions - min_n_open_regions)
+    else:
+        rho = args.rho
 
     data = data[:, :] * (1 / (1 - rho))
 
