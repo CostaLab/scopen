@@ -61,10 +61,8 @@ def main():
     print("Number of peaks: {}; number of cells {}".format(m, n))
     print("Number of non-zeros before imputation: {}".format(np.count_nonzero(data)))
 
-    #rho = args.min_rho + (args.max_rho - args.min_rho) * \
-    #      (max_n_open_regions - n_open_regions) / (max_n_open_regions - min_n_open_regions)
-
-    rho = 0.5
+    rho = args.min_rho + (args.max_rho - args.min_rho) * \
+          (max_n_open_regions - n_open_regions) / (max_n_open_regions - min_n_open_regions)
 
     data = data[:, :] * (1 / (1 - rho))
 
