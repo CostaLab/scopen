@@ -27,6 +27,13 @@ def parse_args():
     parser.add_argument("--rho", type=float, default=None,
                         help='If set, will use this number as dropout rate.'
                              'Default: None')
+    parser.add_argument("--binarize", default=False,
+                        action='store_true',
+                        help='If set, the imputed matrix will be sparsified based on thresholds by keeping quantile.'
+                             'Default: False')
+    parser.add_argument("--quantile", type=float, default=None,
+                        help='If set, will use this number to binarize the imputed matrix.'
+                             'must be between 0 and 1. Default: None')
     parser.add_argument("--alpha", type=float, default=1)
     parser.add_argument("--verbose", type=int, default=0)
 
@@ -38,6 +45,9 @@ def parse_args():
 
 def main():
     args = parse_args()
+
+    if args.binarize:
+        assert args.quantile is not None, "please provide a number to compute the q-th quantile"
 
     start = time.time()
 
@@ -80,6 +90,10 @@ def main():
     del data
     m_hat = np.dot(w_hat, h_hat)
     np.clip(m_hat, 0, 1, out=m_hat)
+
+    if args.binarize:
+        threshold = np.quantile(m_hat, args.quantile, axis=0)
+        m_hat = (m_hat > threshold).astype(int)
 
     df = pd.DataFrame(data=w_hat, index=peaks)
     df.to_csv(os.path.join(args.output_dir, "{}_peaks.txt".format(args.output_prefix)), sep="\t")
