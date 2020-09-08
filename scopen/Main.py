@@ -67,7 +67,8 @@ def main():
     data = np.greater(data, 0)
     (m, n) = data.shape
 
-    n_open_regions = np.log10(data.sum(axis=0))
+    # n_open_regions = np.log10(data.sum(axis=0))
+    n_open_regions = data.sum(axis=0)
     max_n_open_regions = np.max(n_open_regions)
     min_n_open_regions = np.min(n_open_regions)
 
