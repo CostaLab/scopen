@@ -78,6 +78,7 @@ def main():
     if args.rho is None:
         rho = args.min_rho + (args.max_rho - args.min_rho) * \
               (max_n_open_regions - n_open_regions) / (max_n_open_regions - min_n_open_regions)
+        # rho = args.min_rho + (args.max_rho - args.min_rho) * n_open_regions / m
     else:
         rho = args.rho
 
