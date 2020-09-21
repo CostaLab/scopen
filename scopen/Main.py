@@ -69,16 +69,21 @@ def main():
 
     # n_open_regions = np.log10(data.sum(axis=0))
     n_open_regions = data.sum(axis=0)
-    max_n_open_regions = np.max(n_open_regions)
-    min_n_open_regions = np.min(n_open_regions)
+    # max_n_open_regions = np.max(n_open_regions)
+    # min_n_open_regions = np.min(n_open_regions)
 
-    print("Number of peaks: {}; number of cells {}".format(m, n))
-    print("Number of non-zeros before imputation: {}".format(np.count_nonzero(data)))
+    max_n_open_regions = np.quantile(n_open_regions, q=0.975)
+    min_n_open_regions = np.quantile(n_open_regions, q=0.025)
+
+    print(f"max_n_open_regions: {max_n_open_regions}")
+    print(f"min_n_open_regions: {min_n_open_regions}")
+    print(f"Number of peaks: {m}; number of cells {n}")
+    print(f"Number of non-zeros before imputation: {np.count_nonzero(data)}")
+    print(f"Sparsity: {np.count_nonzero(data) / (m*n)}")
 
     if args.rho is None:
         rho = args.min_rho + (args.max_rho - args.min_rho) * \
               (max_n_open_regions - n_open_regions) / (max_n_open_regions - min_n_open_regions)
-        # rho = args.min_rho + (args.max_rho - args.min_rho) * n_open_regions / m
     else:
         rho = args.rho
 
