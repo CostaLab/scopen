@@ -1,5 +1,6 @@
 import time
 import argparse
+from sklearn.neighbors import NearestNeighbors
 
 from .MF import non_negative_factorization
 from .Utils import *
@@ -67,11 +68,9 @@ def main():
     data = np.greater(data, 0)
     (m, n) = data.shape
 
-    # n_open_regions = np.log10(data.sum(axis=0))
-    n_open_regions = data.sum(axis=0)
-    # max_n_open_regions = np.max(n_open_regions)
-    # min_n_open_regions = np.min(n_open_regions)
+    nbrs = NearestNeighbors(n_neighbors=30, algorithm='ball_tree').fit(data)
 
+    n_open_regions = data.sum(axis=0)
     max_n_open_regions = np.quantile(n_open_regions, q=0.975)
     min_n_open_regions = np.quantile(n_open_regions, q=0.025)
 
