@@ -44,6 +44,21 @@ def parse_args():
     return parser.parse_args()
 
 
+def compute_rho_by_knn(data, k):
+    neigh = NearestNeighbors(n_neighbors=k, algorithm='auto', n_jobs=-1)
+    neigh.fit(np.transpose(data))
+
+    _, indices = neigh.kneighbors()
+
+    data_y = np.zeros(data.shape)
+    rho = np.zeros(indices.shape[0])
+    for i in range(indices.shape[0]):
+        data_y[:, i] = data[:, i] + np.sum(data[:, indices[i]], axis=1)
+        rho = (np.count_nonzero(data_y[:, i]) - np.count_nonzero(data[:, i])) / np.count_nonzero(data_y[:, i])
+
+    return rho, data_y
+
+
 def main():
     args = parse_args()
 
@@ -68,21 +83,19 @@ def main():
     data = np.greater(data, 0)
     (m, n) = data.shape
 
-    nbrs = NearestNeighbors(n_neighbors=30, algorithm='ball_tree').fit(data)
-
-    n_open_regions = data.sum(axis=0)
-    max_n_open_regions = np.quantile(n_open_regions, q=0.975)
-    min_n_open_regions = np.quantile(n_open_regions, q=0.025)
-
-    print(f"max_n_open_regions: {max_n_open_regions}")
-    print(f"min_n_open_regions: {min_n_open_regions}")
     print(f"Number of peaks: {m}; number of cells {n}")
     print(f"Number of non-zeros before imputation: {np.count_nonzero(data)}")
-    print(f"Sparsity: {np.count_nonzero(data) / (m*n)}")
+    print(f"Sparsity: {np.count_nonzero(data) / (m * n)}")
 
     if args.rho is None:
-        rho = args.min_rho + (args.max_rho - args.min_rho) * \
-              (max_n_open_regions - n_open_regions) / (max_n_open_regions - min_n_open_regions)
+        rho, data_y = compute_rho_by_knn(data, k=30)
+
+        filename = os.path.join(args.output_dir, "{}_data_y.txt".format(args.output_prefix))
+        write_data_to_dense_file(filename=filename, data=data_y, barcodes=barcodes, peaks=peaks)
+
+        # filename = os.path.join(args.output_dir, "{}_dropout.txt".format(args.output_prefix))
+        # df = pd.DataFrame(data=rho, columns=barcodes)
+        # df.to_csv(filename, sep="\t")
     else:
         rho = args.rho
 
