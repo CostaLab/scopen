@@ -22,9 +22,9 @@ def parse_args():
                         help="Input format. Currently available: sparse, dense, 10X, 10Xh5."
                              "Default: dense")
     parser.add_argument("--n_components", type=int, default=30, help="Number of components. Default: 30")
+    parser.add_argument("--n_neighbors", type=int, default=30, help="Number of neighbors used for dropout calculation. "
+                                                                    "Default: 30")
     parser.add_argument("--max_iter", type=int, default=500)
-    parser.add_argument("--min_rho", type=float, default=0.0)
-    parser.add_argument("--max_rho", type=float, default=0.5)
     parser.add_argument("--rho", type=float, default=None,
                         help='If set, will use this number as dropout rate.'
                              'Default: None')
@@ -88,14 +88,10 @@ def main():
     print(f"Sparsity: {np.count_nonzero(data) / (m * n)}")
 
     if args.rho is None:
-        rho, data_y = compute_rho_by_knn(data, k=30)
-
+        rho, data_y = compute_rho_by_knn(data, k=args.n_neighbors)
         filename = os.path.join(args.output_dir, "{}_data_y.txt".format(args.output_prefix))
         write_data_to_dense_file(filename=filename, data=data_y, barcodes=barcodes, peaks=peaks)
 
-        # filename = os.path.join(args.output_dir, "{}_dropout.txt".format(args.output_prefix))
-        # df = pd.DataFrame(data=rho, columns=barcodes)
-        # df.to_csv(filename, sep="\t")
     else:
         rho = args.rho
 
