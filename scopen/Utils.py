@@ -144,8 +144,39 @@ def write_data_to_10x(output_dir, data, barcodes, peaks):
 def plot_open_regions_density(n_open_regions, args):
     fig = plt.figure(figsize=(8, 8))
     ax = fig.add_subplot(111)
-    ax.hist(n_open_regions, density=True)
+    ax.hist(np.log10(n_open_regions), density=True, bins=100)
 
-    output_filename = os.path.join(args.output_dir, "{}.pdf".format(args.output_prefix))
+    ax.set_xlabel("Number of detected peaks (log10)")
+    ax.set_ylabel("Density")
+
+    output_filename = os.path.join(args.output_dir, "{}_peaks.pdf".format(args.output_prefix))
+    fig.tight_layout()
+    fig.suptitle('Number of detected peaks per cell')
+    fig.savefig(output_filename)
+
+
+def plot_estimated_dropout(rho, args):
+    fig = plt.figure(figsize=(8, 8))
+    ax = fig.add_subplot(111)
+    ax.hist(rho, density=True, bins=100)
+
+    ax.set_xlabel("Estimated dropout rate")
+    ax.set_ylabel("Density")
+
+    output_filename = os.path.join(args.output_dir, "{}_estimated_dropout.pdf".format(args.output_prefix))
+    fig.tight_layout()
+    fig.suptitle('Estimated dropout rate per cell')
+    fig.savefig(output_filename)
+
+
+def plot_objective(obj, args):
+    fig = plt.figure(figsize=(8, 8))
+    ax = fig.add_subplot(111)
+    ax.plot(obj)
+
+    ax.set_xlabel("Iter")
+    ax.set_ylabel("Loss")
+
+    output_filename = os.path.join(args.output_dir, "{}_loss.pdf".format(args.output_prefix))
     fig.tight_layout()
     fig.savefig(output_filename)
