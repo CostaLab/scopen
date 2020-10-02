@@ -1,6 +1,7 @@
 import time
 import argparse
 from sklearn.neighbors import NearestNeighbors
+from sklearn.feature_extraction.text import TfidfTransformer
 
 from .MF import non_negative_factorization
 from .Utils import *
@@ -45,16 +46,21 @@ def parse_args():
 
 
 def compute_rho_by_knn(data, k):
-    neigh = NearestNeighbors(n_neighbors=k, algorithm='auto', n_jobs=-1)
+    tfid = TfidfTransformer()
+    tfid.fit(np.transpose(data))
+    tfid.transform(np.transpose(data))
+
+    neigh = NearestNeighbors(n_neighbors=k, algorithm='auto', n_jobs=-1, metric='jaccard')
     neigh.fit(np.transpose(data))
 
-    _, indices = neigh.kneighbors()
+    indices = neigh.kneighbors(return_distance=False)
 
     data_y = np.zeros(data.shape)
     rho = np.zeros(indices.shape[0])
     for i in range(indices.shape[0]):
-        data_y[:, i] = data[:, i] + np.sum(data[:, indices[i]], axis=1)
-        rho = (np.count_nonzero(data_y[:, i]) - np.count_nonzero(data[:, i])) / np.count_nonzero(data_y[:, i])
+        _y = np.greater(np.sum(data[:, indices[i]], axis=1), k / 2)
+        data_y[:, i] = np.greater(data[:, i] + _y, 0)
+        rho[i] = (np.count_nonzero(data_y[:, i]) - np.count_nonzero(data[:, i])) / np.count_nonzero(data_y[:, i])
 
     return rho, data_y
 
@@ -85,23 +91,43 @@ def main():
 
     print(f"Number of peaks: {m}; number of cells {n}")
     print(f"Number of non-zeros before imputation: {np.count_nonzero(data)}")
-    print(f"Sparsity: {np.count_nonzero(data) / (m * n)}")
+    print(f"Sparsity: {1 - np.count_nonzero(data) / (m * n)}")
+
+    n_open_regions = np.count_nonzero(data, axis=0)
+    plot_open_regions_density(n_open_regions, args)
 
     if args.rho is None:
+        print(f"Estimating dropout rate...")
         rho, data_y = compute_rho_by_knn(data, k=args.n_neighbors)
-        filename = os.path.join(args.output_dir, "{}_data_y.txt".format(args.output_prefix))
+        filename = os.path.join(args.output_dir, "{}_y.txt".format(args.output_prefix))
         write_data_to_dense_file(filename=filename, data=data_y, barcodes=barcodes, peaks=peaks)
+
+        plot_estimated_dropout(rho=rho, args=args)
+        print(f"Estimate of dropout rate is done!")
 
     else:
         rho = args.rho
 
+    df = pd.DataFrame({'num_peaks': n_open_regions,
+                       'estimated_dropout': rho,
+                       'barcodes': barcodes})
+
+    filename = os.path.join(args.output_dir, "{}_stat.txt".format(args.output_prefix))
+    df.to_csv(filename, index=False, sep="\t")
+
     data = data[:, :] * (1 / (1 - rho))
 
-    w_hat, h_hat, _ = non_negative_factorization(X=data,
-                                                 n_components=args.n_components,
-                                                 alpha=args.alpha,
-                                                 max_iter=args.max_iter,
-                                                 verbose=args.verbose)
+    filename = os.path.join(args.output_dir, "{}_x.txt".format(args.output_prefix))
+    write_data_to_dense_file(filename=filename, data=data, barcodes=barcodes, peaks=peaks)
+
+    w_hat, h_hat, obj_list = non_negative_factorization(X=data,
+                                                        n_components=args.n_components,
+                                                        alpha=args.alpha,
+                                                        max_iter=args.max_iter,
+                                                        verbose=args.verbose)
+
+    plot_objective(obj_list, args)
+
     del data
     m_hat = np.dot(w_hat, h_hat)
     np.clip(m_hat, 0, 1, out=m_hat)

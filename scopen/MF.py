@@ -321,6 +321,7 @@ def _fit_coordinate_descent(X, W, H, tol=1e-8, max_iter=200, l2_reg_W=0, l2_reg_
 
     n_iter = 0
     violation_init = 0
+    obj_list = list()
 
     for n_iter in range(max_iter):
         violation = 0.
@@ -337,6 +338,7 @@ def _fit_coordinate_descent(X, W, H, tol=1e-8, max_iter=200, l2_reg_W=0, l2_reg_
 
         if verbose:
             obj = np.square(X - np.dot(W, Ht.T)).mean()
+            obj_list.append(obj)
             print("iteration: {}, objective: {}, violation: {}".format(n_iter, obj, violation / violation_init))
 
         if violation / violation_init <= tol:
@@ -344,7 +346,7 @@ def _fit_coordinate_descent(X, W, H, tol=1e-8, max_iter=200, l2_reg_W=0, l2_reg_
                 print("Converged at iteration", n_iter + 1)
             break
 
-    return W, Ht.T, n_iter
+    return W, Ht.T, obj_list
 
 
 def non_negative_factorization(X, n_components=None, init=None,
