@@ -1,7 +1,6 @@
 import time
 import argparse
 from sklearn.neighbors import NearestNeighbors
-from sklearn.feature_extraction.text import TfidfTransformer
 
 from .MF import non_negative_factorization
 from .Utils import *
@@ -46,19 +45,14 @@ def parse_args():
 
 
 def compute_rho_by_knn(data, k):
-    tfid = TfidfTransformer()
-    tfid.fit(np.transpose(data))
-    tfid.transform(np.transpose(data))
-
     neigh = NearestNeighbors(n_neighbors=k, algorithm='auto', n_jobs=-1, metric='jaccard')
     neigh.fit(np.transpose(data))
-
     indices = neigh.kneighbors(return_distance=False)
 
     data_y = np.zeros(data.shape)
     rho = np.zeros(indices.shape[0])
     for i in range(indices.shape[0]):
-        _y = np.greater(np.sum(data[:, indices[i]], axis=1), k / 2)
+        _y = np.greater(np.sum(data[:, indices[i]], axis=1), 0)
         data_y[:, i] = np.greater(data[:, i] + _y, 0)
         rho[i] = (np.count_nonzero(data_y[:, i]) - np.count_nonzero(data[:, i])) / np.count_nonzero(data_y[:, i])
 
@@ -105,15 +99,15 @@ def main():
         plot_estimated_dropout(rho=rho, args=args)
         print(f"Estimate of dropout rate is done!")
 
+        df = pd.DataFrame({'num_peaks': n_open_regions,
+                           'estimated_dropout': rho,
+                           'barcodes': barcodes})
+
+        filename = os.path.join(args.output_dir, "{}_stat.txt".format(args.output_prefix))
+        df.to_csv(filename, index=False, sep="\t")
+
     else:
         rho = args.rho
-
-    df = pd.DataFrame({'num_peaks': n_open_regions,
-                       'estimated_dropout': rho,
-                       'barcodes': barcodes})
-
-    filename = os.path.join(args.output_dir, "{}_stat.txt".format(args.output_prefix))
-    df.to_csv(filename, index=False, sep="\t")
 
     data = data[:, :] * (1 / (1 - rho))
 
