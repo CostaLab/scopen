@@ -2,6 +2,7 @@
   <dictionary name="zhijian">
     <words>
       <w>binarize</w>
+      <w>frobenius</w>
       <w>sparsified</w>
       <w>sparsify</w>
     </words>
