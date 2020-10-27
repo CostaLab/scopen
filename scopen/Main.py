@@ -22,8 +22,8 @@ def parse_args():
                         help="Input format. Currently available: sparse, dense, 10X, 10Xh5."
                              "Default: dense")
     parser.add_argument("--n_components", type=int, default=30, help="Number of components. Default: 30")
-    parser.add_argument("--n_neighbors", type=int, default=30, help="Number of neighbors used for dropout calculation. "
-                                                                    "Default: 30")
+    parser.add_argument("--n_neighbors", type=int, default=1, help="Number of neighbors used for dropout calculation. "
+                                                                   "Default: 1")
     parser.add_argument("--max_iter", type=int, default=500)
     parser.add_argument("--rho", type=float, default=None,
                         help='If set, will use this number as dropout rate.'
@@ -31,6 +31,10 @@ def parse_args():
     parser.add_argument("--binarize", default=False,
                         action='store_true',
                         help='If set, the imputed matrix will be sparsified based on thresholds by keeping quantile.'
+                             'Default: False')
+    parser.add_argument("--estimate_rank", default=False,
+                        action='store_true',
+                        help='If set, the number of components will be determined by using cross validation.'
                              'Default: False')
     parser.add_argument("--quantile", type=float, default=None,
                         help='If set, will use this number to binarize the imputed matrix.'
@@ -114,13 +118,27 @@ def main():
     filename = os.path.join(args.output_dir, "{}_x.txt".format(args.output_prefix))
     write_data_to_dense_file(filename=filename, data=data, barcodes=barcodes, peaks=peaks)
 
-    w_hat, h_hat, obj_list = non_negative_factorization(X=data,
-                                                        n_components=args.n_components,
-                                                        alpha=args.alpha,
-                                                        max_iter=args.max_iter,
-                                                        verbose=args.verbose)
+    if args.estimate_rank:
+        # create test data
+        non_zero_idx = np.where(data > 0)
 
-    plot_objective(obj_list, args)
+        for n_components in [5, 10, 15, 20, 25, 30]:
+            w_hat, h_hat, obj_list = non_negative_factorization(X=data,
+                                                                n_components=n_components,
+                                                                alpha=args.alpha,
+                                                                max_iter=args.max_iter,
+                                                                verbose=args.verbose)
+            res = np.square(data - np.dot(w_hat, h_hat)).mean()
+            print(f"rank: {n_components}, residual : {res}")
+
+    else:
+        w_hat, h_hat, obj_list = non_negative_factorization(X=data,
+                                                            n_components=args.n_components,
+                                                            alpha=args.alpha,
+                                                            max_iter=args.max_iter,
+                                                            verbose=args.verbose)
+
+        plot_objective(obj_list, args)
 
     del data
     m_hat = np.dot(w_hat, h_hat)
