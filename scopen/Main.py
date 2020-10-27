@@ -1,8 +1,9 @@
 import time
+from datetime import datetime
 import argparse
 from sklearn.neighbors import NearestNeighbors
+from sklearn.decomposition import NMF
 
-from .MF import non_negative_factorization
 from .Utils import *
 from .__version__ import __version__
 
@@ -25,6 +26,7 @@ def parse_args():
     parser.add_argument("--n_neighbors", type=int, default=1, help="Number of neighbors used for dropout calculation. "
                                                                    "Default: 1")
     parser.add_argument("--max_iter", type=int, default=500)
+    parser.add_argument("--random_state", type=int, default=42)
     parser.add_argument("--rho", type=float, default=None,
                         help='If set, will use this number as dropout rate.'
                              'Default: None')
@@ -72,6 +74,10 @@ def main():
     start = time.time()
 
     data, barcodes, peaks = None, None, None
+
+    print(args)
+
+    print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, loading data...")
     if args.input_format == "sparse":
         data, barcodes, peaks = get_data_from_sparse_file(filename=args.input)
 
@@ -84,6 +90,8 @@ def main():
     elif args.input_format == "10X":
         data, barcodes, peaks = get_data_from_10x(input_dir=args.input)
 
+    print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, data loaded...")
+
     data = np.greater(data, 0)
     (m, n) = data.shape
 
@@ -95,13 +103,13 @@ def main():
     plot_open_regions_density(n_open_regions, args)
 
     if args.rho is None:
-        print(f"Estimating dropout rate...")
+        print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, estimating dropout rate...")
         rho, data_y = compute_rho_by_knn(data, k=args.n_neighbors)
         filename = os.path.join(args.output_dir, "{}_y.txt".format(args.output_prefix))
         write_data_to_dense_file(filename=filename, data=data_y, barcodes=barcodes, peaks=peaks)
 
         plot_estimated_dropout(rho=rho, args=args)
-        print(f"Estimate of dropout rate is done!")
+        print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, dropout rate estimated!")
 
         df = pd.DataFrame({'num_peaks': n_open_regions,
                            'estimated_dropout': rho,
@@ -132,13 +140,17 @@ def main():
             print(f"rank: {n_components}, residual : {res}")
 
     else:
-        w_hat, h_hat, obj_list = non_negative_factorization(X=data,
-                                                            n_components=args.n_components,
-                                                            alpha=args.alpha,
-                                                            max_iter=args.max_iter,
-                                                            verbose=args.verbose)
+        model = NMF(n_components=args.n_components,
+                    random_state=args.random_state,
+                    alpha=args.alpha,
+                    l1_ratio=0,
+                    max_iter=args.max_iter,
+                    verbose=args.verbose,
+                    beta_loss="frobenius",
+                    solver="cd")
 
-        plot_objective(obj_list, args)
+        w_hat = model.fit_transform(data)
+        h_hat = model.components_
 
     del data
     m_hat = np.dot(w_hat, h_hat)
