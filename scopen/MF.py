@@ -18,8 +18,9 @@ from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.utils import check_random_state, check_array
 from sklearn.utils.extmath import randomized_svd, safe_sparse_dot, squared_norm
 from sklearn.utils.extmath import safe_min
-from sklearn.utils.validation import check_is_fitted, check_non_negative
+from sklearn.utils.validation import check_is_fitted
 from sklearn.exceptions import ConvergenceWarning
+from cdnmf_fast import _update_cdnmf_fast
 
 EPSILON = np.finfo(np.float32).eps
 
@@ -52,12 +53,44 @@ def trace_dot(X, Y):
     return np.dot(_safe_ravel(X), _safe_ravel(Y))
 
 
+def _check_non_negative(X, whom, accept_nan=False):
+    """
+    Check if there is any negative value in an array.
+    Parameters
+    ----------
+    X : array-like or sparse matrix
+        Input data.
+    whom : string
+        Who passed X to this function.
+    accept_nan : boolean
+        If True, NaN values are accepted in X.
+    """
+    # avoid X.min() on sparse matrix since it also sorts the indices
+    if sp.issparse(X):
+        if X.format in ['lil', 'dok']:
+            X = X.tocsr()
+        if X.data.size == 0:
+            X = np.arange(1)
+        else:
+            X = X.data
+
+    if accept_nan:
+        X_min = np.nanmin(X)
+    else:
+        X_min = np.min(X)
+        if np.isnan(X_min):
+            raise ValueError("NaN values in data passed to %s" % whom)
+
+    if X_min < 0:
+        raise ValueError("Negative values in data passed to %s" % whom)
+
+
 def _check_init(A, shape, whom):
     A = check_array(A)
     if np.shape(A) != shape:
         raise ValueError('Array with wrong shape passed to %s. Expected %s, '
                          'but got %s ' % (whom, shape, np.shape(A)))
-    check_non_negative(A, whom)
+    _check_non_negative(A, whom)
     if np.max(A) == 0:
         raise ValueError('Array passed to %s is full of zeros.' % whom)
 
@@ -388,7 +421,7 @@ def _initialize_nmf(X, n_components, init=None, eps=1e-6,
     nonnegative matrix factorization - Pattern Recognition, 2008
     http://tinyurl.com/nndsvd
     """
-    check_non_negative(X, "NMF initialization", accept_nan=True)
+    _check_non_negative(X, "NMF initialization", accept_nan=True)
     n_samples, n_features = X.shape
 
     if (init is not None and init != 'random'
@@ -1130,7 +1163,7 @@ def non_negative_factorization(X, W=None, H=None, n_components=None,
     """
     X = check_array(X, accept_sparse=('csr', 'csc'), dtype=float,
                     force_all_finite=False)
-    check_non_negative(X, "NMF (input X)", accept_nan=True)
+    _check_non_negative(X, "NMF (input X)", accept_nan=True)
     beta_loss = _check_string_param(solver, regularization, beta_loss, init)
 
     if sp.issparse(X) and np.any(np.isnan(X.data)):

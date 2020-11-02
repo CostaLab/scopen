@@ -141,6 +141,14 @@ def write_data_to_10x(output_dir, data, barcodes, peaks):
             f.write("\t".join([chrom, start, end]) + "\n")
 
 
+def output_wh(best_w_hat, best_h_hat, peaks, barcodes, args):
+    df = pd.DataFrame(data=best_w_hat, index=peaks)
+    df.to_csv(os.path.join(args.output_dir, "{}_peaks.txt".format(args.output_prefix)), sep="\t")
+
+    df = pd.DataFrame(data=best_h_hat, columns=barcodes)
+    df.to_csv(os.path.join(args.output_dir, "{}_barcodes.txt".format(args.output_prefix)), sep="\t")
+
+
 def plot_open_regions_density(n_open_regions, args):
     fig = plt.figure(figsize=(8, 8))
     ax = fig.add_subplot(111)
@@ -180,3 +188,32 @@ def plot_objective(obj, args):
     output_filename = os.path.join(args.output_dir, "{}_loss.pdf".format(args.output_prefix))
     fig.tight_layout()
     fig.savefig(output_filename)
+
+
+def plot_error(n_components_list, train_error_list, test_error_list, best_rank, args):
+    fig, (ax1, ax2) = plt.subplots(1, 2)
+    ax1.plot(n_components_list, train_error_list, label="train")
+    ax2.plot(n_components_list, test_error_list, label="test")
+
+    ax1.axvline(x=best_rank)
+    ax2.axvline(x=best_rank)
+
+    ax1.set_xlabel("Rank")
+    ax1.set_ylabel("Error")
+    ax1.set_title("Training")
+
+    ax2.set_xlabel("Rank")
+    ax2.set_ylabel("Error")
+    ax2.set_title("Test")
+
+    output_filename = os.path.join(args.output_dir, "{}_error.pdf".format(args.output_prefix))
+    fig.tight_layout()
+    fig.set_size_inches(w=8, h=4)
+    fig.savefig(output_filename)
+
+    output_filename = os.path.join(args.output_dir, "{}_error.txt".format(args.output_prefix))
+    df = pd.DataFrame({'ranks': n_components_list,
+                       'training_error': train_error_list,
+                       'test_error': test_error_list})
+
+    df.to_csv(output_filename, index=False, sep="\t")

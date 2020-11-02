@@ -2,8 +2,8 @@ import time
 from datetime import datetime
 import argparse
 from sklearn.neighbors import NearestNeighbors
-from sklearn.decomposition import NMF
 
+from .MF import NMF, _beta_divergence
 from .Utils import *
 from .__version__ import __version__
 
@@ -127,17 +127,69 @@ def main():
     write_data_to_dense_file(filename=filename, data=data, barcodes=barcodes, peaks=peaks)
 
     if args.estimate_rank:
-        # create test data
-        non_zero_idx = np.where(data > 0)
+        print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, estimating ranks...")
+        # create test data by setting 10% elements to NAN
+        test_mask = np.zeros(shape=(m, n), dtype=np.bool)
+        for i in range(m):
+            test_mask[i, :] = np.random.choice([True, False], n, p=[0.1, 0.9])
 
-        for n_components in [5, 10, 15, 20, 25, 30]:
-            w_hat, h_hat, obj_list = non_negative_factorization(X=data,
-                                                                n_components=n_components,
-                                                                alpha=args.alpha,
-                                                                max_iter=args.max_iter,
-                                                                verbose=args.verbose)
-            res = np.square(data - np.dot(w_hat, h_hat)).mean()
-            print(f"rank: {n_components}, residual : {res}")
+        data_train = data.copy()
+        data_train[test_mask] = np.nan
+
+        num_train = np.count_nonzero(~np.isnan(data_train))
+        num_test = np.count_nonzero(np.isnan(data_train))
+
+        print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
+              f"training data: {num_train}, test data: {num_test}")
+
+        n_components_list = [5, 6, 7, 8, 9, 10, 15, 20, 25, 30]
+        train_error_list, test_error_list = [], []
+        best_error, best_rank = np.inf, None
+        best_w_hat, best_h_hat = None, None
+
+        for n_components in n_components_list:
+            model = NMF(n_components=n_components,
+                        random_state=args.random_state,
+                        alpha=args.alpha,
+                        l1_ratio=0,
+                        max_iter=args.max_iter,
+                        verbose=args.verbose,
+                        beta_loss="frobenius",
+                        solver="mu",
+                        init="random")
+
+            w_hat = model.fit_transform(data_train)
+            h_hat = model.components_
+
+            train_error = _beta_divergence(np.ma.masked_array(data, test_mask),
+                                           w_hat, h_hat, beta=2,
+                                           square_root=True)
+
+            test_error = _beta_divergence(np.ma.masked_array(data, ~test_mask),
+                                          w_hat, h_hat, beta=2, square_root=True)
+
+            print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
+                  f"ranks: {n_components}, training error: {train_error}, test error: {test_error}")
+
+            train_error_list.append(train_error)
+            test_error_list.append(test_error)
+
+            if test_error < best_error:
+                # check if any cell has zero column-sum
+                column_sum = np.dot(w_hat, h_hat).sum(axis=0)
+                if np.count_nonzero(column_sum) == len(column_sum):
+                    best_error = test_error
+                    best_w_hat = w_hat
+                    best_h_hat = h_hat
+                    best_rank = n_components
+
+        plot_error(n_components_list,
+                   train_error_list,
+                   test_error_list,
+                   best_rank,
+                   args)
+
+        print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, ranks estimated, best rank: {best_rank}")
 
     else:
         model = NMF(n_components=args.n_components,
@@ -149,22 +201,18 @@ def main():
                     beta_loss="frobenius",
                     solver="cd")
 
-        w_hat = model.fit_transform(data)
-        h_hat = model.components_
+        best_w_hat = model.fit_transform(data)
+        best_h_hat = model.components_
 
     del data
-    m_hat = np.dot(w_hat, h_hat)
+    m_hat = np.dot(best_w_hat, best_h_hat)
     np.clip(m_hat, 0, 1, out=m_hat)
 
     if args.binarize:
         threshold = np.quantile(m_hat, args.quantile, axis=0)
         m_hat = (m_hat > threshold).astype(int)
 
-    df = pd.DataFrame(data=w_hat, index=peaks)
-    df.to_csv(os.path.join(args.output_dir, "{}_peaks.txt".format(args.output_prefix)), sep="\t")
-
-    df = pd.DataFrame(data=h_hat, columns=barcodes)
-    df.to_csv(os.path.join(args.output_dir, "{}_barcodes.txt".format(args.output_prefix)), sep="\t")
+    output_wh(best_w_hat, best_h_hat, peaks, barcodes, args)
 
     if args.output_format == "sparse":
         filename = os.path.join(args.output_dir, "{}.txt".format(args.output_prefix))
