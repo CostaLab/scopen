@@ -129,7 +129,10 @@ def main():
     if args.estimate_rank:
         print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, estimating ranks...")
         # create test data by setting 10% elements to NAN
-        test_mask = np.zeros(shape=(m, n), dtype=np.bool)
+        test_mask = np.empty(shape=(m, n), dtype=np.bool)
+        # set seed for reproducibility
+        np.random.seed(args.random_state)
+
         for i in range(m):
             test_mask[i, :] = np.random.choice([True, False], n, p=[0.1, 0.9])
 
@@ -175,13 +178,10 @@ def main():
             test_error_list.append(test_error)
 
             if test_error < best_error:
-                # check if any cell has zero column-sum
-                column_sum = np.dot(w_hat, h_hat).sum(axis=0)
-                if np.count_nonzero(column_sum) == len(column_sum):
-                    best_error = test_error
-                    best_w_hat = w_hat
-                    best_h_hat = h_hat
-                    best_rank = n_components
+                best_error = test_error
+                best_w_hat = w_hat
+                best_h_hat = h_hat
+                best_rank = n_components
 
         plot_error(n_components_list,
                    train_error_list,
