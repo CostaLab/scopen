@@ -2,13 +2,48 @@ import os
 import pandas as pd
 import numpy as np
 import scipy.sparse as sp_sparse
-from scipy.sparse import csc_matrix
 from scipy.io.mmio import mmread, mmwrite
 import tables
 import matplotlib
 
 matplotlib.use("agg")
 import matplotlib.pyplot as plt
+
+
+def load_data(args):
+    if args.input_format == "sparse":
+        data, barcodes, peaks = get_data_from_sparse_file(filename=args.input)
+
+    elif args.input_format == "dense":
+        data, barcodes, peaks = get_data_from_dense_file(filename=args.input)
+
+    elif args.input_format == "10Xh5":
+        data, barcodes, peaks = get_data_from_10x_h5(filename=args.input)
+
+    elif args.input_format == "10X":
+        data, barcodes, peaks = get_data_from_10x(input_dir=args.input)
+
+    return data, barcodes, peaks
+
+
+def save_data(w, h, peaks, barcodes, args):
+    m_hat = np.dot(w, h)
+    df = pd.DataFrame(data=w, index=peaks)
+    df.to_csv(os.path.join(args.output_dir, "{}_peaks.txt".format(args.output_prefix)), sep="\t")
+
+    df = pd.DataFrame(data=h, columns=barcodes)
+    df.to_csv(os.path.join(args.output_dir, "{}_barcodes.txt".format(args.output_prefix)), sep="\t")
+
+    if args.output_format == "sparse":
+        filename = os.path.join(args.output_dir, "{}.txt".format(args.output_prefix))
+        write_data_to_sparse_file(filename=filename, data=m_hat, barcodes=barcodes, peaks=peaks)
+
+    elif args.output_format == "dense":
+        filename = os.path.join(args.output_dir, "{}.txt".format(args.output_prefix))
+        write_data_to_dense_file(filename=filename, data=m_hat, barcodes=barcodes, peaks=peaks)
+
+    elif args.output_format == "10X":
+        write_data_to_10x(output_dir=args.output_dir, data=m_hat, barcodes=barcodes, peaks=peaks)
 
 
 def get_data_from_sparse_file(filename):
@@ -139,14 +174,6 @@ def write_data_to_10x(output_dir, data, barcodes, peaks):
             end = peak.split(":")[-1].split("-")[1]
 
             f.write("\t".join([chrom, start, end]) + "\n")
-
-
-def output_wh(best_w_hat, best_h_hat, peaks, barcodes, args):
-    df = pd.DataFrame(data=best_w_hat, index=peaks)
-    df.to_csv(os.path.join(args.output_dir, "{}_peaks.txt".format(args.output_prefix)), sep="\t")
-
-    df = pd.DataFrame(data=best_h_hat, columns=barcodes)
-    df.to_csv(os.path.join(args.output_dir, "{}_barcodes.txt".format(args.output_prefix)), sep="\t")
 
 
 def plot_open_regions_density(n_open_regions, args):
