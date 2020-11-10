@@ -1,8 +1,9 @@
 import os
 import pandas as pd
 import numpy as np
+from datetime import datetime
 import scipy.sparse as sp_sparse
-from scipy.io.mmio import mmread, mmwrite
+from scipy.io.mmio import mmread
 import tables
 import matplotlib
 
@@ -11,6 +12,9 @@ import matplotlib.pyplot as plt
 
 
 def load_data(args):
+    print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
+          f"loading data...")
+
     if args.input_format == "sparse":
         data, barcodes, peaks = get_data_from_sparse_file(filename=args.input)
 
@@ -176,7 +180,9 @@ def write_data_to_10x(output_dir, data, barcodes, peaks):
             f.write("\t".join([chrom, start, end]) + "\n")
 
 
-def plot_open_regions_density(n_open_regions, args):
+def plot_open_regions_density(data, args):
+    n_open_regions = np.count_nonzero(data, axis=0)
+
     fig = plt.figure(figsize=(8, 8))
     ax = fig.add_subplot(111)
     ax.hist(np.log10(n_open_regions), density=True, bins=100)

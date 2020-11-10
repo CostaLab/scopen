@@ -13,7 +13,7 @@ import time
 
 import numpy as np
 import scipy.sparse as sp
-
+from datetime import datetime
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.utils import check_random_state, check_array
 from sklearn.utils.extmath import randomized_svd, safe_sparse_dot, squared_norm
@@ -639,11 +639,12 @@ def _fit_coordinate_descent(X, W, H, tol=1e-4, max_iter=200, l1_reg_W=0,
             break
 
         if verbose:
-            print("violation:", violation / violation_init)
+            _violation = violation / violation_init
+            print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, violation: {_violation: .8f}")
 
         if violation / violation_init <= tol:
             if verbose:
-                print("Converged at iteration", n_iter + 1)
+                print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, Converged at iteration {n_iter + 1}")
             break
 
     return W, Ht.T, n_iter
@@ -983,9 +984,8 @@ def _fit_multiplicative_update(X, W, H, beta_loss='frobenius',
             error = _beta_divergence(X, W, H, beta_loss, square_root=True)
 
             if verbose:
-                iter_time = time.time()
-                print("Epoch %02d reached after %.3f seconds, error: %f" %
-                      (n_iter, iter_time - start_time, error))
+                print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
+                      f"epoch {n_iter:} reached, error: {error: .6f}")
 
             if (previous_error - error) / error_at_init < tol:
                 break
@@ -993,9 +993,8 @@ def _fit_multiplicative_update(X, W, H, beta_loss='frobenius',
 
     # do not print if we have already printed in the convergence test
     if verbose and (tol == 0 or n_iter % 10 != 0):
-        end_time = time.time()
-        print("Epoch %02d reached after %.3f seconds." %
-              (n_iter, end_time - start_time))
+        print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
+              f"epoch {n_iter:} reached")
 
     return W, H, n_iter
 
