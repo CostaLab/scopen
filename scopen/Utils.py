@@ -223,30 +223,23 @@ def plot_objective(obj, args):
     fig.savefig(output_filename)
 
 
-def plot_error(n_components_list, train_error_list, test_error_list, best_rank, args):
-    fig, (ax1, ax2) = plt.subplots(1, 2)
-    ax1.plot(n_components_list, train_error_list, label="train")
-    ax2.plot(n_components_list, test_error_list, label="test")
+def plot_knee(kl, args):
+    fig = plt.figure(figsize=(6, 6))
+    ax = fig.add_subplot(111)
 
-    ax1.axvline(x=best_rank)
-    ax2.axvline(x=best_rank)
+    ax.plot(kl.x, kl.y, "bx-")
+    ax.axvline(kl.knee, linestyle="--", label="knee")
 
-    ax1.set_xlabel("Rank")
-    ax1.set_ylabel("Error")
-    ax1.set_title("Training")
-
-    ax2.set_xlabel("Rank")
-    ax2.set_ylabel("Error")
-    ax2.set_title("Test")
+    ax.set_xlabel("Rank")
+    ax.set_ylabel("Error")
+    ax.set_title("Knee Point")
 
     output_filename = os.path.join(args.output_dir, "{}_error.pdf".format(args.output_prefix))
     fig.tight_layout()
-    fig.set_size_inches(w=8, h=4)
     fig.savefig(output_filename)
 
     output_filename = os.path.join(args.output_dir, "{}_error.txt".format(args.output_prefix))
-    df = pd.DataFrame({'ranks': n_components_list,
-                       'training_error': train_error_list,
-                       'test_error': test_error_list})
+    df = pd.DataFrame({'ranks': kl.x,
+                       'error': kl.y})
 
     df.to_csv(output_filename, index=False, sep="\t")

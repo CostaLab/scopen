@@ -1,4 +1,4 @@
-""" Non-negative matrix factorization
+""" Modified Non-negative matrix factorization
 """
 # Author: Vlad Niculae
 #         Lars Buitinck
