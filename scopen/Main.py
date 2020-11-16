@@ -33,6 +33,9 @@ def parse_args():
     parser.add_argument("--n_neighbors", type=int, default=1,
                         help="Number of neighbors used for knn imputation. "
                              "Default: 1")
+    parser.add_argument("--rho", type=float, default=None,
+                        help='If set, will use this number as dropout rate.'
+                             'Default: None')
     parser.add_argument("--select_model", default=False,
                         action='store_true',
                         help='If set, both number of components and alpha will be determined by using cross validation.'
@@ -53,27 +56,6 @@ def parse_args():
     parser.add_argument('--version', action='version', version=version_message)
 
     return parser.parse_args()
-
-
-def knn_impute(data, n_neighbors):
-    print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
-          f"applying knn imputation...")
-
-    model = TfidfTransformer(smooth_idf=False)
-    tf_idf = model.fit_transform(np.transpose(data))
-
-    neigh = NearestNeighbors(n_neighbors=n_neighbors,
-                             n_jobs=-1,
-                             metric='cosine')
-    neigh.fit(tf_idf)
-    indices = neigh.kneighbors(return_distance=False)
-
-    data_y = np.zeros(data.shape, dtype=np.int)
-    for i in range(indices.shape[0]):
-        _y = np.sum(data[:, indices[i]], axis=1)
-        data_y[:, i] = np.greater(data[:, i] + _y, 0)
-
-    return data_y
 
 
 def tf_idf_transform(data):
@@ -187,6 +169,21 @@ def select_model(data, args):
     return w_best, h_best, rank_best, alpha_best
 
 
+def compute_rho_by_knn(data, k):
+    neigh = NearestNeighbors(n_neighbors=k, algorithm='auto', n_jobs=-1, metric='jaccard')
+    neigh.fit(np.transpose(data))
+    indices = neigh.kneighbors(return_distance=False)
+
+    data_y = np.zeros(data.shape)
+    rho = np.zeros(indices.shape[0])
+    for i in range(indices.shape[0]):
+        _y = np.greater(np.sum(data[:, indices[i]], axis=1), 0)
+        data_y[:, i] = np.greater(data[:, i] + _y, 0)
+        rho[i] = (np.count_nonzero(data_y[:, i]) - np.count_nonzero(data[:, i])) / np.count_nonzero(data_y[:, i])
+
+    return rho, data_y
+
+
 def main():
     start = time.time()
 
@@ -207,8 +204,25 @@ def main():
 
     plot_open_regions_density(data, args)
 
-    if args.knn_impute:
-        data = knn_impute(data=data, n_neighbors=args.n_neighbors)
+    if args.rho is None:
+        print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, estimating dropout rate...")
+        rho, data_y = compute_rho_by_knn(data, k=args.n_neighbors)
+        filename = os.path.join(args.output_dir, "{}_y.txt".format(args.output_prefix))
+        write_data_to_dense_file(filename=filename, data=data_y, barcodes=barcodes, peaks=peaks)
+
+        plot_estimated_dropout(rho=rho, args=args)
+        print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, dropout rate estimated!")
+
+        df = pd.DataFrame({'barcodes': barcodes,
+                           'estimated_dropout': rho})
+
+        filename = os.path.join(args.output_dir, "{}_stat.txt".format(args.output_prefix))
+        df.to_csv(filename, index=False, sep="\t")
+
+    else:
+        rho = args.rho
+
+    data = data[:, :] * (1 / (1 - rho))
 
     # tf-idf
     tf_idf = tf_idf_transform(data)
