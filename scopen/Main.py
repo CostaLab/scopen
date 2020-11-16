@@ -31,9 +31,9 @@ def parse_args():
     parser.add_argument("--knn_impute", default=False, action='store_true',
                         help="If set, the matrix will first be imputed by using k-nearest neighbors"
                              "Default: False")
-    parser.add_argument("--n_neighbors", type=int, default=5,
-                        help="Number of neighbors used for knn imputation. "
-                             "Default: 5")
+    parser.add_argument("--n_neighbors", type=int, default=1,
+                        help="Number of neighbors used for knn-based dropout rate estimation. "
+                             "Default: 1")
     parser.add_argument("--select_model", default=False,
                         action='store_true',
                         help='If set, both number of components and alpha will be determined by using cross validation.'
@@ -50,9 +50,9 @@ def parse_args():
     parser.add_argument("--alpha_list", default='0.001,0.01,0.1,1',
                         help='Alpha list for model selection.'
                              'Default: 0.001, 0.01, 0.1, 1')
-    parser.add_argument("--test_size", type=float, default=0.1,
-                        help="Proportion of data for model selection, should be between 0 and 1."
-                             "Default: 0.1")
+    parser.add_argument("--rho", type=float, default=None,
+                        help='Dropout rate per cell.'
+                             'Default: None')
     parser.add_argument("--random_state", type=int, default=42, help="Random state. Default: 42")
     parser.add_argument("--nc", type=int, metavar="INT", default=1,
                         help="The number of cores. DEFAULT: 1")
@@ -62,6 +62,23 @@ def parse_args():
     parser.add_argument('--version', action='version', version=version_message)
 
     return parser.parse_args()
+
+
+def compute_rho_by_knn(data, k):
+    neigh = NearestNeighbors(n_neighbors=k,
+                             algorithm='auto',
+                             n_jobs=-1, metric='jaccard')
+    neigh.fit(np.transpose(data))
+    indices = neigh.kneighbors(return_distance=False)
+
+    data_y = np.zeros(data.shape)
+    rho = np.zeros(indices.shape[0])
+    for i in range(indices.shape[0]):
+        _y = np.greater(np.sum(data[:, indices[i]], axis=1), 0)
+        data_y[:, i] = np.greater(data[:, i] + _y, 0)
+        rho[i] = (np.count_nonzero(data_y[:, i]) - np.count_nonzero(data[:, i])) / np.count_nonzero(data_y[:, i])
+
+    return rho, data_y
 
 
 def knn_impute(data, n_neighbors):
@@ -100,11 +117,6 @@ def tf_idf_transform(data):
 
 def run_nmf(data, n_components, alpha, max_iter, verbose, random_state,
             beta_loss, w=None, h=None):
-    if np.any(np.isnan(data)):
-        solver, init = "mu", "random"
-    else:
-        solver, init = "cd", "nndsvd"
-
     model = NMF(n_components=n_components,
                 random_state=random_state,
                 alpha=alpha,
@@ -112,8 +124,8 @@ def run_nmf(data, n_components, alpha, max_iter, verbose, random_state,
                 max_iter=max_iter,
                 verbose=verbose,
                 beta_loss=beta_loss,
-                solver=solver,
-                init=init)
+                solver="cd",
+                init="nndsvd")
 
     w_hat = model.fit_transform(X=data, W=w, H=h)
     h_hat = model.components_
@@ -176,6 +188,26 @@ def main():
           f"sparsity: {1 - np.count_nonzero(data) / (m * n)}")
 
     plot_open_regions_density(data, args)
+
+    if args.rho is None:
+        print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
+              f"estimating dropout rate...")
+        rho, data_y = compute_rho_by_knn(data, k=args.n_neighbors)
+        filename = os.path.join(args.output_dir, "{}_y.txt".format(args.output_prefix))
+        write_data_to_dense_file(filename=filename, data=data_y, barcodes=barcodes, peaks=peaks)
+
+        plot_estimated_dropout(rho=rho, args=args)
+
+        df = pd.DataFrame({'barcodes': barcodes,
+                           'estimated_dropout': rho})
+
+        filename = os.path.join(args.output_dir, "{}_stat.txt".format(args.output_prefix))
+        df.to_csv(filename, index=False, sep="\t")
+
+    else:
+        rho = args.rho
+
+    data = data[:, :] * (1 / (1 - rho))
 
     # tf-idf
     tf_idf = tf_idf_transform(data)
