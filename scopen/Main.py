@@ -4,6 +4,8 @@ from sklearn.neighbors import NearestNeighbors
 from sklearn.feature_extraction.text import TfidfTransformer
 from multiprocessing import Pool, cpu_count
 from kneed import KneeLocator
+import scipy.sparse as sp
+from sklearn.utils import check_array
 
 from .MF import NMF
 from .Utils import *
@@ -34,7 +36,7 @@ def parse_args():
     parser.add_argument("--max_iter", type=int, default=500,
                         help="Number of iteration for optimization. "
                              "Default: 500")
-    parser.add_argument("--select_model", default=False,
+    parser.add_argument("--estimate_rank", default=False,
                         action='store_true',
                         help='If set, number of components will be selected by knee point. '
                              'Default: False')
@@ -54,7 +56,7 @@ def parse_args():
                         action='store_true',
                         help='If set, dropout rate will be estimated based on knn. '
                              'Default: False')
-    parser.add_argument("--n_neighbors", type=int, default=1,
+    parser.add_argument("--n_neighbors", type=int, default=5,
                         help="Number of neighbors used for knn-based dropout rate estimation. "
                              "Default: 1")
     parser.add_argument("--random_state", type=int, default=42,
@@ -67,6 +69,27 @@ def parse_args():
     parser.add_argument('--version', action='version', version=version_message)
 
     return parser.parse_args()
+
+
+def detect_dropout_by_knn(data, k):
+    data = data.toarray()
+    neigh = NearestNeighbors(n_neighbors=k,
+                             algorithm='auto',
+                             n_jobs=-1, metric='cosine')
+    neigh.fit(np.transpose(data))
+    indices = neigh.kneighbors(return_distance=False)
+
+    rho = np.zeros(indices.shape[0])
+    for i in range(indices.shape[0]):
+        non_zeros = np.count_nonzero(data[:, indices[i]], axis=1)
+        dropout_idx = np.argwhere((non_zeros > k/2) & (data[:, i] == 0))
+        data[dropout_idx, i] = np.nan
+        rho[i] = len(dropout_idx) / (len(dropout_idx) + np.count_nonzero(data[:, i]))
+
+    data = check_array(data, accept_sparse=('csr', 'csc'), dtype=float,
+                       force_all_finite=False)
+
+    return rho, data
 
 
 def compute_rho_by_knn(data, k):
@@ -91,7 +114,6 @@ def tf_idf_transform(data):
           f"running tf-idf transformation...")
     model = TfidfTransformer(smooth_idf=False)
     tf_idf = np.transpose(model.fit_transform(np.transpose(data)))
-
     return tf_idf
 
 
@@ -103,8 +125,7 @@ def run_nmf(arguments):
                 l1_ratio=0,
                 max_iter=max_iter,
                 verbose=verbose,
-                solver="cd",
-                init="nndsvd")
+                solver="cd")
 
     w_hat = model.fit_transform(X=data)
     h_hat = model.components_
@@ -115,9 +136,9 @@ def run_nmf(arguments):
     return [w_hat, h_hat, model.reconstruction_err_]
 
 
-def select_model(data, args):
+def estimate_rank(data, args):
     print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
-          f"running model selection...")
+          f"running rank estimation...")
 
     n_components_list = np.arange(start=args.min_n_components,
                                   stop=args.max_n_components + 1,
@@ -169,7 +190,7 @@ def main():
 
     data, barcodes, peaks = load_data(args=args)
 
-    # data = np.greater(data, 0)
+    data = np.greater(data, 0)
     (m, n) = data.shape
 
     print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
@@ -199,13 +220,20 @@ def main():
     else:
         rho = args.rho
 
+    # dropout rate
     data = data[:, :] * (1 / (1 - rho))
 
     # tf-idf
     tf_idf = tf_idf_transform(data)
 
-    if args.select_model:
-        w_hat, h_hat = select_model(data=tf_idf, args=args)
+    filename = os.path.join(args.output_dir, "{}_x_hat.txt".format(args.output_prefix))
+    write_data_to_dense_file(filename=filename,
+                             data=tf_idf.toarray(),
+                             barcodes=barcodes,
+                             peaks=peaks)
+
+    if args.estimate_rank:
+        w_hat, h_hat = estimate_rank(data=tf_idf, args=args)
 
     else:
         print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
