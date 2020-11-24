@@ -1,14 +1,53 @@
 import os
 import pandas as pd
 import numpy as np
+from datetime import datetime
 import scipy.sparse as sp_sparse
-from scipy.sparse import csc_matrix
-from scipy.io.mmio import mmread, mmwrite
+from scipy.io.mmio import mmread
 import tables
 import matplotlib
 
 matplotlib.use("agg")
 import matplotlib.pyplot as plt
+
+
+def load_data(args):
+    print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
+          f"loading data...")
+
+    if args.input_format == "sparse":
+        data, barcodes, peaks = get_data_from_sparse_file(filename=args.input)
+
+    elif args.input_format == "dense":
+        data, barcodes, peaks = get_data_from_dense_file(filename=args.input)
+
+    elif args.input_format == "10Xh5":
+        data, barcodes, peaks = get_data_from_10x_h5(filename=args.input)
+
+    elif args.input_format == "10X":
+        data, barcodes, peaks = get_data_from_10x(input_dir=args.input)
+
+    return data, barcodes, peaks
+
+
+def save_data(w, h, peaks, barcodes, args):
+    m_hat = np.dot(w, h)
+    df = pd.DataFrame(data=w, index=peaks)
+    df.to_csv(os.path.join(args.output_dir, "{}_peaks.txt".format(args.output_prefix)), sep="\t")
+
+    df = pd.DataFrame(data=h, columns=barcodes)
+    df.to_csv(os.path.join(args.output_dir, "{}_barcodes.txt".format(args.output_prefix)), sep="\t")
+
+    if args.output_format == "sparse":
+        filename = os.path.join(args.output_dir, "{}.txt".format(args.output_prefix))
+        write_data_to_sparse_file(filename=filename, data=m_hat, barcodes=barcodes, peaks=peaks)
+
+    elif args.output_format == "dense":
+        filename = os.path.join(args.output_dir, "{}.txt".format(args.output_prefix))
+        write_data_to_dense_file(filename=filename, data=m_hat, barcodes=barcodes, peaks=peaks)
+
+    elif args.output_format == "10X":
+        write_data_to_10x(output_dir=args.output_dir, data=m_hat, barcodes=barcodes, peaks=peaks)
 
 
 def get_data_from_sparse_file(filename):
@@ -141,11 +180,66 @@ def write_data_to_10x(output_dir, data, barcodes, peaks):
             f.write("\t".join([chrom, start, end]) + "\n")
 
 
-def plot_open_regions_density(n_open_regions, args):
+def plot_open_regions_density(data, args):
+    n_open_regions = np.count_nonzero(data, axis=0)
+
     fig = plt.figure(figsize=(8, 8))
     ax = fig.add_subplot(111)
-    ax.hist(n_open_regions, density=True)
+    ax.hist(np.log10(n_open_regions), density=True, bins=100)
 
-    output_filename = os.path.join(args.output_dir, "{}.pdf".format(args.output_prefix))
+    ax.set_xlabel("Number of detected peaks (log10)")
+    ax.set_ylabel("Density")
+
+    output_filename = os.path.join(args.output_dir, "{}_peaks.pdf".format(args.output_prefix))
+    fig.tight_layout()
+    fig.suptitle('Number of detected peaks per cell')
+    fig.savefig(output_filename)
+
+
+def plot_estimated_dropout(rho, args):
+    fig = plt.figure(figsize=(8, 8))
+    ax = fig.add_subplot(111)
+    ax.hist(rho, density=True, bins=100)
+
+    ax.set_xlabel("Estimated dropout rate")
+    ax.set_ylabel("Density")
+
+    output_filename = os.path.join(args.output_dir, "{}_estimated_dropout.pdf".format(args.output_prefix))
+    fig.tight_layout()
+    fig.suptitle('Estimated dropout rate per cell')
+    fig.savefig(output_filename)
+
+
+def plot_objective(obj, args):
+    fig = plt.figure(figsize=(8, 8))
+    ax = fig.add_subplot(111)
+    ax.plot(obj)
+
+    ax.set_xlabel("Iter")
+    ax.set_ylabel("Loss")
+
+    output_filename = os.path.join(args.output_dir, "{}_loss.pdf".format(args.output_prefix))
     fig.tight_layout()
     fig.savefig(output_filename)
+
+
+def plot_knee(kl, args):
+    fig = plt.figure(figsize=(6, 6))
+    ax = fig.add_subplot(111)
+
+    ax.plot(kl.x, kl.y, "bx-")
+    ax.axvline(kl.knee, linestyle="--", label="knee")
+
+    ax.set_xlabel("Rank")
+    ax.set_ylabel("Error")
+    ax.set_title("Knee Point")
+
+    output_filename = os.path.join(args.output_dir, "{}_error.pdf".format(args.output_prefix))
+    fig.tight_layout()
+    fig.savefig(output_filename)
+
+    output_filename = os.path.join(args.output_dir, "{}_error.txt".format(args.output_prefix))
+    df = pd.DataFrame({'ranks': kl.x,
+                       'error': kl.y})
+
+    df.to_csv(output_filename, index=False, sep="\t")

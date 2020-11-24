@@ -2,9 +2,11 @@
   <dictionary name="zhijianli">
     <words>
       <w>barcodes</w>
+      <w>frip</w>
       <w>matplotlib</w>
       <w>scipy</w>
       <w>scopen</w>
+      <w>simlatedsc</w>
       <w>zhijian</w>
     </words>
   </dictionary>
