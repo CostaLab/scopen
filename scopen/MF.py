@@ -17,7 +17,6 @@ from datetime import datetime
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.utils import check_random_state, check_array
 from sklearn.utils.extmath import randomized_svd, safe_sparse_dot, squared_norm
-from sklearn.utils.extmath import safe_min
 from sklearn.utils.validation import check_is_fitted
 from sklearn.exceptions import ConvergenceWarning
 from cdnmf_fast import _update_cdnmf_fast
@@ -25,6 +24,32 @@ from cdnmf_fast import _update_cdnmf_fast
 EPSILON = np.finfo(np.float32).eps
 
 INTEGER_TYPES = (numbers.Integral, np.integer)
+
+
+def safe_min(X):
+    """Returns the minimum value of a dense or a CSR/CSC matrix.
+
+    Adapated from https://stackoverflow.com/q/13426580
+
+    .. deprecated:: 0.22.0
+
+    Parameters
+    ----------
+    X : array_like
+        The input array or sparse matrix
+
+    Returns
+    -------
+    Float
+        The min value of X
+    """
+    if sp.issparse(X):
+        if len(X.data) == 0:
+            return 0
+        m = X.data.min()
+        return m if X.getnnz() == X.size else min(m, 0)
+    else:
+        return X.min()
 
 
 def norm(x):
