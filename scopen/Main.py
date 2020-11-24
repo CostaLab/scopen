@@ -1,7 +1,13 @@
 import time
 import argparse
+from sklearn.neighbors import NearestNeighbors
+from sklearn.feature_extraction.text import TfidfTransformer
+from multiprocessing import Pool, cpu_count
+from kneed import KneeLocator
+import scipy.sparse as sp
+from sklearn.utils import check_array
 
-from .MF import non_negative_factorization
+from .MF import NMF
 from .Utils import *
 from .__version__ import __version__
 
@@ -10,21 +16,53 @@ def parse_args():
     parser = argparse.ArgumentParser(description='scOpen')
     parser.add_argument("--input", type=str, default=None,
                         help="Input name, can be a file name or a directory")
-    parser.add_argument("--input-format", type=str, default='dense',
-                        help="Input format. Currently available: sparse, dense, 10X."
+    parser.add_argument("--input_format", type=str, default='dense',
+                        help="Input format. Currently available: sparse, dense, 10X. "
                              "Default: dense")
-    parser.add_argument("--output-dir", type=str, default=os.getcwd(),
+    parser.add_argument("--output_dir", type=str, default=os.getcwd(),
                         help="If specified, all output files will be written to that directory. "
                              "Default: current working directory")
-    parser.add_argument("--output-prefix", type=str, default=None, help="Output filename")
-    parser.add_argument("--output-format", type=str, default='dense',
-                        help="Input format. Currently available: sparse, dense, 10X, 10Xh5."
+    parser.add_argument("--output_prefix", type=str, default=None,
+                        help="Output filename")
+    parser.add_argument("--output_format", type=str, default='dense',
+                        help="Input format. Currently available: sparse, dense, 10X, 10Xh5. "
                              "Default: dense")
-    parser.add_argument("--n-components", type=int, default=30, help="Number of components. Default: 30")
-    parser.add_argument("--max-iter", type=int, default=500)
-    parser.add_argument("--min-rho", type=float, default=0.0)
-    parser.add_argument("--max-rho", type=float, default=0.5)
-    parser.add_argument("--alpha", type=float, default=1)
+    parser.add_argument("--n_components", type=int, default=30,
+                        help="Number of components. "
+                             "Default: 30")
+    parser.add_argument("--alpha", type=float, default=1,
+                        help="Parameter for model regularization to prevent from over-fitting. "
+                             "Default: 1")
+    parser.add_argument("--max_iter", type=int, default=500,
+                        help="Number of iteration for optimization. "
+                             "Default: 500")
+    parser.add_argument("--estimate_rank", default=False,
+                        action='store_true',
+                        help='If set, number of components will be selected by knee point. '
+                             'Default: False')
+    parser.add_argument("--min_n_components", type=int, default=2,
+                        help="Minimum of number of components for model selection, must be positive."
+                             "Default: 2")
+    parser.add_argument("--max_n_components", type=int, default=30,
+                        help="Minimum of number of components for model selection, must be positive."
+                             "Default: 2")
+    parser.add_argument("--step_n_components", type=int, default=1,
+                        help="Spacing between values"
+                             "Default: 1")
+    parser.add_argument("--rho", type=float, default=0.9,
+                        help='Dropout rate per cell, must between 0 and 1. '
+                             'Default: 0.9')
+    parser.add_argument("--estimate_rho", default=False,
+                        action='store_true',
+                        help='If set, dropout rate will be estimated based on knn. '
+                             'Default: False')
+    parser.add_argument("--n_neighbors", type=int, default=5,
+                        help="Number of neighbors used for knn-based dropout rate estimation. "
+                             "Default: 1")
+    parser.add_argument("--random_state", type=int, default=42,
+                        help="Random state. Default: 42")
+    parser.add_argument("--nc", type=int, metavar="INT", default=1,
+                        help="The number of cores. DEFAULT: 1")
     parser.add_argument("--verbose", type=int, default=0)
 
     version_message = "Version: " + str(__version__)
@@ -33,70 +71,188 @@ def parse_args():
     return parser.parse_args()
 
 
+def detect_dropout_by_knn(data, k):
+    data = data.toarray()
+    neigh = NearestNeighbors(n_neighbors=k,
+                             algorithm='auto',
+                             n_jobs=-1, metric='cosine')
+    neigh.fit(np.transpose(data))
+    indices = neigh.kneighbors(return_distance=False)
+
+    rho = np.zeros(indices.shape[0])
+    for i in range(indices.shape[0]):
+        non_zeros = np.count_nonzero(data[:, indices[i]], axis=1)
+        dropout_idx = np.argwhere((non_zeros > k/2) & (data[:, i] == 0))
+        data[dropout_idx, i] = np.nan
+        rho[i] = len(dropout_idx) / (len(dropout_idx) + np.count_nonzero(data[:, i]))
+
+    data = check_array(data, accept_sparse=('csr', 'csc'), dtype=float,
+                       force_all_finite=False)
+
+    return rho, data
+
+
+def compute_rho_by_knn(data, k):
+    neigh = NearestNeighbors(n_neighbors=k,
+                             algorithm='auto',
+                             n_jobs=-1, metric='jaccard')
+    neigh.fit(np.transpose(data))
+    indices = neigh.kneighbors(return_distance=False)
+
+    data_y = np.zeros(data.shape)
+    rho = np.zeros(indices.shape[0])
+    for i in range(indices.shape[0]):
+        _y = np.greater(np.sum(data[:, indices[i]], axis=1), 0)
+        data_y[:, i] = np.greater(data[:, i] + _y, 0)
+        rho[i] = (np.count_nonzero(data_y[:, i]) - np.count_nonzero(data[:, i])) / np.count_nonzero(data_y[:, i])
+
+    return rho, data_y
+
+
+def tf_idf_transform(data):
+    print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
+          f"running tf-idf transformation...")
+    model = TfidfTransformer(smooth_idf=False)
+    tf_idf = np.transpose(model.fit_transform(np.transpose(data)))
+    return tf_idf
+
+
+def run_nmf(arguments):
+    data, n_components, alpha, max_iter, verbose, random_state = arguments
+    model = NMF(n_components=n_components,
+                random_state=random_state,
+                alpha=alpha,
+                l1_ratio=0,
+                max_iter=max_iter,
+                verbose=verbose,
+                solver="cd")
+
+    w_hat = model.fit_transform(X=data)
+    h_hat = model.components_
+
+    print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
+          f"ranks: {n_components}, fitting error: {model.reconstruction_err_}")
+
+    return [w_hat, h_hat, model.reconstruction_err_]
+
+
+def estimate_rank(data, args):
+    print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
+          f"running rank estimation...")
+
+    n_components_list = np.arange(start=args.min_n_components,
+                                  stop=args.max_n_components + 1,
+                                  step=args.step_n_components)
+
+    w_hat_dict, h_hat_dict, error_list = dict(), dict(), list()
+    if args.nc == 1:
+        for n_components in n_components_list:
+            arguments = (data, n_components, args.alpha,
+                         args.max_iter, args.verbose,
+                         args.random_state)
+
+            res = run_nmf(arguments)
+            w_hat_dict[n_components] = res[0]
+            h_hat_dict[n_components] = res[1]
+            error_list.append(res[2])
+
+    elif args.nc > 1:
+        arguments_list = list()
+        for n_components in n_components_list:
+            arguments = (data, n_components, args.alpha, args.max_iter, args.verbose, args.random_state)
+            arguments_list.append(arguments)
+
+        with Pool(processes=args.nc) as pool:
+            res = pool.map(run_nmf, arguments_list)
+
+        for i, n_components in enumerate(n_components_list):
+            w_hat_dict[n_components] = res[i][0]
+            h_hat_dict[n_components] = res[i][1]
+            error_list.append(res[i][2])
+
+    kl = KneeLocator(n_components_list, error_list,
+                     S=1.0, curve="convex", direction="decreasing")
+
+    plot_knee(kl, args)
+
+    return w_hat_dict[kl.knee], h_hat_dict[kl.knee]
+
+
 def main():
     args = parse_args()
+    assert args.input is not None, "Please specify an input"
+    print(args)
 
     start = time.time()
 
-    data, barcodes, peaks = None, None, None
-    if args.input_format == "sparse":
-        data, barcodes, peaks = get_data_from_sparse_file(filename=args.input)
+    print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
+          f"detected {cpu_count()} cpus, {args.nc} of them are used.")
 
-    elif args.input_format == "dense":
-        data, barcodes, peaks = get_data_from_dense_file(filename=args.input)
-
-    elif args.input_format == "10Xh5":
-        data, barcodes, peaks = get_data_from_10x_h5(filename=args.input)
-
-    elif args.input_format == "10X":
-        data, barcodes, peaks = get_data_from_10x(input_dir=args.input)
+    data, barcodes, peaks = load_data(args=args)
 
     data = np.greater(data, 0)
     (m, n) = data.shape
 
-    n_open_regions = np.log10(data.sum(axis=0))
-    max_n_open_regions = np.max(n_open_regions)
-    min_n_open_regions = np.min(n_open_regions)
+    print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
+          f"number of peaks: {m}; number of cells {n}")
+    print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
+          f"number of non-zeros before imputation: {np.count_nonzero(data)}")
+    print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
+          f"sparsity: {1 - np.count_nonzero(data) / (m * n)}")
 
-    print("Number of peaks: {}; number of cells {}".format(m, n))
-    print("Number of non-zeros before imputation: {}".format(np.count_nonzero(data)))
+    plot_open_regions_density(data, args)
 
-    rho = args.min_rho + (args.max_rho - args.min_rho) * \
-          (max_n_open_regions - n_open_regions) / (max_n_open_regions - min_n_open_regions)
+    if args.estimate_rho:
+        print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
+              f"estimating dropout rate...")
+        rho, data_y = compute_rho_by_knn(data, k=args.n_neighbors)
+        filename = os.path.join(args.output_dir, "{}_y.txt".format(args.output_prefix))
+        write_data_to_dense_file(filename=filename, data=data_y, barcodes=barcodes, peaks=peaks)
 
+        plot_estimated_dropout(rho=rho, args=args)
+
+        df = pd.DataFrame({'barcodes': barcodes,
+                           'estimated_dropout': rho})
+
+        filename = os.path.join(args.output_dir, "{}_stat.txt".format(args.output_prefix))
+        df.to_csv(filename, index=False, sep="\t")
+
+    else:
+        rho = args.rho
+
+    # dropout rate
     data = data[:, :] * (1 / (1 - rho))
 
-    w_hat, h_hat, _ = non_negative_factorization(X=data,
-                                                 n_components=args.n_components,
-                                                 alpha=args.alpha,
-                                                 max_iter=args.max_iter,
-                                                 verbose=args.verbose)
-    del data
-    m_hat = np.dot(w_hat, h_hat)
-    np.clip(m_hat, 0, 1, out=m_hat)
+    # tf-idf
+    tf_idf = tf_idf_transform(data)
 
-    df = pd.DataFrame(data=w_hat, index=peaks)
-    df.to_csv(os.path.join(args.output_dir, "{}_peaks.txt".format(args.output_prefix)), sep="\t")
+    filename = os.path.join(args.output_dir, "{}_x_hat.txt".format(args.output_prefix))
+    write_data_to_dense_file(filename=filename,
+                             data=tf_idf.toarray(),
+                             barcodes=barcodes,
+                             peaks=peaks)
 
-    df = pd.DataFrame(data=h_hat, columns=barcodes)
-    df.to_csv(os.path.join(args.output_dir, "{}_barcodes.txt".format(args.output_prefix)), sep="\t")
+    if args.estimate_rank:
+        w_hat, h_hat = estimate_rank(data=tf_idf, args=args)
 
-    if args.output_format == "sparse":
-        filename = os.path.join(args.output_dir, "{}.txt".format(args.output_prefix))
-        write_data_to_sparse_file(filename=filename, data=m_hat, barcodes=barcodes, peaks=peaks)
+    else:
+        print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
+              f"running NMF...")
+        arguments = (data, args.n_components, args.alpha,
+                     args.max_iter, args.verbose,
+                     args.random_state)
 
-    elif args.output_format == "dense":
-        filename = os.path.join(args.output_dir, "{}.txt".format(args.output_prefix))
-        write_data_to_dense_file(filename=filename, data=m_hat, barcodes=barcodes, peaks=peaks)
+        res = run_nmf(arguments)
+        w_hat, h_hat = res[0], res[1]
 
-    elif args.output_format == "10X":
-        write_data_to_10x(output_dir=args.output_dir, data=m_hat, barcodes=barcodes, peaks=peaks)
+    save_data(w=w_hat, h=h_hat, peaks=peaks, barcodes=barcodes, args=args)
 
     secs = time.time() - start
     m, s = divmod(secs, 60)
     h, m = divmod(m, 60)
 
-    print("[total time: ", "%dh %dm %ds" % (h, m, s), "]")
+    print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
+          f"total time: {h: .2f}h {m: .2f}m {s: .2f}s")
 
 
 if __name__ == '__main__':
