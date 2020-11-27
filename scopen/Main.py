@@ -122,6 +122,17 @@ def tf_idf_transform(data):
     return tf_idf
 
 
+def tf_idf_transform_with_dropout(data):
+    print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
+          f"running tf-idf transformation...")
+    model = TfidfTransformer(smooth_idf=False, norm="l2")
+    model = model.fit(np.transpose(data))
+    model.idf_ -= 1
+    tf_idf = np.transpose(model.transform(np.transpose(data)))
+
+    return tf_idf
+
+
 def run_nmf(arguments):
     data, n_components, alpha, max_iter, verbose, random_state = arguments
     model = NMF(n_components=n_components,
