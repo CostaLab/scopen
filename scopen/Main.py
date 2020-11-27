@@ -6,6 +6,7 @@ from multiprocessing import Pool, cpu_count
 from kneed import KneeLocator
 import scipy.sparse as sp
 from sklearn.utils import check_array
+from sklearn.utils.validation import check_is_fitted, check_array, FLOAT_DTYPES
 
 from .MF import NMF
 from .Utils import *
@@ -82,9 +83,10 @@ def detect_dropout_by_knn(data, k):
     rho = np.zeros(indices.shape[0])
     for i in range(indices.shape[0]):
         non_zeros = np.count_nonzero(data[:, indices[i]], axis=1)
-        dropout_idx = np.argwhere((non_zeros > k/2) & (data[:, i] == 0))
+        dropout_idx = np.argwhere((non_zeros > k / 2) & (data[:, i] == 0))
         data[dropout_idx, i] = np.nan
-        rho[i] = len(dropout_idx) / (len(dropout_idx) + np.count_nonzero(data[:, i]))
+        rho[i] = len(dropout_idx) / (len(dropout_idx) +
+                                     np.count_nonzero(data[:, i]))
 
     data = check_array(data, accept_sparse=('csr', 'csc'), dtype=float,
                        force_all_finite=False)
@@ -112,8 +114,11 @@ def compute_rho_by_knn(data, k):
 def tf_idf_transform(data):
     print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
           f"running tf-idf transformation...")
-    model = TfidfTransformer(smooth_idf=False)
-    tf_idf = np.transpose(model.fit_transform(np.transpose(data)))
+    model = TfidfTransformer(smooth_idf=False, norm="l2")
+    model = model.fit(np.transpose(data))
+    model.idf_ -= 1
+    tf_idf = np.transpose(model.transform(np.transpose(data)))
+
     return tf_idf
 
 
