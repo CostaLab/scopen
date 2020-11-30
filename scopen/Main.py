@@ -111,18 +111,7 @@ def compute_rho_by_knn(data, k):
     return rho, data_y
 
 
-def tf_idf_transform(data):
-    print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
-          f"running tf-idf transformation...")
-    model = TfidfTransformer(smooth_idf=False, norm="l2")
-    model = model.fit(np.transpose(data))
-    model.idf_ -= 1
-    tf_idf = np.transpose(model.transform(np.transpose(data)))
-
-    return tf_idf
-
-
-def tf_idf_transform_with_dropout(data):
+def tf_idf_transform_with_dropout(data, dropout):
     print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
           f"running tf-idf transformation...")
     model = TfidfTransformer(smooth_idf=False, norm="l2")
@@ -236,11 +225,11 @@ def main():
     else:
         rho = args.rho
 
-    # dropout rate
-    data = data[:, :] * (1 / (1 - rho))
-
     # tf-idf
-    tf_idf = tf_idf_transform(data)
+    #tf_idf = tf_idf_transform_with_dropout(data, dropout=rho)
+
+    tf_idf = data[:, :] / (1 - rho)
+    tf_idf = sp.csr_matrix(tf_idf)
 
     filename = os.path.join(args.output_dir, "{}_x_hat.txt".format(args.output_prefix))
     write_data_to_dense_file(filename=filename,
