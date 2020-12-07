@@ -50,16 +50,6 @@ def parse_args():
     parser.add_argument("--step_n_components", type=int, default=1,
                         help="Spacing between values"
                              "Default: 1")
-    parser.add_argument("--rho", type=float, default=0.9,
-                        help='Dropout rate per cell, must between 0 and 1. '
-                             'Default: 0.9')
-    parser.add_argument("--estimate_rho", default=False,
-                        action='store_true',
-                        help='If set, dropout rate will be estimated based on knn. '
-                             'Default: False')
-    parser.add_argument("--n_neighbors", type=int, default=5,
-                        help="Number of neighbors used for knn-based dropout rate estimation. "
-                             "Default: 1")
     parser.add_argument("--random_state", type=int, default=42,
                         help="Random state. Default: 42")
     parser.add_argument("--nc", type=int, metavar="INT", default=1,
@@ -72,46 +62,7 @@ def parse_args():
     return parser.parse_args()
 
 
-def detect_dropout_by_knn(data, k):
-    data = data.toarray()
-    neigh = NearestNeighbors(n_neighbors=k,
-                             algorithm='auto',
-                             n_jobs=-1, metric='cosine')
-    neigh.fit(np.transpose(data))
-    indices = neigh.kneighbors(return_distance=False)
-
-    rho = np.zeros(indices.shape[0])
-    for i in range(indices.shape[0]):
-        non_zeros = np.count_nonzero(data[:, indices[i]], axis=1)
-        dropout_idx = np.argwhere((non_zeros > k / 2) & (data[:, i] == 0))
-        data[dropout_idx, i] = np.nan
-        rho[i] = len(dropout_idx) / (len(dropout_idx) +
-                                     np.count_nonzero(data[:, i]))
-
-    data = check_array(data, accept_sparse=('csr', 'csc'), dtype=float,
-                       force_all_finite=False)
-
-    return rho, data
-
-
-def compute_rho_by_knn(data, k):
-    neigh = NearestNeighbors(n_neighbors=k,
-                             algorithm='auto',
-                             n_jobs=-1, metric='jaccard')
-    neigh.fit(np.transpose(data))
-    indices = neigh.kneighbors(return_distance=False)
-
-    data_y = np.zeros(data.shape)
-    rho = np.zeros(indices.shape[0])
-    for i in range(indices.shape[0]):
-        _y = np.greater(np.sum(data[:, indices[i]], axis=1), 0)
-        data_y[:, i] = np.greater(data[:, i] + _y, 0)
-        rho[i] = (np.count_nonzero(data_y[:, i]) - np.count_nonzero(data[:, i])) / np.count_nonzero(data_y[:, i])
-
-    return rho, data_y
-
-
-def tf_idf_transform_with_dropout(data, dropout):
+def tf_idf_transform(data):
     print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
           f"running tf-idf transformation...")
     model = TfidfTransformer(smooth_idf=False, norm="l2")
@@ -119,7 +70,7 @@ def tf_idf_transform_with_dropout(data, dropout):
     model.idf_ -= 1
     tf_idf = np.transpose(model.transform(np.transpose(data)))
 
-    return tf_idf
+    return tf_idf.toarray()
 
 
 def run_nmf(arguments):
@@ -207,35 +158,8 @@ def main():
 
     plot_open_regions_density(data, args)
 
-    if args.estimate_rho:
-        print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
-              f"estimating dropout rate...")
-        rho, data_y = compute_rho_by_knn(data, k=args.n_neighbors)
-        filename = os.path.join(args.output_dir, "{}_y.txt".format(args.output_prefix))
-        write_data_to_dense_file(filename=filename, data=data_y, barcodes=barcodes, peaks=peaks)
-
-        plot_estimated_dropout(rho=rho, args=args)
-
-        df = pd.DataFrame({'barcodes': barcodes,
-                           'estimated_dropout': rho})
-
-        filename = os.path.join(args.output_dir, "{}_stat.txt".format(args.output_prefix))
-        df.to_csv(filename, index=False, sep="\t")
-
-    else:
-        rho = args.rho
-
     # tf-idf
-    #tf_idf = tf_idf_transform_with_dropout(data, dropout=rho)
-
-    tf_idf = data[:, :] / (1 - rho)
-    tf_idf = sp.csr_matrix(tf_idf)
-
-    filename = os.path.join(args.output_dir, "{}_x_hat.txt".format(args.output_prefix))
-    write_data_to_dense_file(filename=filename,
-                             data=tf_idf.toarray(),
-                             barcodes=barcodes,
-                             peaks=peaks)
+    tf_idf = tf_idf_transform(data)
 
     if args.estimate_rank:
         w_hat, h_hat = estimate_rank(data=tf_idf, args=args)
