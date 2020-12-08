@@ -66,11 +66,11 @@ def tf_idf_transform(data):
     print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
           f"running tf-idf transformation...")
     model = TfidfTransformer(smooth_idf=False, norm="l2")
+    model._idf_diag -= 1
     model = model.fit(np.transpose(data))
-    model.idf_ -= 1
     tf_idf = np.transpose(model.transform(np.transpose(data)))
 
-    return tf_idf.toarray()
+    return tf_idf
 
 
 def run_nmf(arguments):
