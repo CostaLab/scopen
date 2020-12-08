@@ -196,20 +196,6 @@ def plot_open_regions_density(data, args):
     fig.savefig(output_filename)
 
 
-def plot_estimated_dropout(rho, args):
-    fig = plt.figure(figsize=(8, 8))
-    ax = fig.add_subplot(111)
-    ax.hist(rho, density=True, bins=100)
-
-    ax.set_xlabel("Estimated dropout rate")
-    ax.set_ylabel("Density")
-
-    output_filename = os.path.join(args.output_dir, "{}_estimated_dropout.pdf".format(args.output_prefix))
-    fig.tight_layout()
-    fig.suptitle('Estimated dropout rate per cell')
-    fig.savefig(output_filename)
-
-
 def plot_objective(obj, args):
     fig = plt.figure(figsize=(8, 8))
     ax = fig.add_subplot(111)
