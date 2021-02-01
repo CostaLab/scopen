@@ -30,26 +30,6 @@ def load_data(args):
     return data, barcodes, peaks
 
 
-def save_data(w, h, peaks, barcodes, args):
-    m_hat = np.dot(w, h)
-    df = pd.DataFrame(data=w, index=peaks)
-    df.to_csv(os.path.join(args.output_dir, "{}_peaks.txt".format(args.output_prefix)), sep="\t")
-
-    df = pd.DataFrame(data=h, columns=barcodes)
-    df.to_csv(os.path.join(args.output_dir, "{}_barcodes.txt".format(args.output_prefix)), sep="\t")
-
-    if args.output_format == "sparse":
-        filename = os.path.join(args.output_dir, "{}.txt".format(args.output_prefix))
-        write_data_to_sparse_file(filename=filename, data=m_hat, barcodes=barcodes, peaks=peaks)
-
-    elif args.output_format == "dense":
-        filename = os.path.join(args.output_dir, "{}.txt".format(args.output_prefix))
-        write_data_to_dense_file(filename=filename, data=m_hat, barcodes=barcodes, peaks=peaks)
-
-    elif args.output_format == "10X":
-        write_data_to_10x(output_dir=args.output_dir, data=m_hat, barcodes=barcodes, peaks=peaks)
-
-
 def get_data_from_sparse_file(filename):
     peaks = []
     barcodes = []
