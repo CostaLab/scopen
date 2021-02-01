@@ -54,6 +54,13 @@ def parse_args():
                         help="Random state. Default: 42")
     parser.add_argument("--nc", type=int, metavar="INT", default=1,
                         help="The number of cores. DEFAULT: 1")
+    parser.add_argument("--binary", default=False,
+                        action='store_true',
+                        help='If set, a binary matrix will also be generated. '
+                             'Default: False')
+    parser.add_argument("--binary_quantile", type=float, default=0.5,
+                        help="The quantile value for binarize matrix."
+                             "Default: 0.5")
     parser.add_argument("--verbose", type=int, default=0)
 
     version_message = "Version: " + str(__version__)
@@ -66,8 +73,8 @@ def tf_idf_transform(data):
     print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
           f"running tf-idf transformation...")
     model = TfidfTransformer(smooth_idf=False, norm="l2")
-    model._idf_diag -= 1
     model = model.fit(np.transpose(data))
+    model.idf_ -= 1
     tf_idf = np.transpose(model.transform(np.transpose(data)))
 
     return tf_idf
@@ -174,7 +181,50 @@ def main():
         res = run_nmf(arguments)
         w_hat, h_hat = res[0], res[1]
 
-    save_data(w=w_hat, h=h_hat, peaks=peaks, barcodes=barcodes, args=args)
+    df = pd.DataFrame(data=w_hat, index=peaks)
+    df.to_csv(os.path.join(args.output_dir, "{}_peaks.txt".format(args.output_prefix)), sep="\t")
+
+    df = pd.DataFrame(data=h_hat, columns=barcodes)
+    df.to_csv(os.path.join(args.output_dir, "{}_barcodes.txt".format(args.output_prefix)), sep="\t")
+
+    m_hat = np.dot(w_hat, h_hat).astype(np.float32)
+    m_hat_binary = None
+
+    if args.binary:
+        threshold = np.quantile(m_hat, args.binary_quantile)
+        m_hat_binary = (m_hat > threshold).astype(np.int8)
+
+    if args.output_format == "sparse":
+        filename = os.path.join(args.output_dir, "{}.txt".format(args.output_prefix))
+        write_data_to_sparse_file(filename=filename,
+                                  data=m_hat,
+                                  barcodes=barcodes,
+                                  peaks=peaks)
+        if m_hat_binary is not None:
+            filename = os.path.join(args.output_dir, "{}_binary.txt".format(args.output_prefix))
+            write_data_to_sparse_file(filename=filename,
+                                      data=m_hat_binary,
+                                      barcodes=barcodes,
+                                      peaks=peaks)
+
+    elif args.output_format == "dense":
+        filename = os.path.join(args.output_dir, "{}.txt".format(args.output_prefix))
+        write_data_to_dense_file(filename=filename,
+                                 data=m_hat,
+                                 barcodes=barcodes,
+                                 peaks=peaks)
+        if m_hat_binary is not None:
+            filename = os.path.join(args.output_dir, "{}_binary.txt".format(args.output_prefix))
+            write_data_to_dense_file(filename=filename,
+                                     data=m_hat_binary,
+                                     barcodes=barcodes,
+                                     peaks=peaks)
+
+    elif args.output_format == "10X":
+        write_data_to_10x(output_dir=args.output_dir,
+                          data=m_hat,
+                          barcodes=barcodes,
+                          peaks=peaks)
 
     secs = time.time() - start
     m, s = divmod(secs, 60)
