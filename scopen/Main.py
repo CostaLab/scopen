@@ -1,12 +1,8 @@
 import time
 import argparse
-from sklearn.neighbors import NearestNeighbors
 from sklearn.feature_extraction.text import TfidfTransformer
 from multiprocessing import Pool, cpu_count
 from kneed import KneeLocator
-import scipy.sparse as sp
-from sklearn.utils import check_array
-from sklearn.utils.validation import check_is_fitted, check_array, FLOAT_DTYPES
 
 from .MF import NMF
 from .Utils import *
@@ -31,7 +27,7 @@ def parse_args():
     parser.add_argument("--n_components", type=int, default=30,
                         help="Number of components. "
                              "Default: 30")
-    parser.add_argument("--alpha", type=float, default=1,
+    parser.add_argument("--alpha", type=float, default=1.0,
                         help="Parameter for model regularization to prevent from over-fitting. "
                              "Default: 1")
     parser.add_argument("--max_iter", type=int, default=500,
@@ -54,6 +50,11 @@ def parse_args():
                         help="Random state. Default: 42")
     parser.add_argument("--nc", type=int, metavar="INT", default=1,
                         help="The number of cores. DEFAULT: 1")
+    parser.add_argument("--no_impute", default=False,
+                        action='store_true',
+                        help='If set, scOpen will not save the imputed matrix. '
+                             'Set it if you only want to use the dimension reduced matrix. '
+                             'Default: False')
     parser.add_argument("--binary", default=False,
                         action='store_true',
                         help='If set, a binary matrix will also be generated. '
@@ -174,7 +175,7 @@ def main():
     else:
         print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
               f"running NMF...")
-        arguments = (data, args.n_components, args.alpha,
+        arguments = (tf_idf, args.n_components, args.alpha,
                      args.max_iter, args.verbose,
                      args.random_state)
 
@@ -187,44 +188,46 @@ def main():
     df = pd.DataFrame(data=h_hat, columns=barcodes)
     df.to_csv(os.path.join(args.output_dir, "{}_barcodes.txt".format(args.output_prefix)), sep="\t")
 
-    m_hat = np.dot(w_hat, h_hat).astype(np.float32)
-    m_hat_binary = None
+    if not args.no_impute:
 
-    if args.binary:
-        threshold = np.quantile(m_hat, args.binary_quantile)
-        m_hat_binary = (m_hat > threshold).astype(np.int8)
+        m_hat = np.dot(w_hat, h_hat).astype(np.float32)
+        m_hat_binary = None
 
-    if args.output_format == "sparse":
-        filename = os.path.join(args.output_dir, "{}.txt".format(args.output_prefix))
-        write_data_to_sparse_file(filename=filename,
-                                  data=m_hat,
-                                  barcodes=barcodes,
-                                  peaks=peaks)
-        if m_hat_binary is not None:
-            filename = os.path.join(args.output_dir, "{}_binary.txt".format(args.output_prefix))
+        if args.binary:
+            threshold = np.quantile(m_hat, args.binary_quantile)
+            m_hat_binary = (m_hat > threshold).astype(np.int8)
+
+        if args.output_format == "sparse":
+            filename = os.path.join(args.output_dir, "{}.txt".format(args.output_prefix))
             write_data_to_sparse_file(filename=filename,
-                                      data=m_hat_binary,
+                                      data=m_hat,
                                       barcodes=barcodes,
                                       peaks=peaks)
+            if m_hat_binary is not None:
+                filename = os.path.join(args.output_dir, "{}_binary.txt".format(args.output_prefix))
+                write_data_to_sparse_file(filename=filename,
+                                          data=m_hat_binary,
+                                          barcodes=barcodes,
+                                          peaks=peaks)
 
-    elif args.output_format == "dense":
-        filename = os.path.join(args.output_dir, "{}.txt".format(args.output_prefix))
-        write_data_to_dense_file(filename=filename,
-                                 data=m_hat,
-                                 barcodes=barcodes,
-                                 peaks=peaks)
-        if m_hat_binary is not None:
-            filename = os.path.join(args.output_dir, "{}_binary.txt".format(args.output_prefix))
+        elif args.output_format == "dense":
+            filename = os.path.join(args.output_dir, "{}.txt".format(args.output_prefix))
             write_data_to_dense_file(filename=filename,
-                                     data=m_hat_binary,
+                                     data=m_hat,
                                      barcodes=barcodes,
                                      peaks=peaks)
+            if m_hat_binary is not None:
+                filename = os.path.join(args.output_dir, "{}_binary.txt".format(args.output_prefix))
+                write_data_to_dense_file(filename=filename,
+                                         data=m_hat_binary,
+                                         barcodes=barcodes,
+                                         peaks=peaks)
 
-    elif args.output_format == "10X":
-        write_data_to_10x(output_dir=args.output_dir,
-                          data=m_hat,
-                          barcodes=barcodes,
-                          peaks=peaks)
+        elif args.output_format == "10X":
+            write_data_to_10x(output_dir=args.output_dir,
+                              data=m_hat,
+                              barcodes=barcodes,
+                              peaks=peaks)
 
     secs = time.time() - start
     m, s = divmod(secs, 60)

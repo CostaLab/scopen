@@ -198,7 +198,7 @@ def plot_knee(kl, args):
 
     ax.set_xlabel("Rank")
     ax.set_ylabel("Error")
-    ax.set_title("Knee Point")
+    ax.set_title(f"Knee Point: {kl.knee}")
 
     output_filename = os.path.join(args.output_dir, "{}_error.pdf".format(args.output_prefix))
     fig.tight_layout()
