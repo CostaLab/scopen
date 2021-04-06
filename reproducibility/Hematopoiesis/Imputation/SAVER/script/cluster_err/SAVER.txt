@@ -1,0 +1,50 @@
+109418 genes, 2210 cells
+Running SAVER with 4 worker(s)
+Calculating predictions for 109418 genes using 34599 genes and 2210 cells...
+Start time: 2021-01-23 17:59:50
+Estimating finish time...
+Loading required package: SAVER
+loaded SAVER and set parent environment
+Loading required package: SAVER
+loaded SAVER and set parent environment
+Loading required package: SAVER
+loaded SAVER and set parent environment
+Loading required package: SAVER
+loaded SAVER and set parent environment
+Finished 8/109418 genes. Approximate finish time: 2021-01-23 18:20:08
+Calculating max cor cutoff...
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+Finished 100/109418 genes. Approximate finish time: 2021-01-23 19:05:25
+Calculating lambda coefficients...
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+Finished 1350/109418 genes. Approximate finish time: 2021-01-23 20:28:14
+Predicting remaining genes...
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+Finished 28367/109418 genes. Approximate finish time: 2021-01-24 00:15:22
+Predicting remaining genes...
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+Done!
+Finish time: 2021-01-24 00:13:02
+Total time: 6.220227 hours
+Warning message:
+In if (!(grepl("matrix", class(x), ignore.case = TRUE))) { :
+  the condition has length > 1 and only the first element will be used
+Rscript  --input=$1 --outdir=$2   292.49s  user 15.01s system 1% cpu 6:17:47.70 total
+avg shared (code):         0 KB
+avg unshared (data/stack): 0 KB
+total (sum):               0 KB
+max memory:                17343 MB
+page faults from disk:     23
+other page faults:         2701728

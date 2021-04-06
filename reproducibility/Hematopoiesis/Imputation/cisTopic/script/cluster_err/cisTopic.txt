@@ -1,0 +1,8 @@
+There were 16 warnings (use warnings() to see them)
+Rscript  --input=$1 --output=$2   331.95s  user 14.81s system 9% cpu 58:04.93 total
+avg shared (code):         0 KB
+avg unshared (data/stack): 0 KB
+total (sum):               0 KB
+max memory:                8662 MB
+page faults from disk:     61
+other page faults:         2538045

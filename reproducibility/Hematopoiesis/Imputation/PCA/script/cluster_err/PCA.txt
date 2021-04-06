@@ -1,0 +1,11 @@
+Warning message:
+In impute(X, ncp = ncp, scale = scale, method = method, ind.sup = ind.sup,  :
+  Stopped after  1000  iterations
+Rscript  --input=$1 --output=$2   137451.43s  user 12134.22s system 229% cpu 18:08:25.30 total
+avg shared (code):         0 KB
+avg unshared (data/stack): 0 KB
+total (sum):               0 KB
+max memory:                27093 MB
+page faults from disk:     32
+other page faults:         2002922740
+slurmstepd: error: Unable to send job complete message: Unable to contact slurm controller (connect failure)

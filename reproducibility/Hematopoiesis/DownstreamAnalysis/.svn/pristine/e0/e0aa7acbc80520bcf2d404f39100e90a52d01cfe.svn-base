@@ -1,0 +1,512 @@
+scv$tl$velocity(adata, model = "dynamics")
+scv$tl$velocity_graph(adata)
+# Plot results
+scv$pl$velocity_embedding_stream(adata, basis='umap', color='celltype')
+topgenes <- adata$var["fit_likelihood"]
+topgenes
+scv.pl.proportions(adata)
+scv$pl
+$proportions(adata)
+scv$pl$proportions(adata)
+pdf("rna_velo.pdf")
+scv$pl$scatter(adata, basis=names(topgenes_vals)[1:5], ncols=5, frameon=FALSE)
+# Plot results
+pdf("rna_velo.pdf")
+scv$pl$velocity_embedding_stream(adata, basis='umap', color='celltype')
+dev.off()
+adata$obs_names
+scv$pl$velocity_embedding_stream(adata, basis='umap', color='celltype')
+scv$pl$proportions(adata)
+scv$pl$proportions(adata, groupby="celltype")
+topgenes <- adata$var["fit_likelihood"]
+head(topgenes)
+topgenes_vals <- topgenes[, 1]
+topgenes <- as.data.frame(adata$var["fit_likelihood"])
+topgenes <- adata$var["fit_likelihood"]
+topgenes[, 1]
+topgenes[, 2]
+topgenes
+topgenes$BSDC1
+adata$var$fit_likelihood
+topgenes <- adata$var$fit_likelihood
+head(topgenes)
+head(topgenes[1])
+head(topgenes[1, ])
+head(topgenes[1, 1])
+head(topgenes[, 1])
+head(topgenes[, :1])
+names(topgenes_vals) <- rownames(topgenes)
+rownames(topgenes)
+scv$pl$velocity_embedding_stream(adata, basis='pca')
+scv$pl$velocity_embedding_stream(adata, basis='pca', color="celltype")
+DefaultAssay(pbmc) <- "RNA"
+ad <- import("anndata", convert = FALSE)
+df_obs <- as.data.frame(pbmc@meta.data)
+df_var <- data.frame(rownames(pbmc))
+colnames(df_var) <- "genes"
+rownames(df_var) <- df_var$genes
+adata <- ad$AnnData(X = t(pbmc@assays$RNA@counts),
+obs = df_obs,
+var = df_var,
+layers = list('spliced' = t(pbmc@assays$RNA_spliced@counts),
+'unspliced' = t(pbmc@assays$RNA_unspliced@counts)),
+obsm = list('X_umap' = pbmc@reductions$rna_umap@cell.embeddings,
+'X_pca' = pbmc@reductions$rna_pca@cell.embeddings))
+adata
+adata$write('./PBMC_10k/adata.h5ad', compression='gzip')
+setwd("~/Cluster/izkf/projects/SingleCellOpenChromatin/local/VisiumHeart/ATAC_Integration/code")
+library(ggplot2)
+library(ArchR)
+library(stringr)
+library(magrittr)
+library(readr)
+library(Matrix)
+library(tidyr)
+library(dplyr)
+library(plotly)
+library(Signac)
+library(Seurat)
+library(cluster)
+library(mclust)
+library(cowplot)
+library(gridExtra)
+library(clustree)
+library(GenomicRanges)
+library(GenomeInfoDb)
+library(EnsDb.Hsapiens.v86)
+library(ComplexHeatmap)
+DefaultAssay(fib) <- "Peaks"
+cols.celltypes = c('Cardiomyocytes' = '#800000',
+'Cardiomyocytes 1' = '#800000',
+'Cardiomyocytes 2' = '#9A6324',
+'Cardiomyocytes 3' = '#808000',
+'Fibroblasts 1' = '#911eb4',
+'Fibroblasts 2' = '#e6beff',
+'Fibroblasts 3' = '#f032e6',
+'Fibroblasts 4' = '#f032e6',
+'Fibroblasts 5' = '#f032e6',
+'Fibroblasts 0' = '#f032e6',
+'Endothelial cells 1' = '#000075',
+'Endothelial cells 2' = 'blue',
+'Endothelial cells 3' = '#568198',
+'Endothelial cells 4' = '#469990',
+'Endothelial cells 5' = '#469990',
+'Endothelial cells 6' = '#469990',
+'Macrophages' = '#e6194B',
+'Macrophages 1' = '#e6194B',
+'Macrophages 2' = '#fabebe',
+'Pericytes' = '#f58231',
+'T cells' = '#ffe119',
+'Lymphatic endothelial cells' = '#ffd8b1',
+'Adipocytes' = '#000000',
+'Neuronal cells' = '#42d4f4',
+'Erythrocytes' = '#999999',
+'Endothelial cells (damaged)' = '#999999',
+'Vascular smooth muscle cells' = '#aaffc3')
+if(!file.exists("../data/fib.Rds")){
+heart.integrated <- readRDS("../data/heart.integrated.Rds")
+print(heart.integrated)
+Idents(heart.integrated) <- "celltype"
+fib <- subset(heart.integrated,
+idents = c("Fibroblasts 0",
+"Fibroblasts 1",
+"Fibroblasts 2",
+"Fibroblasts 3",
+"Fibroblasts 5"))
+counts <- fib@assays$Peaks@counts
+chrom_assay <- CreateChromatinAssay(counts = counts,
+sep = c(":", "-"),
+min.cells = 10,
+genome = 'hg38')
+fib <- CreateSeuratObject(counts = chrom_assay,
+assay = "Peaks",
+meta.data = fib@meta.data)
+saveRDS(fib, file = "../data/fib.Rds")
+} else{
+fib <- readRDS("../data/fib.Rds")
+}
+set.seed(42)
+DefaultAssay(fib) <- "Peaks"
+fib <- fib %>%
+RunTFIDF() %>%
+FindTopFeatures(min.cutoff = 'q0')
+RunSVD()
+fib <- fib %>%
+RunTFIDF() %>%
+FindTopFeatures(min.cutoff = 'q0') %>%
+RunSVD() %>%
+RunUMAP(reduction = 'lsi', dims = 2:30)
+p1 <- DimPlot(object = fib, label = TRUE, cols = cols.celltypes,
+group.by = "celltype")
+p2 <- DimPlot(object = fib, label = TRUE, group.by = "spatial.ident")
+p1 + p2
+library(harmony)
+install.packages("harmony")
+BiocManager::install("harmony")
+devtools::install_github("immunogenomics/harmony")
+library(harmony)
+fib <- RunHarmony(object = fib,
+group.by.vars = 'spatial.ident',
+reduction = 'lsi',
+assay.use = 'Peaks',
+project.dim = FALSE)
+fib <- RunUMAP(fib, dims = 2:30, reduction = 'harmony',
+reduction.name = "harmony_umap")
+p1 <- DimPlot(object = fib.integrated, label = TRUE, cols = cols.celltypes,
+reduction = "harmony_umap", group.by = "celltype")
+p1 <- DimPlot(object = fib, label = TRUE, cols = cols.celltypes,
+reduction = "harmony_umap", group.by = "celltype")
+p2 <- DimPlot(object = fib, label = TRUE, group.by = "spatial.ident",
+reduction = "harmony_umap")
+p1 + p2
+DefaultAssay(fib) <- "Peaks"
+fib <- NormalizeData(fib, normalization.method = "LogNormalize")
+fib <- FindVariableFeatures(fib, nfeatures = 5000)
+fib <- ScaleData(fib, features = VariableFeatures(fib))
+fib
+cols.celltypes = c('Cardiomyocytes' = '#800000',
+'Cardiomyocytes 1' = '#800000',
+'Cardiomyocytes 2' = '#9A6324',
+'Cardiomyocytes 3' = '#808000',
+'Fibroblasts 1' = '#911eb4',
+'Fibroblasts 2' = '#e6beff',
+'Fibroblasts 3' = '#f032e6',
+'Fibroblasts 4' = '#f032e6',
+'Fibroblasts 5' = '#f032e6',
+'Fibroblasts 0' = '#f032e6',
+'Endothelial cells 1' = '#000075',
+'Endothelial cells 2' = 'blue',
+'Endothelial cells 3' = '#568198',
+'Endothelial cells 4' = '#469990',
+'Endothelial cells 5' = '#469990',
+'Endothelial cells 6' = '#469990',
+'Macrophages' = '#e6194B',
+'Macrophages 1' = '#e6194B',
+'Macrophages 2' = '#fabebe',
+'Pericytes' = '#f58231',
+'T cells' = '#ffe119',
+'Lymphatic endothelial cells' = '#ffd8b1',
+'Adipocytes' = '#000000',
+'Neuronal cells' = '#42d4f4',
+'Erythrocytes' = '#999999',
+'Endothelial cells (damaged)' = '#999999',
+'Vascular smooth muscle cells' = '#aaffc3')
+if(!file.exists("../data/fib.Rds")){
+heart.integrated <- readRDS("../data/heart.integrated.Rds")
+print(heart.integrated)
+Idents(heart.integrated) <- "celltype"
+fib <- subset(heart.integrated,
+idents = c("Fibroblasts 0",
+"Fibroblasts 1",
+"Fibroblasts 2",
+"Fibroblasts 3",
+"Fibroblasts 5"))
+saveRDS(fib, file = "../data/fib.Rds")
+} else{
+fib <- readRDS("../data/fib.Rds")
+}
+set.seed(42)
+fib
+DefaultAssay(fib) <- "integrated"
+fib <- RunUMAP(fib,
+reduction = "pca",
+reduction.name = "umap",
+dims = 1:30)
+p1 <- DimPlot(object = fib, label = TRUE, cols = cols.celltypes,
+group.by = "celltype")
+p2 <- DimPlot(object = fib, label = TRUE, group.by = "spatial.ident")
+p1 + p2
+DefaultAssay(fib) <- "integrated"
+fib <- ScaleData(fib,
+features = rownames(fib),
+verbose = FALSE)
+fib <- RunPCA(fib, npcs = 30,
+reduction.name = "pca",
+verbose = FALSE)
+fib <- RunUMAP(fib,
+reduction = "pca",
+reduction.name = "umap",
+dims = 1:30)
+p1 <- DimPlot(object = fib, label = TRUE, cols = cols.celltypes,
+group.by = "celltype")
+p2 <- DimPlot(object = fib, label = TRUE, group.by = "spatial.ident")
+p1 + p2
+library(destiny)
+df <- as.data.frame(fib.integrated@reductions$pca@cell.embeddings[, 2:30])
+library(destiny)
+df <- as.data.frame(fib@reductions$pca@cell.embeddings[, 2:30])
+data <- as.ExpressionSet(df)
+dm <- DiffusionMap(data,
+verbose = TRUE)
+dpt <- DPT(dm)
+pdf("dm.pdf", width = 8, height = 8)
+plot(dpt)
+dev.off()
+embedding <- as.data.frame(dm)[, c("DC1", "DC2")]
+rownames(embedding) <- colnames(fib)
+fib[['dm']] = CreateDimReducObject(embeddings = as.matrix(embedding),
+key = 'DC_',
+assay = 'integrated')
+p <- DimPlot(fib,
+reduction = 'dm',
+pt.size = 0.5,
+group.by = "celltype",
+cols = cols.celltypes)
+print(p)
+?phate
+library(phateR)
+?phate
+?DiffusionMap
+?phate
+library(ggplot2)
+library(stringr)
+library(magrittr)
+library(WriteXLS)
+install.packages("WriteXLS")
+library(ggplot2)
+library(stringr)
+library(magrittr)
+library(WriteXLS)
+library(tidyr)
+library(dplyr)
+library(plotly)
+library(cluster)
+library(cowplot)
+library(gridExtra)
+library(viridis)
+library(data.table)
+library(Seurat)
+message("Reading in integrated data...")
+obj <- readRDS("../../scRNA_filtered/trajectory_analysis/fib.subset.reclustered.rds")
+print(obj)
+setwd("~/Cluster/icg-data/scATA/SingleCellOpenChromatin/local/ATAC/Cell2018/Visualization")
+library(ggplot2)
+library(Seurat)
+library(stringr)
+library(magrittr)
+library(readr)
+library(Matrix)
+library(tidyr)
+library(dplyr)
+library(plotly)
+library(Signac)
+library(cluster)
+library(mclust)
+library(cowplot)
+library(gridExtra)
+library(RColorBrewer)
+counts <- read.table("../TagCount/TagCount.txt", header = TRUE)
+chrom_assay <- CreateChromatinAssay(
+counts = counts,
+sep = c("_", "_"),
+genome = 'hg19',
+min.cells = 0,
+min.features = 0
+)
+obj <- CreateSeuratObject(
+counts = chrom_assay,
+assay = "peaks"
+)
+obj
+cols.celltype <- c("CLP" = "#98D9E9", "CMP" = "#FFC179",
+"GMP" = "#FFA300", "HSC" = "#00441B",
+"LMPP" = "#00AF99", "MEP" = "#F6313E",
+"MPP" = "#46A040", "pDC" = "#C390D4")
+df <- read.table("./UMAP/scOpen.txt", header = TRUE)
+rownames(df) <- df$Runs
+embeddings <- as.matrix(df[, c("UMAP1", "UMAP2")])
+obj[['umap']] <- CreateDimReducObject(embeddings = embeddings,
+key = "UMAP",
+assay = "peaks")
+obj <- AddMetaData(object = obj, metadata = df)
+obj$NumofReads_log10 <- log10(obj$NumofReads)
+DimPlot(obj, reduction = "umap", group.by = "CellType") +
+scale_color_manual(values = cols.celltype) +
+xlab("UMAP1") + ylab("UAMP2") +
+ggtitle("")
+FeaturePlot(obj, features = "NumofReads_log10",
+reduction = "umap")
+dev <- readRDS("../DownstreamAnalysis/ChromVAR/scOpen/chromVAR.rds")
+dev
+obj
+colnames(obj)
+head(colnames(obj))
+dev
+tf_deviations <- dev@assays@data[['deviations']]
+tf_deviations[is.na(tf_deviations)] <- 0
+tf_deviations <- tf_deviations[, colnames(obj)]
+colnames(tf_deviations)
+head(colnames(tf_deviations))
+head(colnames(obj))
+obj[["motif"]] <- CreateAssayObject(data = tf_deviations)
+DefaultAssay(obj) <- "motif"
+all.tfs <- rownames(obj)
+#obj <- ScaleData(obj, features = all.tfs)
+p1 <- FeaturePlot(obj, reduction = "umap", features = "MA0502.1.NFYB")+
+scale_color_gradient2(midpoint=0, low="blue", mid="gray",
+high="red", space ="Lab" )
+p1
+p2 <- FeaturePlot(obj, reduction = "umap", features = "MA0140.2.GATA1::TAL1") +
+scale_color_gradient2(midpoint=0, low="blue", mid="gray",
+high="red", space ="Lab" )
+p2
+p2
+print(p1)
+print(p2)
+p1
+p2
+rownames(counts)
+coord_cols <- str_split_fixed(rownames(counts), ":|-|_", 3)
+View(coord_cols)
+head(rownames(counts))
+rowRanges <- GRanges(coord_cols[, 1],
+ranges = IRanges(as.numeric(coord_cols[, 2]),
+as.numeric(coord_cols[, 3])))
+library(chromVAR)
+library(mclust)
+library(motifmatchr)
+library(BSgenome.Hsapiens.UCSC.hg19)
+library(stringr)
+library(GenomicRanges)
+library(JASPAR2018)
+library(IRanges)
+library(SummarizedExperiment)
+library(TFBSTools)
+library(pheatmap)
+library(pdfCluster)
+library(ggplot2)
+library(cowplot)
+library(gridExtra)
+library(e1071)
+library(dplyr)
+library(tibble)
+library(Seurat)
+library(cowplot)
+library(gridExtra)
+install.packages("pheatmap")
+install.packages("pdfCluster")
+input_file <- "../../TagCount/TagCount.txt"
+df <- read.table(input_file, header = TRUE)
+setwd("~/Cluster/icg-data/scATA/SingleCellOpenChromatin/local/ATAC/Cell2018/DownstreamAnalysis/ChromVAR")
+df <- read.table(input_file, header = TRUE)
+df_anno <- read.table("../../Statistics/stat.txt", header = TRUE) %>%
+subset(., Runs %in% colnames(df)) %>%
+rename(., Cell = Runs)
+df_anno <- read.table("../../Statistics/stat.txt", header = TRUE)
+head(df_anno)
+library(chromVAR)
+library(mclust)
+library(motifmatchr)
+library(BSgenome.Hsapiens.UCSC.hg19)
+library(stringr)
+library(GenomicRanges)
+library(JASPAR2018)
+library(IRanges)
+library(SummarizedExperiment)
+library(TFBSTools)
+library(pheatmap)
+library(pdfCluster)
+library(ggplot2)
+library(cowplot)
+library(gridExtra)
+library(e1071)
+library(dplyr)
+library(tibble)
+library(Seurat)
+library(cowplot)
+library(gridExtra)
+BiocManager::install("BSgenome.Hsapiens.UCSC.hg19")
+devtools::install_github("da-bar/JASPAR2020")
+library(JASPAR2020)
+opts <- list()
+opts["species"] <- "Homo sapiens"
+opts["collection"] <- "CORE"
+motifs1 <- getMatrixSet(JASPAR2020, opts)
+opts["species"] <- "Mus musculus"
+opts["collection"] <- "CORE"
+motifs2 <- getMatrixSet(JASPAR2020, opts)
+motifs1
+motifs2
+names(motifs1)
+name(motifs1)
+names(motifs1) <- paste(names(motifs1), name(motifs1), sep = ".")
+names(motifs2) <- paste(names(motifs2), name(motifs2), sep = ".")
+motif_names <- unique(c(names(motifs1), names(motifs2)))
+motif_names
+motifs <- c(motifs1, motifs2)
+motifs <- motifs[motif_names]
+df_anno <- read.table("../../Statistics/stat.txt", header = TRUE) %>%
+subset(., Runs %in% colnames(df)) %>%
+rename(., Cell = Runs)
+rownames(df_anno) <- df_anno$Cell
+df_anno <- subset(df_anno, select = c("CellType"))
+coord_cols <- str_split_fixed(rownames(df), ":|-|_", 3)
+rowRanges <- GRanges(coord_cols[, 1],
+ranges = IRanges(as.numeric(coord_cols[, 2]),
+as.numeric(coord_cols[, 3])))
+rse <- SummarizedExperiment(assays = SimpleList(counts=as.matrix(df)),
+rowRanges = rowRanges,
+colData = df_anno)
+counts <- addGCBias(rse, genome = BSgenome.Hsapiens.UCSC.hg19)
+?rename
+df_anno <- read.table("../../Statistics/stat.txt", header = TRUE) %>%
+subset(., Runs %in% colnames(df))
+rownames(df_anno) <- df_anno$Runs
+head(df_anno)
+df_anno <- subset(df_anno, select = c("CellType"))
+coord_cols <- str_split_fixed(rownames(df), ":|-|_", 3)
+rowRanges <- GRanges(coord_cols[, 1],
+ranges = IRanges(as.numeric(coord_cols[, 2]),
+as.numeric(coord_cols[, 3])))
+rse <- SummarizedExperiment(assays = SimpleList(counts=as.matrix(df)),
+rowRanges = rowRanges,
+colData = df_anno)
+rse
+counts <- addGCBias(rse, genome = BSgenome.Hsapiens.UCSC.hg19)
+library(BSgenome.Hsapiens.UCSC.hg19)
+?addGCBias
+?matchMotifs
+?matchMotifs
+BiocManager::install("BSgenome.Hsapiens.UCSC.hg19")
+library(BSgenome.Hsapiens.UCSC.hg19)
+?getJasparMotifs
+?CreateSeuratObject
+?CreateSeuratObject
+setwd("~/Cluster/icg-data/scATA/SingleCellOpenChromatin/local/ATAC/Cell2018/DownstreamAnalysis/ChromVAR")
+?getJasparMotifs
+?ScaleData
+?VlnPlot
+df_dev
+dev
+df_dev <-as.data.frame(deviations(dev))
+colnames(df_dev)
+head(colnames(df_dev))
+head(df_anno)
+input_file
+df_anno <- read.table("../../Statistics/stat.txt", header = TRUE) %>%
+subset(., Runs %in% colnames(df))
+head(df_anno)
+dim(df_anno)
+df_anno <- read.table("../../Visualization/UMAP/scOpen.txt",
+header = TRUE)
+head(df_anno)
+coord_cols <- str_split_fixed(rownames(df), ":|-|_", 3)
+rowRanges <- GRanges(coord_cols[, 1],
+ranges = IRanges(as.numeric(coord_cols[, 2]),
+as.numeric(coord_cols[, 3])))
+rownames(df_anno) <- df_anno$Runs
+rse <- SummarizedExperiment(assays = SimpleList(counts=as.matrix(df)),
+rowRanges = rowRanges,
+colData = df_anno)
+counts <- addGCBias(rse, genome = BSgenome.Hsapiens.UCSC.hg19)
+counts
+?computeDeviations
+df_anno <- read.table(glue("../../Visualization/UMAP/{data}.txt"),
+header = TRUE)
+library(glue)
+df_anno <- read.table(glue("../../Visualization/UMAP/{data}.txt"),
+header = TRUE)
+data <- "Raw"
+df_anno <- read.table(glue("../../Visualization/UMAP/{data}.txt"),
+header = TRUE)
+head(df_anno)

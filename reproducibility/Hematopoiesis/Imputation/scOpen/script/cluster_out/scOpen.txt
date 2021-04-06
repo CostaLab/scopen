@@ -1,0 +1,17 @@
+Namespace(alpha=1.0, binary=False, binary_quantile=0.5, estimate_rank=True, input='../../../TagCount/TagCount.txt', input_format='dense', max_iter=500, max_n_components=30, min_n_components=2, n_components=30, nc=4, no_impute=False, output_dir='../', output_format='dense', output_prefix='scOpen', random_state=42, step_n_components=1, verbose=0)
+03/08/2021 17:18:41, detected 128 cpus, 4 of them are used.
+03/08/2021 17:18:41, loading data...
+03/08/2021 17:19:01, number of peaks: 109418; number of cells 2210
+03/08/2021 17:19:01, number of non-zeros before imputation: 13161350
+03/08/2021 17:19:01, sparsity: 0.9455723739151672
+03/08/2021 17:19:02, running tf-idf transformation...
+03/08/2021 17:19:05, running rank estimation...
+03/08/2021 17:19:29, ranks: 6, fitting error: 45.1142035170084
+03/08/2021 17:20:02, ranks: 7, fitting error: 45.08785594566808
+03/08/2021 17:21:34, ranks: 14, fitting error: 44.97273143491288
+03/08/2021 17:22:36, ranks: 15, fitting error: 44.96039637453695
+03/08/2021 17:24:51, ranks: 22, fitting error: 44.885846798511395
+03/08/2021 17:27:13, ranks: 23, fitting error: 44.87654662688345
+03/08/2021 17:30:14, ranks: 30, fitting error: 44.81689090149755
+03/08/2021 17:37:20, total time:  0.00h  18.00m  38.66s
+It took 1120 seconds
