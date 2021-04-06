@@ -1,8 +1,0 @@
-Loading required package: parallel
-Loading required package: kernlab
-Loading required package: penalized
-Loading required package: survival
-Welcome to penalized. For extended examples, see vignette("penalized").
-Loading required package: doParallel
-Loading required package: foreach
-Loading required package: iterators

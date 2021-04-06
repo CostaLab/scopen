@@ -1,3 +1,0 @@
-Warning message:
-In impute(X, ncp = ncp, scale = scale, method = method, ind.sup = ind.sup,  :
-  Stopped after  1000  iterations
