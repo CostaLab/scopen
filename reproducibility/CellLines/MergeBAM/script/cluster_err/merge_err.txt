@@ -1,0 +1,98 @@
+INFO  @ Wed, 22 Aug 2018 01:33:18: 
+# Command line: callpeak -t ATAC.bam -n ATAC --outdir Peaks -g hs -f BAM --keep-dup all --call-summits
+# ARGUMENTS LIST:
+# name = ATAC
+# format = BAM
+# ChIP-seq file = ['ATAC.bam']
+# control file = None
+# effective genome size = 2.70e+09
+# band width = 300
+# model fold = [5, 50]
+# qvalue cutoff = 5.00e-02
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 10000 bps
+# Broad region calling is off
+# Paired-End mode is off
+# Searching for subpeak summits is on
+ 
+INFO  @ Wed, 22 Aug 2018 01:33:18: #1 read tag files... 
+INFO  @ Wed, 22 Aug 2018 01:33:18: #1 read treatment tags... 
+INFO  @ Wed, 22 Aug 2018 01:33:24:  1000000 
+INFO  @ Wed, 22 Aug 2018 01:33:30:  2000000 
+INFO  @ Wed, 22 Aug 2018 01:33:36:  3000000 
+INFO  @ Wed, 22 Aug 2018 01:33:42:  4000000 
+INFO  @ Wed, 22 Aug 2018 01:33:48:  5000000 
+INFO  @ Wed, 22 Aug 2018 01:33:54:  6000000 
+INFO  @ Wed, 22 Aug 2018 01:34:00:  7000000 
+INFO  @ Wed, 22 Aug 2018 01:34:06:  8000000 
+INFO  @ Wed, 22 Aug 2018 01:34:13:  9000000 
+INFO  @ Wed, 22 Aug 2018 01:34:19:  10000000 
+INFO  @ Wed, 22 Aug 2018 01:34:25:  11000000 
+INFO  @ Wed, 22 Aug 2018 01:34:31:  12000000 
+INFO  @ Wed, 22 Aug 2018 01:34:37:  13000000 
+INFO  @ Wed, 22 Aug 2018 01:34:43:  14000000 
+INFO  @ Wed, 22 Aug 2018 01:34:49:  15000000 
+INFO  @ Wed, 22 Aug 2018 01:34:55:  16000000 
+INFO  @ Wed, 22 Aug 2018 01:35:01:  17000000 
+INFO  @ Wed, 22 Aug 2018 01:35:07:  18000000 
+INFO  @ Wed, 22 Aug 2018 01:35:13:  19000000 
+INFO  @ Wed, 22 Aug 2018 01:35:18:  20000000 
+INFO  @ Wed, 22 Aug 2018 01:35:24:  21000000 
+INFO  @ Wed, 22 Aug 2018 01:35:30:  22000000 
+INFO  @ Wed, 22 Aug 2018 01:35:36:  23000000 
+INFO  @ Wed, 22 Aug 2018 01:35:42:  24000000 
+INFO  @ Wed, 22 Aug 2018 01:35:48:  25000000 
+INFO  @ Wed, 22 Aug 2018 01:35:54:  26000000 
+INFO  @ Wed, 22 Aug 2018 01:36:00:  27000000 
+INFO  @ Wed, 22 Aug 2018 01:36:07:  28000000 
+INFO  @ Wed, 22 Aug 2018 01:36:13:  29000000 
+INFO  @ Wed, 22 Aug 2018 01:36:19:  30000000 
+INFO  @ Wed, 22 Aug 2018 01:36:25:  31000000 
+INFO  @ Wed, 22 Aug 2018 01:36:31:  32000000 
+INFO  @ Wed, 22 Aug 2018 01:36:37:  33000000 
+INFO  @ Wed, 22 Aug 2018 01:36:43:  34000000 
+INFO  @ Wed, 22 Aug 2018 01:36:49:  35000000 
+INFO  @ Wed, 22 Aug 2018 01:36:55:  36000000 
+INFO  @ Wed, 22 Aug 2018 01:37:01:  37000000 
+INFO  @ Wed, 22 Aug 2018 01:37:07:  38000000 
+INFO  @ Wed, 22 Aug 2018 01:37:13:  39000000 
+INFO  @ Wed, 22 Aug 2018 01:37:19:  40000000 
+INFO  @ Wed, 22 Aug 2018 01:37:25:  41000000 
+INFO  @ Wed, 22 Aug 2018 01:37:30:  42000000 
+INFO  @ Wed, 22 Aug 2018 01:37:36:  43000000 
+INFO  @ Wed, 22 Aug 2018 01:37:42:  44000000 
+INFO  @ Wed, 22 Aug 2018 01:37:48:  45000000 
+INFO  @ Wed, 22 Aug 2018 01:37:54:  46000000 
+INFO  @ Wed, 22 Aug 2018 01:38:00:  47000000 
+INFO  @ Wed, 22 Aug 2018 01:38:06:  48000000 
+INFO  @ Wed, 22 Aug 2018 01:38:12:  49000000 
+INFO  @ Wed, 22 Aug 2018 01:38:18:  50000000 
+INFO  @ Wed, 22 Aug 2018 01:38:23: #1 tag size is determined as 54 bps 
+INFO  @ Wed, 22 Aug 2018 01:38:23: #1 tag size = 54 
+INFO  @ Wed, 22 Aug 2018 01:38:23: #1  total tags in treatment: 25378296 
+INFO  @ Wed, 22 Aug 2018 01:38:23: #1 finished! 
+INFO  @ Wed, 22 Aug 2018 01:38:23: #2 Build Peak Model... 
+INFO  @ Wed, 22 Aug 2018 01:38:23: #2 looking for paired plus/minus strand peaks... 
+INFO  @ Wed, 22 Aug 2018 01:38:29: #2 number of paired peaks: 71185 
+INFO  @ Wed, 22 Aug 2018 01:38:29: start model_add_line... 
+INFO  @ Wed, 22 Aug 2018 01:38:30: start X-correlation... 
+INFO  @ Wed, 22 Aug 2018 01:38:30: end of X-cor 
+INFO  @ Wed, 22 Aug 2018 01:38:30: #2 finished! 
+INFO  @ Wed, 22 Aug 2018 01:38:30: #2 predicted fragment length is 90 bps 
+INFO  @ Wed, 22 Aug 2018 01:38:30: #2 alternative fragment length(s) may be 90 bps 
+INFO  @ Wed, 22 Aug 2018 01:38:30: #2.2 Generate R script for model : Peaks/ATAC_model.r 
+WARNING @ Wed, 22 Aug 2018 01:38:30: #2 Since the d (90) calculated from paired-peaks are smaller than 2*tag length, it may be influenced by unknown sequencing problem! 
+WARNING @ Wed, 22 Aug 2018 01:38:30: #2 You may need to consider one of the other alternative d(s): 90 
+WARNING @ Wed, 22 Aug 2018 01:38:30: #2 You can restart the process with --nomodel --extsize XXX with your choice or an arbitrary number. Nontheless, MACS will continute computing. 
+INFO  @ Wed, 22 Aug 2018 01:38:30: #3 Call peaks... 
+INFO  @ Wed, 22 Aug 2018 01:38:30: #3 Going to call summits inside each peak ... 
+INFO  @ Wed, 22 Aug 2018 01:38:30: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Wed, 22 Aug 2018 01:39:30: #3 Call peaks for each chromosome... 
+INFO  @ Wed, 22 Aug 2018 01:41:09: #4 Write output xls file... Peaks/ATAC_peaks.xls 
+INFO  @ Wed, 22 Aug 2018 01:41:11: #4 Write peak in narrowPeak format file... Peaks/ATAC_peaks.narrowPeak 
+INFO  @ Wed, 22 Aug 2018 01:41:12: #4 Write summits bed file... Peaks/ATAC_summits.bed 
+INFO  @ Wed, 22 Aug 2018 01:41:13: Done! 
+awk: fatal: cannot open file `../Peaks/ATAC_summits.bed' for reading (No such file or directory)
+
+*****
+***** ERROR: Requested column 5, but database file ../ATACPeaks.bed only has fields 1 - 0.

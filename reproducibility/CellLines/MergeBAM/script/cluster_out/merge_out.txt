@@ -1,0 +1,41 @@
+Sender: LSF System <lsfadmin@linuxbmc0083>
+Subject: Job 44125573: <merge> in cluster <rcc> Done
+
+Job <merge> was submitted from host <login> by user <rs619065> in cluster <rcc> at Tue Aug 21 23:42:19 2018
+Job was executed on host(s) <linuxbmc0083>, in queue <rwth>, as user <rs619065> in cluster <rcc> at Wed Aug 22 00:40:43 2018
+</home/rs619065> was used as the home directory.
+</hpcwork/izkf/projects/SingleCellOpenChromatin/data/ATAC/Nature2015/Merged/script> was used as the working directory.
+Started at Wed Aug 22 00:40:43 2018
+Terminated at Wed Aug 22 01:41:14 2018
+Results reported at Wed Aug 22 01:41:14 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./run.zsh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   2048.85 sec.
+    Max Memory :                                 17310 MB
+    Average Memory :                             972.03 MB
+    Total Requested Memory :                     20480.00 MB
+    Delta Memory :                               3170.00 MB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                37
+    Run time :                                   3631 sec.
+    Turnaround time :                            7135 sec.
+
+The output (if any) follows:
+
+
+
+PS:
+
+Read file <./cluster_err/merge_err.txt> for stderr output of this job.
+
