@@ -5,4 +5,4 @@
 5. DimReduction ---> generate dimension reduction matrix
 6. DownstreamAnalysis ---> codes for scABC, Cicero and ChromVAR using either raw or scOpen imputed matrix as input
 7. EvaluationByAUPR ---> evaluate the imputation by using AUPR metric
-8. 
+8. ClusteringImputation ---> evaluate the imputation by clustering
