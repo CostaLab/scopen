@@ -1,0 +1,1 @@
+Rscript -e rmarkdown::render"('visualize.Rmd',output_file='visualize.html',clean=TRUE)" &

@@ -1,0 +1,112 @@
+---
+title: "visualization"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## load package
+```{r load_package}
+suppressPackageStartupMessages(library(data.table))
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(Matrix))
+suppressPackageStartupMessages(library(stringr))
+suppressPackageStartupMessages(library(cowplot))
+suppressPackageStartupMessages(library(BuenColors))
+suppressPackageStartupMessages(library(irlba))
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(patchwork))
+suppressPackageStartupMessages(library(doParallel))
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(Rtsne))
+registerDoParallel(cores = 11)
+```
+
+## define help function
+```{r help_function}
+get_pca <- function(mat, rank){
+    # mat: peak by cell
+    mat <- as.matrix(mat)
+    mat <- 1e5 * sweep(mat, 2, colSums(mat), "/")
+    mat.pca <- prcomp(t(mat), rank. = rank, scale. = TRUE)
+    x <- as.data.frame(mat.pca$x)
+    return(x)
+}
+```
+
+## set data
+```{r}
+method_list <- c('MAGIC', 'scImpute', 'SAVER', 'scOpen', 'cisTopic',
+                 'DCA', 'scBFA', 'SCALE', 'Raw', 'PCA',
+                 'scOpen_Dropout_0.0', 'scOpen_Dropout_0.5',
+                 'scOpen_Binarize_0.2', 'scOpen_Binarize_0.5')
+
+cols <- c("CLP" = "#98D9E9", "CMP" = "#FFC179", 
+          "GMP" = "#FFA300", "HSC" = "#00441B",
+          "LMPP" = "#00AF99", "MEP" = "#F6313E",
+          "MPP" = "#46A040", "pDC" = "#C390D4")
+
+anno_file <- "../../Statistics/stat.txt"
+df_anno <- read.table(anno_file, header = TRUE)
+```
+
+
+## visualization
+```{r, fig.width=12, fig.height=12}
+plot_list <- foreach (method = method_list) %dopar% {
+    if(method == "Raw"){
+        input_filename <- "../../TagCount/TagCount.txt"
+    } else{
+        input_filename <- paste0("../../Imputation/", method, "/", method, ".txt")
+    }
+    stopifnot(file.exists(input_filename))
+    
+    df <- read.table(input_filename, header = TRUE)
+    df.pca <- get_pca(df, rank = 50)
+    
+    set.seed(42)
+    tsne_out <- Rtsne(df.pca, pca = FALSE, verbose = FALSE,
+                      check_duplicates = FALSE)
+    df_tsne_out <- as.data.frame(tsne_out$Y)
+    colnames(df_tsne_out) <- c("tSNE1", "tSNE2")
+    df_tsne_out$Runs <- colnames(df)
+    df_plot <- merge.data.frame(df_tsne_out, df_anno, by = "Runs")
+    
+    p <- ggplot(data = df_plot, 
+                aes(x = tSNE1, y = tSNE2, color = CellType)) +
+        geom_point() +
+        scale_color_manual(values = cols) +
+        theme_cowplot() +
+        theme(legend.title = element_blank()) +
+        ggtitle(method)
+    
+    write.table(df_plot, file = paste0("./output/", method, ".txt"),
+                row.names = FALSE, sep = "\t", quote = FALSE)
+    ggsave(filename = paste0("./plot/", method, ".pdf"), plot = p,
+           width = 6, height = 4, units = "in")
+    
+    p
+}
+
+# extract the legend from one of the plots
+legend <- get_legend(
+  # create some space to the left of the legend
+  plot_list[[1]] + theme(legend.box.margin = margin(0, 0, 0, 0))
+)
+
+for (idx in 1:length(plot_list)) {
+    plot_list[[idx]] <- plot_list[[idx]] + theme(legend.position="none")
+}
+p <- plot_grid(plotlist = plot_list, legend,
+               nrow = 4)
+print(p)
+```
+
+
+## Session information
+```{r}
+sessionInfo()
+```
+

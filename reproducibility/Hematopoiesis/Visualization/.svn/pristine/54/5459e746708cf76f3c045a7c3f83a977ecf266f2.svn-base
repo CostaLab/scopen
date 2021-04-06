@@ -1,0 +1,98 @@
+---
+title: "Visualize TF score from scopen"
+author: "Zhijian Li"
+date: "July 31, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(ggplot2)
+library(Seurat)
+library(stringr)
+library(magrittr)
+library(readr)
+library(Matrix)
+library(tidyr)
+library(dplyr)
+library(plotly)
+library(Signac)
+library(cluster)
+library(mclust)
+library(cowplot)
+library(gridExtra)
+library(RColorBrewer)
+```
+
+## Load data
+```{r load_data}
+counts <- read.table("../TagCount/TagCount.txt", header = TRUE)
+
+chrom_assay <- CreateChromatinAssay(
+    counts = counts,
+    sep = c("_", "_"),
+    genome = 'hg19',
+    min.cells = 0,
+    min.features = 0
+)
+
+obj <- CreateSeuratObject(
+    counts = chrom_assay,
+    assay = "peaks"
+)
+
+obj
+
+cols.celltype <- c("CLP" = "#98D9E9", "CMP" = "#FFC179", 
+          "GMP" = "#FFA300", "HSC" = "#00441B",
+          "LMPP" = "#00AF99", "MEP" = "#F6313E",
+          "MPP" = "#46A040", "pDC" = "#C390D4")
+```
+
+## add umap
+```{r add_umap, fig.height=6, fig.width=6}
+df <- read.table("./UMAP/scOpen.txt", header = TRUE)
+rownames(df) <- df$Runs
+
+embeddings <- as.matrix(df[, c("UMAP1", "UMAP2")])
+
+obj[['umap']] <- CreateDimReducObject(embeddings = embeddings,
+                                      key = "UMAP",
+                                      assay = "peaks")
+
+obj <- AddMetaData(object = obj, metadata = df)
+obj$NumofReads_log10 <- log10(obj$NumofReads)
+
+
+DimPlot(obj, reduction = "umap", group.by = "CellType") +
+    scale_color_manual(values = cols.celltype) +
+    xlab("UMAP1") + ylab("UAMP2") +
+    ggtitle("")
+
+FeaturePlot(obj, features = "NumofReads_log10", 
+            reduction = "umap")
+
+```
+
+
+## add meta information
+```{r, fig.height=6, fig.width=12}
+df <- read.table("../Statistics/stat_with_metadata.txt", header = TRUE) %>%
+    subset(., Runs %in% colnames(obj)) %>%
+    subset(., select = c("Runs", "experiment_title"))
+
+rownames(df) <- df$Runs
+df$Runs <- NULL
+
+df$plate <- stringr::str_replace_all(df$experiment_title, "-[:digit:]+$", "")
+obj <- AddMetaData(obj, metadata = df)
+
+p <- DimPlot(obj, reduction = "umap", group.by = "plate") +
+    theme_classic()
+
+p
+```
+
+## Session information
+```{r}
+sessionInfo()
+```
