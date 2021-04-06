@@ -1,0 +1,18 @@
+
+2019-04-24T10:38:56 prefetch.2.9.0: KClientHttpOpen - connected from '134.61.212.177' to www.ncbi.nlm.nih.gov (130.14.29.110) 
+2019-04-24T10:38:56 prefetch.2.9.0: KClientHttpOpen - verifying CA cert 
+2019-04-24T10:38:56 prefetch.2.9.0: KClientHttpOpen - connected from '134.61.212.177' to sra-download.ncbi.nlm.nih.gov (130.14.250.24) 
+2019-04-24T10:38:56 prefetch.2.9.0: KClientHttpOpen - verifying CA cert 
+2019-04-24T10:38:56 prefetch.2.9.0: 1) Downloading 'SRR6358996'...
+2019-04-24T10:38:56 prefetch.2.9.0:  Downloading via https...
+2019-04-24T10:38:56 prefetch.2.9.0: https://sra-download.ncbi.nlm.nih.gov/traces/sra55/SRR/006209/SRR6358996 -> /hpcwork/izkf/ncbi/sra/SRR6358996.sra.tmp.83388.tmp
+2019-04-24T10:38:57 prefetch.2.9.0: KClientHttpOpen - connected from '134.61.212.177' to sra-download.ncbi.nlm.nih.gov (130.14.250.24) 
+2019-04-24T10:38:57 prefetch.2.9.0: KClientHttpOpen - verifying CA cert 
+2019-04-24T10:39:26 prefetch.2.9.0: /hpcwork/izkf/ncbi/sra/SRR6358996.sra.tmp.83388.tmp (0)
+2019-04-24T10:39:26 prefetch.2.9.0: 1) 'SRR6358996' was downloaded successfully
+2019-04-24T10:39:26 prefetch.2.9.0: 'SRR6358996' has 0 unresolved dependencies
+2019-04-24T10:39:26 prefetch.2.9.0: 'SRR6358996' is not cSRA
+Read 3491610 spots for /hpcwork/izkf/ncbi/sra/SRR6358996.sra
+Written 3491610 spots for /hpcwork/izkf/ncbi/sra/SRR6358996.sra
+1.16
+11:45:49.130 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/rwthfs/rz/cluster/hpcwork/izkf/jar/picard.jar!/com/intel/gkl/native/libgkl_compression.so

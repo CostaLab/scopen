@@ -1,0 +1,35 @@
+1959915 reads; of these:
+  1959915 (100.00%) were paired; of these:
+    134215 (6.85%) aligned concordantly 0 times
+    751580 (38.35%) aligned concordantly exactly 1 time
+    1074120 (54.80%) aligned concordantly >1 times
+    ----
+    134215 pairs aligned 0 times concordantly or discordantly; of these:
+      268430 mates make up the pairs; of these:
+        241660 (90.03%) aligned 0 times
+        15551 (5.79%) aligned exactly 1 time
+        11219 (4.18%) aligned >1 times
+93.83% overall alignment rate
+Picked up JAVA_TOOL_OPTIONS: -Xmx2048m
+[Wed Apr 24 11:43:16 GMT+01:00 2019] picard.sam.markduplicates.MarkDuplicates INPUT=[SRR6359005.sort.bam] OUTPUT=SRR6359005.rmdup.bam METRICS_FILE=SRR6359005_matrics.txt REMOVE_DUPLICATES=true VALIDATION_STRINGENCY=LENIENT    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 TAG_DUPLICATE_SET_MEMBERS=false REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO QUIET=false COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Wed Apr 24 11:43:16 GMT+01:00 2019] Executing as rs619065@ncm0127.hpc.itc.rwth-aachen.de on Linux 3.10.0-957.10.1.el7.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_212-b04; Deflater: Intel; Inflater: Intel; Picard version: 2.10.7-SNAPSHOT
+INFO	2019-04-24 11:43:16	MarkDuplicates	Start of doWork freeMemory: 2038979832; totalMemory: 2058354688; maxMemory: 2058354688
+INFO	2019-04-24 11:43:16	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2019-04-24 11:43:16	MarkDuplicates	Will retain up to 7457806 data points before spilling to disk.
+WARNING	2019-04-24 11:43:16	AbstractOpticalDuplicateFinderCommandLineProgram	A field field parsed out of a read name was expected to contain an integer and did not. Read name: SRR6359005.40432. Cause: String 'SRR6359005.40432' did not start with a parsable number.
+INFO	2019-04-24 11:43:20	MarkDuplicates	Read     1,000,000 records.  Elapsed time: 00:00:03s.  Time for last 1,000,000:    3s.  Last read position: chr15:52,154,306
+INFO	2019-04-24 11:43:20	MarkDuplicates	Tracking 78 as yet unmatched pairs. 41 records in RAM.
+INFO	2019-04-24 11:43:21	MarkDuplicates	Read 1312800 records. 0 pairs never matched.
+INFO	2019-04-24 11:43:22	MarkDuplicates	After buildSortedReadEndLists freeMemory: 1774783432; totalMemory: 1986527232; maxMemory: 1986527232
+INFO	2019-04-24 11:43:22	MarkDuplicates	Will retain up to 62078976 duplicate indices before spilling to disk.
+INFO	2019-04-24 11:43:22	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2019-04-24 11:43:22	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2019-04-24 11:43:22	MarkDuplicates	Sorting list of duplicate records.
+INFO	2019-04-24 11:43:22	MarkDuplicates	After generateDuplicateIndexes freeMemory: 1323812560; totalMemory: 1831862272; maxMemory: 1908932608
+INFO	2019-04-24 11:43:22	MarkDuplicates	Marking 1279959 records as duplicates.
+INFO	2019-04-24 11:43:22	MarkDuplicates	Found 0 optical duplicate clusters.
+INFO	2019-04-24 11:43:22	MarkDuplicates	Reads are assumed to be ordered by: coordinate
+INFO	2019-04-24 11:43:26	MarkDuplicates	Before output close freeMemory: 1967304064; totalMemory: 1979187200; maxMemory: 1979187200
+INFO	2019-04-24 11:43:26	MarkDuplicates	After output close freeMemory: 1826259064; totalMemory: 1838153728; maxMemory: 1908932608
+[Wed Apr 24 11:43:26 GMT+01:00 2019] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 0.17 minutes.
+Runtime.totalMemory()=1838153728
