@@ -1,0 +1,16 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: Matrix
+Loading required package: rhdf5
+Warning message:
+no DISPLAY variable so Tk is not available 
+slurmstepd: error: *** JOB 18984935 ON ncm0104 CANCELLED AT 2021-01-25T18:38:11 ***

@@ -1,0 +1,67 @@
+library(cluster)
+library(dplyr)
+library(stringr)
+library(SnapATAC)
+library(chromVAR)
+
+df_anno <- read.table("../Statistics/stat.txt", header = TRUE)
+rownames(df_anno) <- df_anno$Cell
+df_anno$CellType <- stringr::str_replace_all(df_anno$CellType,
+                                             c("naive_CD4_T_cells" = "1",
+                                               "memory_CD4_T_cells" = "2",
+                                               "naive_CD8_T_cells" = "3",
+                                               "effector_CD8_T_cells" = "4",
+                                               "MAIT_T_cells" = "5",
+                                               "non-classical_monocytes" = "6",
+                                               "classical_monocytes" = "7",
+                                               "intermediate_monocytes" = "8",
+                                               "memory_B_cells" = "9",
+                                               "naive_B_cells" = "10",
+                                               "CD56_\\(dim\\)_NK_cells" = "11",
+                                               "CD56_\\(bright\\)_NK_cells" = "12",
+                                               "myeloid_DC" = "13",
+                                               "plasmacytoid_DC" = "14"))
+df_anno$CellType <- as.numeric(df_anno$CellType)
+
+for (method in c("ChromVAR", "Cicero")) {
+    if(method == "ChromVAR"){
+        for(data in c("Raw", "scOpen")){
+            dev <- readRDS(sprintf("../DownstreamAnalysis/ChromVAR/%s/chromVAR.rds", data))
+            sample_cor <- getSampleCorrelation(dev,
+                                               threshold = -Inf)
+            sample_cor[is.na(sample_cor)] <- 0
+            
+            df_anno <- df_anno[colnames(sample_cor), ]
+            
+            si <- silhouette(x = df_anno$CellType, 
+                             dmatrix = 1 - sample_cor)
+            
+            saveRDS(si, sprintf("%s_%s.Rds", method, data))
+            
+            pdf(sprintf("%s_%s.pdf", method, data), height = 8, width = 8)
+            plot(si)
+            dev.off()
+            
+        }
+    }
+    else if (method == "Cicero"){
+        for(data in c("Raw", "scOpen")){
+            df <- read.table(sprintf("../DownstreamAnalysis/Cicero/%s/GA.txt", data),
+                             header = TRUE)
+            
+            df_anno <- df_anno[colnames(df), ]
+            
+            dist <- 1 - cor(df)
+            
+            si <- silhouette(x = df_anno$CellType, 
+                             dmatrix = dist)
+            
+            saveRDS(si, sprintf("%s_%s.Rds", method, data))
+            
+            pdf(sprintf("%s_%s.pdf", method, data), height = 8, width = 8)
+            plot(si)
+            dev.off()
+            
+        }
+    }
+}

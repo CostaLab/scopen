@@ -1,0 +1,6 @@
+During startup - Warning messages:
+1: Setting LC_TIME failed, using "C" 
+2: Setting LC_MONETARY failed, using "C" 
+3: Setting LC_PAPER failed, using "C" 
+4: Setting LC_MEASUREMENT failed, using "C" 
+
