@@ -1,0 +1,5248 @@
+Reading file SRR1781219.bam ... 0.37s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781222.bam ... 0.21s
+Converting to GRanges ... 0.04s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781220.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781221.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781223.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781224.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781226.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781227.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781229.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781228.bam ... 0.38s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781231.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781233.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781234.bam ... 0.3s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781235.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781232.bam ... 0.75s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781237.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781238.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781239.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781241.bam ... 0.36s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781243.bam ... 0.35s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781244.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781245.bam ... 0.31s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781246.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781250.bam ... 0.32s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781249.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781253.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781254.bam ... 0.3s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781255.bam ... 0.31s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781257.bam ... 0.29s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781260.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781263.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781261.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781251.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781264.bam ... 0.34s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781265.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781266.bam ... 0.27s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781256.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781269.bam ... 0.27s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781259.bam ... 0.25s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781271.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781270.bam ... 0.33s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781273.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781272.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781274.bam ... 0.31s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781277.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781276.bam ... 0.32s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781278.bam ... 0.27s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781279.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781280.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781282.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781281.bam ... 0.27s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781283.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781284.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781285.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781287.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781286.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781288.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781291.bam ... 0.31s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781290.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781292.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781294.bam ... 0.46s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781293.bam ... 0.34s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781296.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781297.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781295.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781298.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781300.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781299.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781301.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781303.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781305.bam ... 0.42s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781306.bam ... 0.28s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781308.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781314.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781309.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781310.bam ... 0.29s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781312.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781311.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781313.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779683.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779685.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779686.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779688.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779687.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779690.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779689.bam ... 1.4s
+Converting to GRanges ... 0.04s
+Filtering reads (mapq >= 10) ... 0.03s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779691.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779693.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779694.bam ... 0.34s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779692.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779695.bam ... 0.14s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779696.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779698.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779701.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779702.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779704.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.02s
+Reading file SRR1779705.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779706.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779708.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779707.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779709.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779711.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779712.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779713.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779715.bam ... 0.44s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779714.bam ... 0.37s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779710.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779716.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779717.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779718.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779719.bam ... 0.29s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779722.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779724.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779723.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779729.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779731.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779728.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779732.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779721.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779733.bam ... 0.47s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779735.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779736.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779734.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779738.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779740.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779737.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779742.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779743.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779744.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779741.bam ... 0.44s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779745.bam ... 0.32s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779746.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779747.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779749.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779750.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779752.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779753.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779751.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779754.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779756.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779755.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779757.bam ... 0.23s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779759.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779762.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779761.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779760.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779763.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.02s
+Reading file SRR1779765.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779764.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779766.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779768.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779767.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779769.bam ... 0.38s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779771.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779770.bam ... 0.27s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779772.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779774.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779776.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779777.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779780.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779781.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779782.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779779.bam ... 0.33s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779783.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779784.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779785.bam ... 0.28s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779788.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779787.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779789.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779790.bam ... 0.21s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779792.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779791.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779793.bam ... 0.3s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779794.bam ... 0.71s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779796.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779795.bam ... 0.36s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779797.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779798.bam ... 0.29s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779799.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779800.bam ... 1.4s
+Converting to GRanges ... 0.05s
+Filtering reads (mapq >= 10) ... 0.03s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779801.bam ... 0.37s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779802.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779803.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779804.bam ... 0.48s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779806.bam ... 0.28s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779805.bam ... 0.34s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779808.bam ... 0.37s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779809.bam ... 0.56s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779811.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779810.bam ... 0.27s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779813.bam ... 0.31s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779812.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779814.bam ... 1.59s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779815.bam ... 0.26s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779816.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779817.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779819.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779820.bam ... 0.28s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779807.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779822.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779821.bam ... 0.33s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779818.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779823.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779824.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779825.bam ... 0.29s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779828.bam ... 0.39s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779826.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779827.bam ... 0.29s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779829.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779830.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779833.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779831.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779832.bam ... 0.25s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779834.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779835.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779836.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779837.bam ... 0.68s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779839.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779841.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779842.bam ... 0.28s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779838.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779840.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779843.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779844.bam ... 0.45s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779846.bam ... 0.52s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779848.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779845.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779849.bam ... 0.32s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779847.bam ... 0.94s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.03s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779850.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779851.bam ... 0.72s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779852.bam ... 0.39s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779853.bam ... 0.31s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779855.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779854.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779857.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779858.bam ... 0.38s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779859.bam ... 0.3s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779861.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779866.bam ... 0.39s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779863.bam ... 0.68s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779860.bam ... 0.33s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779862.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779864.bam ... 0.43s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779865.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779867.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779868.bam ... 0.27s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779873.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779869.bam ... 0.29s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779870.bam ... 0.31s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779871.bam ... 4.38s
+Converting to GRanges ... 0.12s
+Filtering reads (mapq >= 10) ... 0.09s
+Subsetting chromosomes ... 0.02s
+Reading file SRR1779874.bam ... 0.38s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779872.bam ... 0.43s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779875.bam ... 0.25s
+Converting to GRanges ... 0.08s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779876.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779877.bam ... 0.33s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779878.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779880.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779882.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.02s
+Reading file SRR1779883.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779879.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779881.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779884.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779885.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779886.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779887.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779891.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779889.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779888.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779890.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779893.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779892.bam ... 0.32s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779895.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779894.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779899.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779898.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779896.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779903.bam ... 0.55s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779902.bam ... 0.29s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779901.bam ... 0.57s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779904.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779905.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779906.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779907.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779908.bam ... 0.34s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779910.bam ... 0.3s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779897.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779911.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779912.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779913.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779914.bam ... 0.34s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779900.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779915.bam ... 0.35s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779916.bam ... 1.24s
+Converting to GRanges ... 0.04s
+Filtering reads (mapq >= 10) ... 0.03s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779917.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779918.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779919.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779922.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779920.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779923.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779909.bam ... 0.28s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779924.bam ... 0.44s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779926.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779927.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779930.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779933.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779934.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779929.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779935.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779937.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779938.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779932.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779939.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779936.bam ... 0.3s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779940.bam ... 0.45s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779921.bam ... 0.31s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779941.bam ... 0.37s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779925.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779942.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779943.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.02s
+Reading file SRR1779945.bam ... 0.32s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779946.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779948.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779928.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779950.bam ... 0.38s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779952.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779931.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779953.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779955.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779949.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779951.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779956.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779954.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779957.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779958.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779959.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779960.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779944.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779961.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779962.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779963.bam ... 0.42s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779947.bam ... 0.28s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779964.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779965.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779967.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779966.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779970.bam ... 0.38s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779968.bam ... 2.83s
+Converting to GRanges ... 0.1s
+Filtering reads (mapq >= 10) ... 0.08s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779969.bam ... 0.5s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779971.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779973.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779974.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779975.bam ... 0.4s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779976.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779978.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779977.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779979.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779983.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779984.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779985.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779989.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779990.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779995.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779996.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780001.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779997.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779998.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780002.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780009.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779991.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780008.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780012.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780010.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780013.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780003.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780007.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780015.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780016.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780017.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780018.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780014.bam ... 0.19s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780020.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780021.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780022.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780024.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780023.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.02s
+Reading file SRR1780027.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780026.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780029.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780031.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780030.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780025.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780028.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780034.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780033.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780032.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780037.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780038.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780035.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780036.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780040.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780041.bam ... 0.3s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780019.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780039.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780042.bam ... 0.33s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780043.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780044.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780045.bam ... 0.35s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780046.bam ... 0.4s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780048.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780049.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780050.bam ... 0.64s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780047.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780053.bam ... 0.39s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780054.bam ... 0.28s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780055.bam ... 0.31s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780051.bam ... 0.29s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780052.bam ... 0.36s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780059.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780060.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780056.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780057.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780058.bam ... 0.26s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780063.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780065.bam ... 0.37s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780062.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780066.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779587.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779588.bam ... 0.1s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779589.bam ... 0.49s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779590.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779591.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779592.bam ... 0.31s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779593.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779594.bam ... 0.39s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779595.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779596.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779597.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779598.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779599.bam ... 0.44s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779601.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779600.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779602.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779604.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779605.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779603.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779606.bam ... 0.12s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779607.bam ... 0.29s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779608.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779610.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779612.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779609.bam ... 0.48s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779611.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779613.bam ... 0.36s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779614.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779615.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779616.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779618.bam ... 0.34s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779619.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779621.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779622.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779624.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779617.bam ... 0.46s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779625.bam ... 0.41s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779620.bam ... 0.27s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779623.bam ... 0.29s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779626.bam ... 0.33s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779627.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779628.bam ... 0.3s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779629.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779630.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779631.bam ... 0.39s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779632.bam ... 0.29s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779633.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779634.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779635.bam ... 0.58s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779636.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779637.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779638.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779639.bam ... 0.34s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779640.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779641.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779642.bam ... 0.32s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779643.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779644.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779645.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779646.bam ... 0.31s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779647.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779648.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779650.bam ... 0.38s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779649.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779652.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779651.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779653.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779655.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779654.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779656.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779658.bam ... 1.58s
+Converting to GRanges ... 0.05s
+Filtering reads (mapq >= 10) ... 0.04s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779657.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779660.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779662.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779661.bam ... 0.33s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779663.bam ... 0.7s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779665.bam ... 0.66s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779664.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779666.bam ... 0.34s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779667.bam ... 0.43s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779668.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779669.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779671.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779670.bam ... 0.33s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779672.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779673.bam ... 0.44s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779674.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779675.bam ... 0.37s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779676.bam ... 0.69s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779677.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779678.bam ... 0.36s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779679.bam ... 0.32s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779680.bam ... 0.28s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779681.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1779682.bam ... 0.39s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781123.bam ... 0.66s
+Converting to GRanges ... 0.04s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781124.bam ... 0.45s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781125.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781127.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781126.bam ... 1.77s
+Converting to GRanges ... 0.06s
+Filtering reads (mapq >= 10) ... 0.04s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781129.bam ... 2.06s
+Converting to GRanges ... 0.08s
+Filtering reads (mapq >= 10) ... 0.06s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781128.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781130.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781131.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781132.bam ... 0.35s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781133.bam ... 0.32s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.02s
+Reading file SRR1781135.bam ... 1.48s
+Converting to GRanges ... 0.04s
+Filtering reads (mapq >= 10) ... 0.03s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781134.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781137.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781136.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781138.bam ... 0.39s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781140.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781141.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781139.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781143.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781145.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781146.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781147.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781148.bam ... 0.39s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781149.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781142.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781144.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781150.bam ... 0.28s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781151.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781153.bam ... 0.92s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781155.bam ... 0.35s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781152.bam ... 2.44s
+Converting to GRanges ... 0.06s
+Filtering reads (mapq >= 10) ... 0.05s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781156.bam ... 0.33s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781154.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781158.bam ... 0.3s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781157.bam ... 0.41s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781159.bam ... 0.29s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781161.bam ... 0.4s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781160.bam ... 0.29s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781162.bam ... 0.3s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781163.bam ... 0.56s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781164.bam ... 2.89s
+Converting to GRanges ... 0.07s
+Filtering reads (mapq >= 10) ... 0.06s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781165.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781166.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781168.bam ... 0.42s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781167.bam ... 0.41s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781169.bam ... 0.35s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781170.bam ... 0.33s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781172.bam ... 0.49s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781174.bam ... 1.09s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781171.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781173.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781175.bam ... 0.26s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781176.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781178.bam ... 0.64s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781177.bam ... 0.35s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781180.bam ... 0.31s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781179.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781181.bam ... 4.05s
+Converting to GRanges ... 0.11s
+Filtering reads (mapq >= 10) ... 0.1s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781182.bam ... 0.75s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781183.bam ... 1.09s
+Converting to GRanges ... 0.04s
+Filtering reads (mapq >= 10) ... 0.03s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781184.bam ... 0.31s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781185.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781188.bam ... 0.65s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781187.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781186.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781189.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781190.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781191.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781192.bam ... 0.48s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781194.bam ... 0.36s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781193.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781196.bam ... 0.28s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781195.bam ... 0.37s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781197.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781198.bam ... 0.44s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781200.bam ... 0.4s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781201.bam ... 0.32s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781203.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781202.bam ... 0.35s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781199.bam ... 0.37s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781204.bam ... 0.42s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781207.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781208.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781209.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781205.bam ... 0.63s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781206.bam ... 0.26s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781210.bam ... 2.51s
+Converting to GRanges ... 0.06s
+Filtering reads (mapq >= 10) ... 0.05s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781211.bam ... 0.43s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781212.bam ... 0.33s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781213.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781214.bam ... 0.4s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781217.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781216.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781215.bam ... 0.46s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781218.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780166.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.03s
+Reading file SRR1780168.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780170.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780172.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780174.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780176.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780184.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780186.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780178.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780180.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780182.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780188.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780194.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780196.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780202.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780198.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780200.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780204.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780206.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780212.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780210.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780208.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780214.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780216.bam ... 0.3s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780218.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780224.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780222.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780220.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780228.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780230.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780226.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780232.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780236.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780234.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780238.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780240.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780242.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780244.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780250.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780248.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780246.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780190.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780254.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780252.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780192.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780256.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780262.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780260.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780258.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780264.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780266.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780270.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780272.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780268.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780274.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780276.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780278.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780280.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780282.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780284.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780288.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780286.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780292.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780294.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780296.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780298.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780290.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780300.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780302.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780304.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780306.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780308.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780310.bam ... 0.66s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780314.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780312.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780316.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780318.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780320.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780326.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780324.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780328.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780330.bam ... 0.16s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780338.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780334.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780336.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780342.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780332.bam ... 0.19s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780344.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780340.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780354.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780352.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780348.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780358.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780356.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780362.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780360.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780366.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.02s
+Reading file SRR1780370.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780374.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780376.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780380.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780386.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780392.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780390.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780396.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780384.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780402.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780400.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780406.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780388.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780410.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780404.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780408.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780416.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780422.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780424.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780428.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780430.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780420.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780418.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780432.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780438.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780440.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780448.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780436.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780434.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780444.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780446.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780450.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780452.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780458.bam ... 0.3s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780466.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780454.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780456.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780460.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780462.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780470.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780474.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780472.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780478.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780482.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780484.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780496.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780494.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780498.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780500.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780480.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780504.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780502.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780506.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780512.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780508.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780510.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780518.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780520.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780522.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780528.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780530.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780536.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780514.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780534.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780538.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780544.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780550.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780558.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780560.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780556.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780562.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780564.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780568.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780574.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780570.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780580.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780582.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780584.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780586.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780552.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780590.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780594.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780596.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780598.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780572.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780602.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780604.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780566.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780614.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780616.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780618.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780620.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780624.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780630.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780634.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780622.bam ... 0.12s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780632.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780628.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780636.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780638.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780626.bam ... 0.15s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780640.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780644.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780646.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780642.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780648.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780652.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780650.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780654.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780656.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780666.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.02s
+Reading file SRR1780664.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780668.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780670.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780674.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780672.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 1.06s
+Reading file SRR1780676.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780684.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780682.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780686.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780688.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780690.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780692.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780694.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780696.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780700.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780702.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780698.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780704.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780708.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780712.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780714.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780718.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780726.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780730.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780732.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780736.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1780738.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584213.bam ... 0.43s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584214.bam ... 0.43s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584193.bam ... 0.35s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584194.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584196.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584198.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584199.bam ... 0.52s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584200.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584201.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584202.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584203.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584204.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584205.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584206.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584207.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584209.bam ... 0.33s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584210.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584212.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584211.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584215.bam ... 0.39s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584216.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584217.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584218.bam ... 0.45s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584219.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584221.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584220.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584222.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584223.bam ... 0.32s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584224.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584225.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584226.bam ... 0.25s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584227.bam ... 0.48s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584228.bam ... 0.39s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584229.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584230.bam ... 0.36s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584231.bam ... 0.7s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584232.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584234.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584233.bam ... 0.29s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584235.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584236.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584237.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584238.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584239.bam ... 0.3s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584240.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584241.bam ... 0.37s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584242.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584243.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584244.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584246.bam ... 0.32s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584247.bam ... 0.3s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584248.bam ... 0.29s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584249.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584250.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584251.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584252.bam ... 0.32s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584253.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584254.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584255.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584256.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584259.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584257.bam ... 0.28s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584258.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584260.bam ... 0.43s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584262.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584263.bam ... 0.36s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584261.bam ... 0.3s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584266.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584267.bam ... 0.33s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584269.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584268.bam ... 0.3s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584270.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584271.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584273.bam ... 0.37s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584272.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584276.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584274.bam ... 0.41s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584275.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584277.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.02s
+Reading file SRR5584278.bam ... 0.31s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584279.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584281.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584282.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584280.bam ... 0.27s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.05s
+Reading file SRR5584283.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584284.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584286.bam ... 0.3s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584287.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584288.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584289.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584291.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584290.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584292.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584293.bam ... 0.33s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584294.bam ... 0.42s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584295.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584296.bam ... 0.61s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584297.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584298.bam ... 0.29s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584299.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584300.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584301.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584302.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584303.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584304.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584305.bam ... 0.31s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584306.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584307.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584308.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584310.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584309.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584312.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584311.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584314.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584313.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584315.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584316.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584317.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584318.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584320.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584321.bam ... 0.29s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584322.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584323.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584324.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584325.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584326.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584327.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584328.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584329.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584331.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584330.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584332.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584333.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584334.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584335.bam ... 0.33s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584336.bam ... 0.8s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584337.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584338.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584339.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584340.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584342.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584343.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584345.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584344.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584347.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584348.bam ... 0.28s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584349.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584350.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584351.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584352.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584354.bam ... 0.53s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584355.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584356.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584357.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584358.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584359.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584360.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584362.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584361.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584363.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584364.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584365.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584366.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584367.bam ... 0.29s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584368.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584369.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584370.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584372.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584371.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584373.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584374.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584375.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584376.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584377.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584378.bam ... 0.37s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584379.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584380.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584381.bam ... 0.11s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584382.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584383.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584385.bam ... 0.41s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584387.bam ... 0.39s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584388.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584386.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584389.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584390.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584391.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584392.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584393.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584395.bam ... 0.55s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584396.bam ... 0.36s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584394.bam ... 0.47s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584397.bam ... 0.64s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584398.bam ... 0.55s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584399.bam ... 0.55s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584400.bam ... 0.64s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584401.bam ... 0.51s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584404.bam ... 0.59s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584403.bam ... 0.76s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584402.bam ... 0.4s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584405.bam ... 0.66s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584406.bam ... 0.62s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584407.bam ... 0.38s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584408.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584409.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584410.bam ... 0.45s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584411.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584412.bam ... 0.57s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584415.bam ... 0.43s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584413.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.03s
+Reading file SRR5584414.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584416.bam ... 0.37s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584418.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584417.bam ... 0.38s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584419.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.02s
+Reading file SRR5584420.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584422.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584421.bam ... 0.34s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584423.bam ... 0.38s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584424.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584425.bam ... 0.44s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584427.bam ... 0.12s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584428.bam ... 0.66s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584426.bam ... 0.28s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584429.bam ... 0.44s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584430.bam ... 0.2s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584432.bam ... 0.68s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584431.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584434.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584433.bam ... 0.47s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584435.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584436.bam ... 0.47s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584437.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584439.bam ... 0.57s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584441.bam ... 0.59s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584440.bam ... 0.38s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584442.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584438.bam ... 0.33s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584443.bam ... 0.56s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584444.bam ... 0.29s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584445.bam ... 0.3s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584447.bam ... 0.51s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584449.bam ... 0.58s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584448.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584446.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584450.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584451.bam ... 2.25s
+Converting to GRanges ... 0.06s
+Filtering reads (mapq >= 10) ... 0.05s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584452.bam ... 0.56s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584453.bam ... 0.69s
+Converting to GRanges ... 0.03s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584454.bam ... 0.59s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584455.bam ... 0.48s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584456.bam ... 2.89s
+Converting to GRanges ... 0.07s
+Filtering reads (mapq >= 10) ... 0.06s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584459.bam ... 0.32s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584457.bam ... 0.46s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584458.bam ... 0.28s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584460.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584461.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584463.bam ... 0.41s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584462.bam ... 0.23s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584464.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584465.bam ... 0.45s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584466.bam ... 0.32s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584468.bam ... 0.41s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584467.bam ... 0.49s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584469.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584470.bam ... 0.4s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584471.bam ... 0.35s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584472.bam ... 0.41s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584474.bam ... 0.35s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584473.bam ... 0.33s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584475.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584476.bam ... 0.54s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584477.bam ... 0.3s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584479.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR5584480.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781027.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781028.bam ... 0.22s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781029.bam ... 0.56s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781031.bam ... 0.38s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781030.bam ... 0.34s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781033.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781032.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781034.bam ... 0.5s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781035.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781036.bam ... 0.26s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781039.bam ... 0.32s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781038.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781037.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781040.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781041.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781042.bam ... 0.31s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781043.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781044.bam ... 0.31s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781045.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781046.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781047.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781048.bam ... 0.33s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781049.bam ... 0.3s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781051.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781052.bam ... 0.37s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781057.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781053.bam ... 0.38s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781056.bam ... 0.41s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781054.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781050.bam ... 0.32s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781055.bam ... 0.37s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781058.bam ... 0.37s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781061.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781059.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781060.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781063.bam ... 0.21s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781064.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781066.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781067.bam ... 0.41s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781068.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781069.bam ... 0.31s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781071.bam ... 0.31s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781072.bam ... 0.55s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781073.bam ... 0.49s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781062.bam ... 0.31s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781075.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781074.bam ... 0.48s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781077.bam ... 0.28s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781076.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781078.bam ... 0.32s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781080.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781065.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781070.bam ... 0.3s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781079.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781081.bam ... 0.32s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781083.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781084.bam ... 0.29s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781085.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781082.bam ... 0.29s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781087.bam ... 0.51s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781086.bam ... 2.04s
+Converting to GRanges ... 0.07s
+Filtering reads (mapq >= 10) ... 0.06s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781089.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781090.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781091.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781088.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781092.bam ... 0.38s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781093.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781094.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781095.bam ... 0.25s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781097.bam ... 0.48s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781098.bam ... 0.39s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781096.bam ... 0.33s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781099.bam ... 0.27s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781102.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781100.bam ... 0.35s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781101.bam ... 0.68s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781103.bam ... 0.27s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781104.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781107.bam ... 0.28s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781108.bam ... 0.13s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781105.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781106.bam ... 0.34s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781109.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781110.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781113.bam ... 0.37s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781112.bam ... 0.16s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781111.bam ... 0.17s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781114.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781115.bam ... 0.15s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781117.bam ... 0.19s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781118.bam ... 0.18s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781116.bam ... 0.24s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781121.bam ... 0.14s
+Converting to GRanges ... 0.01s
+Filtering reads (mapq >= 10) ... 0s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781122.bam ... 0.64s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.02s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781119.bam ... 0.29s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+Reading file SRR1781120.bam ... 0.38s
+Converting to GRanges ... 0.02s
+Filtering reads (mapq >= 10) ... 0.01s
+Subsetting chromosomes ... 0.01s
+100000	tags, 0.6573076248168945 seconds 
+200000	tags, 1.8063464164733887 seconds 
+300000	tags, 2.709979772567749 seconds 
+400000	tags, 3.9792912006378174 seconds 
+500000	tags, 5.043552398681641 seconds 
+600000	tags, 6.198227643966675 seconds 
+700000	tags, 7.434460878372192 seconds 
+800000	tags, 8.538778066635132 seconds 
+900000	tags, 9.630343675613403 seconds 
+1000000	tags, 10.6643226146698 seconds 
+1100000	tags, 11.842275619506836 seconds 
+1200000	tags, 13.029802799224854 seconds 
+1300000	tags, 14.098976850509644 seconds 
+1400000	tags, 14.836140155792236 seconds 
+1500000	tags, 16.443361043930054 seconds 
+1600000	tags, 17.54662823677063 seconds 
+1700000	tags, 18.658908367156982 seconds 
+1800000	tags, 19.754841566085815 seconds 
+1900000	tags, 20.806584358215332 seconds 
+2000000	tags, 21.74158239364624 seconds 
+2100000	tags, 23.072629928588867 seconds 
+2200000	tags, 24.023229837417603 seconds 
+2300000	tags, 25.271695852279663 seconds 
+2400000	tags, 26.38433599472046 seconds 
+2500000	tags, 26.842114686965942 seconds 
+2600000	tags, 28.49515676498413 seconds 
+2700000	tags, 28.785746335983276 seconds 
+2800000	tags, 30.64981508255005 seconds 
+2900000	tags, 31.75397491455078 seconds 
+3000000	tags, 32.68248414993286 seconds 
+3100000	tags, 33.151710748672485 seconds 
+3200000	tags, 34.70741891860962 seconds 
+3300000	tags, 35.75756049156189 seconds 
+3400000	tags, 36.99181890487671 seconds 
+3500000	tags, 37.54524874687195 seconds 
+3600000	tags, 39.082624435424805 seconds 
+3700000	tags, 40.12165021896362 seconds 
+3800000	tags, 40.68663430213928 seconds 
+3900000	tags, 41.88733172416687 seconds 
+4000000	tags, 43.361390829086304 seconds 
+4100000	tags, 44.17004609107971 seconds 
+4200000	tags, 45.348429441452026 seconds 
+4300000	tags, 46.36978030204773 seconds 
+4400000	tags, 47.34270095825195 seconds 
+4500000	tags, 47.620970487594604 seconds 
+4600000	tags, 47.8978488445282 seconds 
+4700000	tags, 48.16923928260803 seconds 
+4800000	tags, 48.439244508743286 seconds 
+4900000	tags, 52.97137689590454 seconds 
+5000000	tags, 54.12677335739136 seconds 
+5100000	tags, 55.206796407699585 seconds 
+5200000	tags, 56.22674226760864 seconds 
+5300000	tags, 57.22497320175171 seconds 
+5400000	tags, 58.470739126205444 seconds 
+5500000	tags, 59.576287031173706 seconds 
+5600000	tags, 60.24992108345032 seconds 
+5700000	tags, 61.7626895904541 seconds 
+5800000	tags, 62.73967742919922 seconds 
+5900000	tags, 64.07183361053467 seconds 
+6000000	tags, 65.24040746688843 seconds 
+6100000	tags, 66.2317705154419 seconds 
+6200000	tags, 67.43519854545593 seconds 
+6300000	tags, 68.49314570426941 seconds 
+6400000	tags, 69.54988026618958 seconds 
+6500000	tags, 70.91083288192749 seconds 
+6600000	tags, 71.2098753452301 seconds 
+6700000	tags, 71.50714349746704 seconds 
+6800000	tags, 71.80264544487 seconds 
+6900000	tags, 75.2507426738739 seconds 
+7000000	tags, 76.18912553787231 seconds 
+7100000	tags, 77.2691376209259 seconds 
+7200000	tags, 78.28133535385132 seconds 
+7300000	tags, 79.19906544685364 seconds 
+7400000	tags, 80.18092083930969 seconds 
+7500000	tags, 81.14425897598267 seconds 
+7600000	tags, 82.03342485427856 seconds 
+7700000	tags, 83.23283338546753 seconds 
+7800000	tags, 84.3611421585083 seconds 
+7900000	tags, 85.48016262054443 seconds 
+8000000	tags, 86.50762009620667 seconds 
+8100000	tags, 87.50106883049011 seconds 
+8200000	tags, 88.60458540916443 seconds 
+8300000	tags, 89.3629629611969 seconds 
+8400000	tags, 90.6361813545227 seconds 
+8500000	tags, 91.51527142524719 seconds 
+8600000	tags, 92.69463515281677 seconds 
+8700000	tags, 93.71228861808777 seconds 
+8800000	tags, 94.63565468788147 seconds 
+8900000	tags, 95.75810027122498 seconds 
+9000000	tags, 96.67815947532654 seconds 
+9100000	tags, 97.66127681732178 seconds 
+9200000	tags, 98.24470448493958 seconds 
+9300000	tags, 98.51880168914795 seconds 
+9400000	tags, 100.73622941970825 seconds 
+9500000	tags, 101.60574841499329 seconds 
+9600000	tags, 102.77501845359802 seconds 
+9700000	tags, 103.71358561515808 seconds 
+9800000	tags, 104.60255146026611 seconds 
+9900000	tags, 106.03231883049011 seconds 
+10000000	tags, 106.99460530281067 seconds 
+10100000	tags, 107.7747323513031 seconds 
+10200000	tags, 108.81419396400452 seconds 
+10300000	tags, 109.1087417602539 seconds 
+10400000	tags, 111.21592164039612 seconds 
+10500000	tags, 111.49502348899841 seconds 
+10600000	tags, 113.47693753242493 seconds 
+10700000	tags, 114.56017327308655 seconds 
+10800000	tags, 114.82710003852844 seconds 
+10900000	tags, 116.46985459327698 seconds 
+11000000	tags, 117.51002645492554 seconds 
+11100000	tags, 118.55771946907043 seconds 
+11200000	tags, 119.38030314445496 seconds 
+11300000	tags, 120.40932583808899 seconds 
+11400000	tags, 121.10241961479187 seconds 
+11500000	tags, 121.37793779373169 seconds 
+11600000	tags, 123.8765139579773 seconds 
+11700000	tags, 125.06995677947998 seconds 
+11800000	tags, 126.26169061660767 seconds 
+11900000	tags, 127.31097149848938 seconds 
+12000000	tags, 127.63317775726318 seconds 
+12100000	tags, 127.95193934440613 seconds 
+12200000	tags, 131.08186388015747 seconds 
+12300000	tags, 132.17078304290771 seconds 
+12400000	tags, 133.39210319519043 seconds 
+12500000	tags, 133.67880153656006 seconds 
+12600000	tags, 135.4446666240692 seconds 
+12700000	tags, 136.49123239517212 seconds 
+12800000	tags, 137.28311681747437 seconds 
+12900000	tags, 137.57240891456604 seconds 
+13000000	tags, 137.85869097709656 seconds 
+13100000	tags, 138.14476799964905 seconds 
+13200000	tags, 141.98617362976074 seconds 
+13300000	tags, 142.94597458839417 seconds 
+13400000	tags, 144.34908723831177 seconds 
+13500000	tags, 145.50520062446594 seconds 
+13600000	tags, 146.44895792007446 seconds 
+13700000	tags, 147.57073712348938 seconds 
+13800000	tags, 148.63661170005798 seconds 
+13900000	tags, 149.56589198112488 seconds 
+14000000	tags, 150.33323669433594 seconds 
+14100000	tags, 151.4844934940338 seconds 
+14200000	tags, 151.78578186035156 seconds 
+14300000	tags, 152.08707475662231 seconds 
+14400000	tags, 155.0591642856598 seconds 
+14500000	tags, 156.29097604751587 seconds 
+14600000	tags, 157.17362451553345 seconds 
+14700000	tags, 158.31841611862183 seconds 
+14800000	tags, 159.4133632183075 seconds 
+14900000	tags, 160.42406392097473 seconds 
+15000000	tags, 161.4638273715973 seconds 
+15100000	tags, 162.51823568344116 seconds 
+15200000	tags, 163.60077619552612 seconds 
+15300000	tags, 164.56016206741333 seconds 
+15400000	tags, 165.5303566455841 seconds 
+15500000	tags, 166.52180075645447 seconds 
+15600000	tags, 167.43662118911743 seconds 
+15700000	tags, 168.51682138442993 seconds 
+15800000	tags, 169.49797010421753 seconds 
+15900000	tags, 170.47531700134277 seconds 
+16000000	tags, 171.4582962989807 seconds 
+16100000	tags, 172.3357458114624 seconds 
+16200000	tags, 173.30534172058105 seconds 
+16300000	tags, 174.21650767326355 seconds 
+16400000	tags, 175.50719475746155 seconds 
+16500000	tags, 176.56989932060242 seconds 
+16600000	tags, 177.63676023483276 seconds 
+16700000	tags, 178.40498328208923 seconds 
+16800000	tags, 179.70126914978027 seconds 
+16900000	tags, 180.5939917564392 seconds 
+17000000	tags, 181.59474897384644 seconds 
+17100000	tags, 182.69332551956177 seconds 
+17200000	tags, 183.81574487686157 seconds 
+17300000	tags, 185.03671026229858 seconds 
+17400000	tags, 186.22200846672058 seconds 
+17500000	tags, 187.273432970047 seconds 
+17600000	tags, 188.44142484664917 seconds 
+17700000	tags, 189.46390056610107 seconds 
+17800000	tags, 190.51810503005981 seconds 
+17900000	tags, 191.42508459091187 seconds 
+18000000	tags, 192.69757103919983 seconds 
+18100000	tags, 193.79347038269043 seconds 
+18200000	tags, 194.851149559021 seconds 
+18300000	tags, 195.94687843322754 seconds 
+18400000	tags, 196.94264006614685 seconds 
+18500000	tags, 198.09476113319397 seconds 
+18600000	tags, 199.1923806667328 seconds 
+18700000	tags, 200.27838492393494 seconds 
+18800000	tags, 201.36445260047913 seconds 
+18900000	tags, 202.34360432624817 seconds 
+19000000	tags, 203.49132132530212 seconds 
+19100000	tags, 204.49643230438232 seconds 
+19200000	tags, 205.61548137664795 seconds 
+19300000	tags, 206.65492343902588 seconds 
+19400000	tags, 207.63705110549927 seconds 
+19500000	tags, 208.49125695228577 seconds 
+19600000	tags, 209.89628505706787 seconds 
+19700000	tags, 210.7733166217804 seconds 
+19800000	tags, 212.07531642913818 seconds 
+19900000	tags, 213.10652494430542 seconds 
+20000000	tags, 214.3838312625885 seconds 
+20100000	tags, 215.26291155815125 seconds 
+20200000	tags, 216.39220023155212 seconds 
+20300000	tags, 217.51190876960754 seconds 
+20400000	tags, 218.3760347366333 seconds 
+20500000	tags, 219.57925724983215 seconds 
+20600000	tags, 220.54250597953796 seconds 
+20700000	tags, 221.54991173744202 seconds 
+20800000	tags, 222.8222029209137 seconds 
+20900000	tags, 223.70455932617188 seconds 
+21000000	tags, 224.4658989906311 seconds 
+21100000	tags, 225.75636839866638 seconds 
+21200000	tags, 227.00584888458252 seconds 
+21300000	tags, 227.66715216636658 seconds 
+21400000	tags, 229.04980397224426 seconds 
+21500000	tags, 229.63710522651672 seconds 
+21600000	tags, 229.91151213645935 seconds 
+21700000	tags, 232.40787053108215 seconds 
+21800000	tags, 233.20960235595703 seconds 
+21900000	tags, 234.09974098205566 seconds 
+22000000	tags, 235.47654509544373 seconds 
+22100000	tags, 235.7364354133606 seconds 
+22200000	tags, 236.00124335289001 seconds 
+22300000	tags, 236.27290439605713 seconds 
+22400000	tags, 239.99077320098877 seconds 
+22500000	tags, 241.02225279808044 seconds 
+22600000	tags, 242.01677441596985 seconds 
+22700000	tags, 243.26400756835938 seconds 
+22800000	tags, 244.19077444076538 seconds 
+22900000	tags, 245.47525477409363 seconds 
+23000000	tags, 246.65758609771729 seconds 
+23100000	tags, 247.42610883712769 seconds 
+23200000	tags, 249.06003093719482 seconds 
+23300000	tags, 250.1198787689209 seconds 
+23400000	tags, 251.1487545967102 seconds 
+23500000	tags, 252.21630001068115 seconds 
+23600000	tags, 253.19055199623108 seconds 
+23700000	tags, 254.41017293930054 seconds 
+23800000	tags, 255.48156595230103 seconds 
+23900000	tags, 256.39908504486084 seconds 
+24000000	tags, 257.481169462204 seconds 
+24100000	tags, 258.403804063797 seconds 
+24200000	tags, 259.6714174747467 seconds 
+24300000	tags, 260.776540517807 seconds 
+24400000	tags, 261.90826630592346 seconds 
+24500000	tags, 262.1911299228668 seconds 
+24600000	tags, 262.4787104129791 seconds 
+24700000	tags, 265.0457167625427 seconds 
+24800000	tags, 265.941365480423 seconds 
+24900000	tags, 267.2433354854584 seconds 
+25000000	tags, 267.9584741592407 seconds 
+25100000	tags, 269.4360086917877 seconds 
+25200000	tags, 270.48930263519287 seconds 
+25300000	tags, 271.1299624443054 seconds 
+===== reading the barcodes and bins ======
+@AM	nBinSize:1
+@AM	binSizeList: [5000]
+@AM	binSize:5000	nBin:619150
+Loading required package: Matrix
+Loading required package: rhdf5
+Warning message:
+no DISPLAY variable so Tk is not available 
+Loading required package: stats4
+Loading required package: BiocGenerics
+Loading required package: parallel
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:Matrix’:
+
+    expand
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+Loading required package: GenomeInfoDb
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:GenomicRanges’:
+
+    intersect, setdiff, union
+
+The following object is masked from ‘package:GenomeInfoDb’:
+
+    intersect
+
+The following objects are masked from ‘package:IRanges’:
+
+    collapse, desc, intersect, setdiff, slice, union
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, intersect, rename, setdiff, setequal, union
+
+The following objects are masked from ‘package:BiocGenerics’:
+
+    combine, intersect, setdiff, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Package 'mclust' version 5.4.7
+Type 'citation("mclust")' for citing this R package in publications.
+Epoch: reading the barcode session ...
+Epoch: reading cell-bin count matrix session ...
+--2021-01-20 17:27:44--  http://mitra.stanford.edu/kundaje/akundaje/release/blacklists/hg19-human/wgEncodeHg19ConsensusSignalArtifactRegions.bed.gz
+Resolving mitra.stanford.edu (mitra.stanford.edu)... 171.67.96.243
+Connecting to mitra.stanford.edu (mitra.stanford.edu)|171.67.96.243|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4750 (4.6K) [application/x-gzip]
+Saving to: ‘wgEncodeHg19ConsensusSignalArtifactRegions.bed.gz’
+
+     0K ....                                                  100%  237M=0s
+
+2021-01-20 17:27:44 (237 MB/s) - ‘wgEncodeHg19ConsensusSignalArtifactRegions.bed.gz’ saved [4750/4750]
+
+Epoch: checking the inputs ...
+Epoch: computing jaccard similarity matrix ...
+Epoch: fitting regression model ...
+Epoch: performing normalization ...
+Epoch: computing eigen decomposition ...
+Epoch: Done
