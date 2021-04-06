@@ -1,0 +1,26 @@
+There were 16 warnings (use warnings() to see them)
+  |                                                                              |                                                                      |   0%INFO  [11:03:38.684] early stopping at 100 iteration 
+INFO  [11:14:06.112] early stopping at 50 iteration 
+  |                                                                              |....                                                                  |   6%INFO  [12:04:34.816] early stopping at 225 iteration 
+INFO  [12:14:58.400] early stopping at 50 iteration 
+  |                                                                              |.........                                                             |  12%INFO  [14:13:41.808] early stopping at 50 iteration 
+  |                                                                              |.............                                                         |  19%INFO  [16:11:30.125] early stopping at 50 iteration 
+  |                                                                              |..................                                                    |  25%INFO  [18:09:49.308] early stopping at 50 iteration 
+  |                                                                              |......................                                                |  31%INFO  [20:09:55.012] early stopping at 50 iteration 
+  |                                                                              |..........................                                            |  38%INFO  [22:08:31.556] early stopping at 50 iteration 
+  |                                                                              |...............................                                       |  44%INFO  [00:06:55.284] early stopping at 50 iteration 
+  |                                                                              |...................................                                   |  50%INFO  [02:05:10.072] early stopping at 50 iteration 
+  |                                                                              |.......................................                               |  56%INFO  [04:03:16.857] early stopping at 50 iteration 
+  |                                                                              |............................................                          |  62%INFO  [06:01:26.259] early stopping at 50 iteration 
+  |                                                                              |................................................                      |  69%INFO  [07:59:21.027] early stopping at 50 iteration 
+  |                                                                              |....................................................                  |  75%INFO  [09:58:38.701] early stopping at 50 iteration 
+  |                                                                              |.........................................................             |  81%INFO  [11:57:55.266] early stopping at 50 iteration 
+  |                                                                              |.............................................................         |  88%INFO  [13:57:39.140] early stopping at 50 iteration 
+  |                                                                              |..................................................................    |  94%INFO  [15:57:48.134] early stopping at 50 iteration 
+  |                                                                              |......................................................................| 100%
+[1] "Are these CGS models? Please, use type=\"maximum\""
+
+real	1764m20.686s
+user	1770m29.862s
+sys	23m42.966s
+It took 105860 seconds

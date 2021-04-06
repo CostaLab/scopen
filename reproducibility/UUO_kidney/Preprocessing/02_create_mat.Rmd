@@ -1,0 +1,109 @@
+---
+title: "Analyze data using ArchR"
+author: "Zhijian Li"
+date: '`r format(Sys.Date(), "%Y-%B-%d")`'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(ggplot2)
+library(stringr)
+library(magrittr)
+library(WriteXLS)
+library(tidyr)
+library(dplyr)
+library(plotly)
+library(cluster)
+library(cowplot)
+library(gridExtra)
+library(viridis)
+library(GenomicRanges)
+library(GenomeInfoDb)
+library(data.table)
+library(ArchR)
+```
+
+```{r set_parameters, echo=FALSE}
+## set parameters
+set.seed(42)
+addArchRThreads(threads = parallel::detectCores() - 2)
+addArchRGenome("mm10")
+```
+
+## Load project
+```{r}
+proj <- loadArchRProject(path = "./UUO")
+```
+
+## Peak calling
+```{r}
+proj <- addGroupCoverages(ArchRProj = proj, 
+                          groupBy = "Sample",
+                          maxCells = 3000,
+                          force = TRUE)
+
+pathToMacs2 <- findMacs2()
+
+proj <- addReproduciblePeakSet(
+    ArchRProj = proj, 
+    groupBy = "Sample", 
+    pathToMacs2 = pathToMacs2
+)
+
+getPeakSet(proj)
+
+proj <- addPeakMatrix(proj)
+
+getAvailableMatrices(proj)
+```
+
+
+## save data
+```{r}
+peakMatrix <- getMatrixFromProject(proj,
+                                   useMatrix = "PeakMatrix")
+
+counts <- peakMatrix@assays@data$PeakMatrix
+df_rangers <- as.data.frame(peakMatrix@rowRanges@ranges)
+
+rownames(counts) <- paste(peakMatrix@rowRanges@seqnames,
+                          df_rangers$start,
+                          df_rangers$end,
+                          sep = "_") 
+
+saveRDS(counts, file = "./PeakMatrix.Rds")
+
+
+if(!dir.exists("./filtered_peak_bc_matrix")){
+    dir.create("./filtered_peak_bc_matrix")
+}
+
+writeMM(counts, file = "./filtered_peak_bc_matrix/matrix.mtx")
+barcodes <- as.data.frame(colnames(counts))
+peaks <- as.data.frame(stringr::str_split_fixed(rownames(counts), "_", 3))
+
+write.table(barcodes, file = "./filtered_peak_bc_matrix/barcodes.tsv", 
+            sep = "\t", quote = FALSE, row.names = FALSE, col.names = FALSE)
+write.table(peaks, file = "./filtered_peak_bc_matrix/peaks.bed", 
+            sep = "\t", quote = FALSE, row.names = FALSE, col.names = FALSE)
+
+
+atac <- getMatrixFromProject(ArchRProj = proj,
+                             useMatrix = "GeneScoreMatrix")
+
+counts <- atac@assays@data$GeneScoreMatrix
+rownames(counts) <- atac@elementMetadata$name
+
+saveRDS(counts, file = "GeneScoreMatrix.Rds")
+
+df <- as.data.frame(proj@cellColData)
+write.csv(df, file = "meta_data.csv", quote = FALSE, row.names = TRUE)
+
+saveArchRProject(ArchRProj = proj, 
+                 load = FALSE)
+```
+
+## Session information
+```{r}
+sessionInfo()
+```

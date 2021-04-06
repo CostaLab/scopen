@@ -1,0 +1,26 @@
+Namespace(alpha=1.0, binary=False, binary_quantile=0.5, estimate_rank=True, input='../../../ArchR/filtered_peak_bc_matrix/', input_format='10X', max_iter=500, max_n_components=40, min_n_components=10, n_components=30, nc=1, no_impute=True, output_dir='../', output_format='dense', output_prefix='scOpen', random_state=42, step_n_components=2, verbose=0)
+02/21/2021 10:36:35, detected 48 cpus, 1 of them are used.
+02/21/2021 10:36:35, loading data...
+02/21/2021 10:41:54, number of peaks: 150593; number of cells 30129
+02/21/2021 10:41:54, number of non-zeros before imputation: 190571396
+02/21/2021 10:41:55, sparsity: 0.9579981699956338
+02/21/2021 10:41:59, running tf-idf transformation...
+02/21/2021 10:43:08, running rank estimation...
+02/21/2021 10:54:44, ranks: 10, fitting error: 166.95798672504765
+02/21/2021 11:06:22, ranks: 12, fitting error: 166.88096128387733
+02/21/2021 11:25:41, ranks: 14, fitting error: 166.82171142320635
+02/21/2021 11:43:53, ranks: 16, fitting error: 166.7745688787108
+02/21/2021 12:18:21, ranks: 18, fitting error: 166.72936969050713
+02/21/2021 13:17:47, ranks: 20, fitting error: 166.70243055083606
+02/21/2021 13:59:48, ranks: 22, fitting error: 166.6766769453948
+02/21/2021 14:46:46, ranks: 24, fitting error: 166.6602666908634
+02/21/2021 16:04:47, ranks: 26, fitting error: 166.63971176098923
+02/21/2021 17:28:50, ranks: 28, fitting error: 166.61734988481095
+02/21/2021 18:59:35, ranks: 30, fitting error: 166.60070450357304
+02/21/2021 20:31:47, ranks: 32, fitting error: 166.58366770289712
+02/21/2021 21:35:00, ranks: 34, fitting error: 166.56988249274596
+02/21/2021 22:53:32, ranks: 36, fitting error: 166.55518764602616
+02/22/2021 00:47:09, ranks: 38, fitting error: 166.54429746124416
+02/22/2021 02:48:19, ranks: 40, fitting error: 166.53690913147247
+02/22/2021 02:48:23, total time:  16.00h  11.00m  48.34s
+It took 58343 seconds

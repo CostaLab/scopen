@@ -1,0 +1,7 @@
+scopen --input $1 --input_format 10X --output_dir $2 --output_prefix $3  dens   58285.79s  user 377.07s system 100% cpu 16:12:23.05 total
+avg shared (code):         0 KB
+avg unshared (data/stack): 0 KB
+total (sum):               0 KB
+max memory:                44894 MB
+page faults from disk:     301
+other page faults:         13651681

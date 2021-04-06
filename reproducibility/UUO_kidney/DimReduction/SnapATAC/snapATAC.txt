@@ -1,0 +1,220 @@
+Loading required package: Matrix
+Loading required package: rhdf5
+Warning message:
+no DISPLAY variable so Tk is not available 
+Loading required package: stats4
+Loading required package: BiocGenerics
+Loading required package: parallel
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:Matrix’:
+
+    expand
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+Loading required package: GenomeInfoDb
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:GenomicRanges’:
+
+    intersect, setdiff, union
+
+The following object is masked from ‘package:GenomeInfoDb’:
+
+    intersect
+
+The following objects are masked from ‘package:IRanges’:
+
+    collapse, desc, intersect, setdiff, slice, union
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, intersect, rename, setdiff, setequal, union
+
+The following objects are masked from ‘package:BiocGenerics’:
+
+    combine, intersect, setdiff, union
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Package 'mclust' version 5.4.7
+Type 'citation("mclust")' for citing this R package in publications.
+Loading required package: ggplot2
+Loading required package: SummarizedExperiment
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: ‘matrixStats’
+
+The following object is masked from ‘package:dplyr’:
+
+    count
+
+
+Attaching package: ‘MatrixGenerics’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    colWeightedMeans, colWeightedMedians, colWeightedSds,
+    colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    rowWeightedSds, rowWeightedVars
+
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: ‘Biobase’
+
+The following object is masked from ‘package:MatrixGenerics’:
+
+    rowMedians
+
+The following objects are masked from ‘package:matrixStats’:
+
+    anyMissing, rowMedians
+
+Loading required package: data.table
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:SummarizedExperiment’:
+
+    shift
+
+The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+The following object is masked from ‘package:GenomicRanges’:
+
+    shift
+
+The following object is masked from ‘package:IRanges’:
+
+    shift
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, second
+
+Loading required package: magrittr
+Successfully loaded ArchRProject!
+
+                                                   / |
+                                                 /    \
+            .                                  /      |.
+            \\\                              /        |.
+              \\\                          /           `|.
+                \\\                      /              |.
+                  \                    /                |\
+                  \\#####\           /                  ||
+                ==###########>      /                   ||
+                 \\##==......\    /                     ||
+            ______ =       =|__ /__                     ||      \\\
+        ,--' ,----`-,__ ___/'  --,-`-===================##========>
+       \               '        ##_______ _____ ,--,__,=##,__   ///
+        ,    __==    ___,-,__,--'#'  ==='      `-'    | ##,-/
+        -,____,---'       \\####\\________________,--\\_##,/
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+Epoch: reading the barcode session ...
+Epoch: reading cell-bin count matrix session ...
+Epoch: reading the barcode session ...
+Epoch: reading cell-bin count matrix session ...
+Epoch: reading the barcode session ...
+Epoch: reading cell-bin count matrix session ...
+Epoch: reading the barcode session ...
+Epoch: reading cell-bin count matrix session ...
+Epoch: reading the barcode session ...
+Epoch: reading cell-bin count matrix session ...
+Epoch: reading the barcode session ...
+Epoch: reading cell-bin count matrix session ...
+Warning message:
+'rBind' is deprecated.
+ Since R version 3.2.0, base's rbind() should work fine with S4 objects 
+            used   (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells   6443134  344.2   12280657   655.9    7708450   411.7
+Vcells 542299218 4137.5 1922615604 14668.4 1504365056 11477.4
+
+ D0_1  D0_2 D10_1 D10_2  D2_1  D2_2 
+ 5855  5514  4842  3256  4420  6242 
+--2021-02-25 10:33:50--  http://mitra.stanford.edu/kundaje/akundaje/release/blacklists/hg38-human/hg38.blacklist.bed.gz
+Resolving mitra.stanford.edu (mitra.stanford.edu)... 171.67.96.243
+Connecting to mitra.stanford.edu (mitra.stanford.edu)|171.67.96.243|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 310 [application/x-gzip]
+Saving to: ‘hg38.blacklist.bed.gz.1’
+
+     0K                                                       100% 56.2M=0s
+
+2021-02-25 10:33:51 (56.2 MB/s) - ‘hg38.blacklist.bed.gz.1’ saved [310/310]
+
+Epoch: checking the inputs ...
+Epoch: computing jaccard similarity matrix ...
+Epoch: fitting regression model ...
+Epoch: performing normalization ...
+Epoch: computing eigen decomposition ...
+Epoch: Done
+Epoch: checking the inputs ...
+Epoch: computing jaccard similarity matrix ...
+Epoch: performing normalization ...
+Epoch: projecting query cells to the reference ...
+Epoch: Done
+null device 
+          1 

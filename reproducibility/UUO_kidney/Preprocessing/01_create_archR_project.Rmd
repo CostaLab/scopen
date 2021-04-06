@@ -1,0 +1,147 @@
+---
+title: "Analyze data using ArchR"
+author: "Zhijian Li"
+date: '`r format(Sys.Date(), "%Y-%B-%d")`'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(ggplot2)
+library(stringr)
+library(magrittr)
+library(WriteXLS)
+library(tidyr)
+library(dplyr)
+library(plotly)
+library(cluster)
+library(cowplot)
+library(gridExtra)
+library(viridis)
+library(GenomicRanges)
+library(GenomeInfoDb)
+library(data.table)
+library(ArchR)
+```
+
+```{r set_parameters, echo=FALSE}
+## set parameters
+set.seed(42)
+addArchRThreads(threads = parallel::detectCores() - 2)
+addArchRGenome("mm10")
+```
+
+## Creating Arrow Files
+```{r}
+inputFiles <- c("D0_1" = "../CountMatrix3/D0_1/outs/fragments.tsv.gz",
+                "D0_2" = "../CountMatrix3/D0_2/outs/fragments.tsv.gz",
+                "D2_1" = "../CountMatrix3/D2_1/outs/fragments.tsv.gz",
+                "D2_2" = "../CountMatrix3/D2_2/outs/fragments.tsv.gz",
+                "D10_1" = "../CountMatrix3/D10_1/outs/fragments.tsv.gz",
+                "D10_2" = "../CountMatrix3/D10_2/outs/fragments.tsv.gz")
+
+filterTSS <- 8
+filterFrags <- 1000
+
+ArrowFiles <- createArrowFiles(
+  inputFiles = inputFiles,
+  sampleNames = names(inputFiles),
+  outputNames = names(inputFiles),
+  minTSS = filterTSS, 
+  minFrags = filterFrags, 
+  QCDir = "QualityControl",
+  addTileMat = TRUE,
+  addGeneScoreMat = TRUE
+)
+
+ArrowFiles
+```
+
+## Plotting
+```{r, fig.width=6, fig.height=6}
+for(sample in unique(names(inputFiles))){
+    input_filename <- sprintf("./QualityControl/%s/%s-Pre-Filter-Metadata.rds", sample, sample)
+    
+    if(file.exists(input_filename)){
+        Metadata <- readRDS(input_filename)
+    
+        ggtitle <- sprintf("%s\n%s\n%s",
+            paste0(sample, "\nnCells Pass Filter = ", sum(Metadata$Keep)),
+            paste0("Median Frags = ", median(Metadata$nFrags[Metadata$Keep==1])),
+            paste0("Median TSS Enrichment = ", median(Metadata$TSSEnrichment[Metadata$Keep==1]))
+          )
+    
+        gg <- ggPoint(
+          x = pmin(log10(Metadata$nFrags), 5) + rnorm(length(Metadata$nFrags), sd = 0.00001),
+          y = Metadata$TSSEnrichment + rnorm(length(Metadata$nFrags), sd = 0.00001), 
+          colorDensity = TRUE,
+          xlim = c(2.5, 5),
+          ylim = c(0, max(Metadata$TSSEnrichment) * 1.05),
+          baseSize = 6,
+          continuousSet = "sambaNight",
+          xlabel = "Log 10 (Unique Fragments)",
+          ylabel = "TSS Enrichment",
+          title = ggtitle,
+          rastr = TRUE) + 
+          geom_hline(yintercept=filterTSS, lty = "dashed", size = 0.25) +
+          geom_vline(xintercept=log10(filterFrags), lty = "dashed", size = 0.25)
+        
+        print(gg)
+    }
+}
+```
+
+
+## Inferring Doublets
+```{r, fig.width=6, fig.height=6}
+doubScores <- addDoubletScores(
+  input = ArrowFiles,
+  k = 10, #Refers to how many cells near a "pseudo-doublet" to count.
+  knnMethod = "UMAP", #Refers to the embedding to use for nearest neighbor search.
+  LSIMethod = 1
+)
+```
+
+
+## Creating an ArchRProject
+```{r, fig.width=6, fig.height=6}
+# With our Arrow files in hand, we are now ready to create an ArchRProject. An ArchRProject is associated with a set of Arrow files and is the backbone of nearly all ArchR analyses.
+proj <- ArchRProject(
+  ArrowFiles = ArrowFiles, 
+  outputDirectory = "UUO",
+  showLogo = FALSE,
+  copyArrows = TRUE #This is recommened so that you maintain an unaltered copy for later usage.
+)
+
+p1 <- plotGroups(ArchRProj = proj, 
+                 groupBy = "Sample", 
+                 colorBy = "cellColData", 
+                 name = "TSSEnrichment",
+                 alpha = 0.4,
+                 plotAs = "violin",
+                 addBoxPlot = TRUE)
+
+p2 <- plotGroups(ArchRProj = proj, 
+                 groupBy = "Sample", 
+                 colorBy = "cellColData", 
+                 name = "log10(nFrags)",
+                 plotAs = "violin",
+                 alpha = 0.4,
+                 addBoxPlot = TRUE)
+
+print(p1)
+print(p2)
+```
+
+## save data
+```{r}
+# Now we can filter putative doublets based on the previously determined doublet scores using the filterDoublets() function. This doesn’t physically remove data from the Arrow files but rather tells the ArchRProject to ignore these cells for downstream analysis.
+proj <- filterDoublets(ArchRProj = proj)
+
+saveArchRProject(ArchRProj = proj, 
+                 load = FALSE)
+```
+
+## Session information
+```{r}
+sessionInfo()
+```
