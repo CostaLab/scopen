@@ -1,0 +1,110 @@
+Sender: LSF System <lsfadmin@linuxbmc0018>
+Subject: Job 44149199: <merge> in cluster <rcc> Done
+
+Job <merge> was submitted from host <login> by user <rs619065> in cluster <rcc> at Thu Aug 23 12:56:56 2018
+Job was executed on host(s) <linuxbmc0018>, in queue <rwth>, as user <rs619065> in cluster <rcc> at Thu Aug 23 12:57:01 2018
+</home/rs619065> was used as the home directory.
+</hpcwork/izkf/projects/SingleCellOpenChromatin/data/ATAC/Cell2018/Merged/script> was used as the working directory.
+Started at Thu Aug 23 12:57:01 2018
+Terminated at Thu Aug 23 13:44:39 2018
+Results reported at Thu Aug 23 13:44:39 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./run.zsh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   3752.43 sec.
+    Max Memory :                                 27018 MB
+    Average Memory :                             2711.63 MB
+    Total Requested Memory :                     51200.00 MB
+    Delta Memory :                               24182.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                45
+    Run time :                                   2858 sec.
+    Turnaround time :                            2863 sec.
+
+The output (if any) follows:
+
+INFO [2018-08-23 12:24:11,773]  [IgvTools.java:831] [main]  Computing coverage.  File = ATAC.bam
+Computing coverage.  File = ATAC.bam
+INFO [2018-08-23 12:24:11,776]  [IgvTools.java:832] [main]  Max zoom = 7
+Max zoom = 7
+INFO [2018-08-23 12:24:11,776]  [IgvTools.java:833] [main]  Window size = 25
+Window size = 25
+INFO [2018-08-23 12:24:11,777]  [IgvTools.java:838] [main]  Window functions: mean 
+Window functions: mean 
+INFO [2018-08-23 12:24:11,777]  [IgvTools.java:839] [main]  Ext factor = 0
+Ext factor = 0
+INFO [2018-08-23 12:24:11,791]  [GenomeManager.java:163] [main]  Loading genome: /rwthfs/rz/cluster/home/rs619065/opt/IGVTools/genomes/hg19.chrom.sizes
+Loading genome: /rwthfs/rz/cluster/home/rs619065/opt/IGVTools/genomes/hg19.chrom.sizes
+INFO [2018-08-23 12:24:11,962]  [DirectoryManager.java:169] [main]  IGV Directory: /home/rs619065/igv
+IGV Directory: /home/rs619065/igv
+INFO [2018-08-23 12:24:11,998]  [GenomeManager.java:210] [main]  Genome loaded.  id= /rwthfs/rz/cluster/home/rs619065/opt/IGVTools/genomes/hg19
+Genome loaded.  id= /rwthfs/rz/cluster/home/rs619065/opt/IGVTools/genomes/hg19
+INFO [2018-08-23 12:24:12,210]  [Preprocessor.java:255] [main]  Processing chromosome chr1
+Processing chromosome chr1
+..INFO [2018-08-23 12:24:59,539]  [Preprocessor.java:255] [main]  Processing chromosome chr2
+Processing chromosome chr2
+...INFO [2018-08-23 12:25:37,428]  [Preprocessor.java:255] [main]  Processing chromosome chr3
+Processing chromosome chr3
+..INFO [2018-08-23 12:26:08,915]  [Preprocessor.java:255] [main]  Processing chromosome chr4
+Processing chromosome chr4
+..INFO [2018-08-23 12:26:34,138]  [Preprocessor.java:255] [main]  Processing chromosome chr5
+Processing chromosome chr5
+10.0% 
+.INFO [2018-08-23 12:27:00,084]  [Preprocessor.java:255] [main]  Processing chromosome chr6
+Processing chromosome chr6
+..INFO [2018-08-23 12:27:27,737]  [Preprocessor.java:255] [main]  Processing chromosome chr7
+Processing chromosome chr7
+.INFO [2018-08-23 12:27:53,340]  [Preprocessor.java:255] [main]  Processing chromosome chr8
+Processing chromosome chr8
+..INFO [2018-08-23 12:28:15,133]  [Preprocessor.java:255] [main]  Processing chromosome chr9
+Processing chromosome chr9
+.INFO [2018-08-23 12:28:36,604]  [Preprocessor.java:255] [main]  Processing chromosome chr10
+Processing chromosome chr10
+..INFO [2018-08-23 12:28:59,418]  [Preprocessor.java:255] [main]  Processing chromosome chr11
+Processing chromosome chr11
+20.0% 
+INFO [2018-08-23 12:29:25,822]  [Preprocessor.java:255] [main]  Processing chromosome chr12
+Processing chromosome chr12
+..INFO [2018-08-23 12:29:50,414]  [Preprocessor.java:255] [main]  Processing chromosome chr13
+Processing chromosome chr13
+.INFO [2018-08-23 12:30:02,800]  [Preprocessor.java:255] [main]  Processing chromosome chr14
+Processing chromosome chr14
+.INFO [2018-08-23 12:30:18,920]  [Preprocessor.java:255] [main]  Processing chromosome chr15
+Processing chromosome chr15
+.INFO [2018-08-23 12:30:33,341]  [Preprocessor.java:255] [main]  Processing chromosome chr16
+Processing chromosome chr16
+.INFO [2018-08-23 12:30:52,412]  [Preprocessor.java:255] [main]  Processing chromosome chr17
+Processing chromosome chr17
+.INFO [2018-08-23 12:31:15,797]  [Preprocessor.java:255] [main]  Processing chromosome chr18
+Processing chromosome chr18
+.INFO [2018-08-23 12:31:26,607]  [Preprocessor.java:255] [main]  Processing chromosome chr19
+Processing chromosome chr19
+.INFO [2018-08-23 12:31:50,995]  [Preprocessor.java:255] [main]  Processing chromosome chr20
+Processing chromosome chr20
+INFO [2018-08-23 12:32:03,833]  [Preprocessor.java:255] [main]  Processing chromosome chr21
+Processing chromosome chr21
+30.0% 
+INFO [2018-08-23 12:32:10,068]  [Preprocessor.java:255] [main]  Processing chromosome chr22
+Processing chromosome chr22
+INFO [2018-08-23 12:32:20,464]  [Preprocessor.java:255] [main]  Processing chromosome chrX
+Processing chromosome chrX
+.INFO [2018-08-23 12:32:36,268]  [TDFWriter.java:318] [main]  Group idx: 1
+Group idx: 1
+100.0% 
+Done
+
+
+PS:
+
+Read file <./cluster_err/merge_err.txt> for stderr output of this job.
+
