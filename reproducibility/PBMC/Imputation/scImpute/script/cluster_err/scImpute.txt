@@ -1,0 +1,105 @@
+Loading required package: parallel
+Loading required package: penalized
+Loading required package: survival
+Welcome to penalized. For extended examples, see vignette("penalized").
+Loading required package: doParallel
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: scImpute
+Loading required package: parallel
+Loading required package: penalized
+Loading required package: survival
+Welcome to penalized. For extended examples, see vignette("penalized").
+Loading required package: doParallel
+Loading required package: foreach
+Loading required package: iterators
+loaded scImpute and set parent environment
+Loading required package: scImpute
+Loading required package: parallel
+Loading required package: penalized
+Loading required package: survival
+Welcome to penalized. For extended examples, see vignette("penalized").
+Loading required package: doParallel
+Loading required package: foreach
+Loading required package: iterators
+loaded scImpute and set parent environment
+Loading required package: scImpute
+Loading required package: parallel
+Loading required package: penalized
+Loading required package: survival
+Welcome to penalized. For extended examples, see vignette("penalized").
+Loading required package: doParallel
+Loading required package: foreach
+Loading required package: iterators
+loaded scImpute and set parent environment
+Loading required package: scImpute
+Loading required package: parallel
+Loading required package: penalized
+Loading required package: survival
+Welcome to penalized. For extended examples, see vignette("penalized").
+Loading required package: doParallel
+Loading required package: foreach
+Loading required package: iterators
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+Warning message:
+In dir.create(out_dir, recursive = TRUE) : '..' already exists
+Rscript  --input=$1 --outdir=$2 --Kcluster=$3   9898.65s  user 770.34s system 30% cpu 9:51:01.17 total
+avg shared (code):         0 KB
+avg unshared (data/stack): 0 KB
+total (sum):               0 KB
+max memory:                73938 MB
+page faults from disk:     49
+other page faults:         541248400
+slurmstepd: error: Unable to send job complete message: Unable to contact slurm controller (connect failure)

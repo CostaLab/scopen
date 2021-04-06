@@ -1,0 +1,9 @@
+There were 16 warnings (use warnings() to see them)
+Rscript  --input=$1 --output=$2   1454.52s  user 69.09s system 4% cpu 9:53:13.76 total
+avg shared (code):         0 KB
+avg unshared (data/stack): 0 KB
+total (sum):               0 KB
+max memory:                32858 MB
+page faults from disk:     160
+other page faults:         12661794
+slurmstepd: error: Unable to send job complete message: Unable to contact slurm controller (connect failure)

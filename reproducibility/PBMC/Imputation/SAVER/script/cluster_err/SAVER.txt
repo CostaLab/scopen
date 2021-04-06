@@ -1,0 +1,38 @@
+106935 genes, 10032 cells
+Running SAVER with 4 worker(s)
+Calculating predictions for 106935 genes using 30159 genes and 10032 cells...
+Start time: 2020-12-11 15:07:57
+Estimating finish time...
+Loading required package: SAVER
+loaded SAVER and set parent environment
+Loading required package: SAVER
+loaded SAVER and set parent environment
+Loading required package: SAVER
+loaded SAVER and set parent environment
+Loading required package: SAVER
+loaded SAVER and set parent environment
+Finished 8/106935 genes. Approximate finish time: 2020-12-11 15:22:57
+Calculating max cor cutoff...
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+Finished 100/106935 genes. Approximate finish time: 2020-12-11 17:26:14
+Calculating lambda coefficients...
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+Finished 254/106935 genes. Approximate finish time: 2020-12-11 19:20:28
+Predicting remaining genes...
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+Finished 26925/106935 genes. Approximate finish time: 2020-12-17 19:54:38
+Predicting remaining genes...
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+slurmstepd: error: *** JOB 18473971 ON nrm118 CANCELLED AT 2020-12-16T15:02:50 DUE TO TIME LIMIT ***

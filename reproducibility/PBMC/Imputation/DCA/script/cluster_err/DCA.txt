@@ -1,0 +1,28 @@
+(OK) Loading cuda 10.0.130
+(OK) Loading cudnn 7.4
+Traceback (most recent call last):
+  File "/home/rs619065/miniconda3/envs/r-4.0.3/bin/dca", line 8, in <module>
+    sys.exit(main())
+  File "/home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/dca/__main__.py", line 147, in main
+    from . import train
+  File "/home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/dca/train.py", line 23, in <module>
+    from . import io
+  File "/home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/dca/io.py", line 26, in <module>
+    import scanpy.api as sc
+  File "/home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/scanpy/__init__.py", line 3, in <module>
+    from ._utils import pkg_version, check_versions, annotate_doc_types
+  File "/home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/scanpy/_utils.py", line 17, in <module>
+    from anndata import AnnData
+  File "/home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/anndata/__init__.py", line 5, in <module>
+    from ._core.anndata import AnnData, ImplicitModificationWarning
+  File "/home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/anndata/_core/anndata.py", line 25, in <module>
+    from .raw import Raw
+  File "/home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/anndata/_core/raw.py", line 11, in <module>
+    from .aligned_mapping import AxisArrays, AxisArraysView
+  File "/home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/anndata/_core/aligned_mapping.py", line 13, in <module>
+    from .views import as_view
+  File "/home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/anndata/_core/views.py", line 13, in <module>
+    from ..compat import ZappyArray
+  File "/home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/anndata/compat/__init__.py", line 15, in <module>
+    from packaging import version
+ModuleNotFoundError: No module named 'packaging'
