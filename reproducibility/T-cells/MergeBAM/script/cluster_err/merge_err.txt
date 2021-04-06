@@ -1,0 +1,56 @@
+[bam_sort_core] merging from 0 files and 32 in-memory blocks...
+INFO  @ Fri, 03 May 2019 18:34:03: 
+# Command line: callpeak -t ATAC.bam -n ATAC --outdir Peaks -g hs -f BAM --keep-dup all --call-summits
+# ARGUMENTS LIST:
+# name = ATAC
+# format = BAM
+# ChIP-seq file = ['ATAC.bam']
+# control file = None
+# effective genome size = 2.70e+09
+# band width = 300
+# model fold = [5, 50]
+# qvalue cutoff = 5.00e-02
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 10000 bps
+# Broad region calling is off
+# Paired-End mode is off
+# Searching for subpeak summits is on
+ 
+INFO  @ Fri, 03 May 2019 18:34:03: #1 read tag files... 
+INFO  @ Fri, 03 May 2019 18:34:03: #1 read treatment tags... 
+INFO  @ Fri, 03 May 2019 18:34:06:  1000000 
+INFO  @ Fri, 03 May 2019 18:34:09:  2000000 
+INFO  @ Fri, 03 May 2019 18:34:12:  3000000 
+INFO  @ Fri, 03 May 2019 18:34:15:  4000000 
+INFO  @ Fri, 03 May 2019 18:34:19:  5000000 
+INFO  @ Fri, 03 May 2019 18:34:22:  6000000 
+INFO  @ Fri, 03 May 2019 18:34:25:  7000000 
+INFO  @ Fri, 03 May 2019 18:34:28:  8000000 
+INFO  @ Fri, 03 May 2019 18:34:31:  9000000 
+INFO  @ Fri, 03 May 2019 18:34:34:  10000000 
+INFO  @ Fri, 03 May 2019 18:34:37:  11000000 
+INFO  @ Fri, 03 May 2019 18:34:38: #1 tag size is determined as 55 bps 
+INFO  @ Fri, 03 May 2019 18:34:38: #1 tag size = 55 
+INFO  @ Fri, 03 May 2019 18:34:38: #1  total tags in treatment: 5723495 
+INFO  @ Fri, 03 May 2019 18:34:38: #1 finished! 
+INFO  @ Fri, 03 May 2019 18:34:38: #2 Build Peak Model... 
+INFO  @ Fri, 03 May 2019 18:34:38: #2 looking for paired plus/minus strand peaks... 
+INFO  @ Fri, 03 May 2019 18:34:41: #2 number of paired peaks: 76053 
+INFO  @ Fri, 03 May 2019 18:34:41: start model_add_line... 
+INFO  @ Fri, 03 May 2019 18:34:41: start X-correlation... 
+INFO  @ Fri, 03 May 2019 18:34:41: end of X-cor 
+INFO  @ Fri, 03 May 2019 18:34:41: #2 finished! 
+INFO  @ Fri, 03 May 2019 18:34:41: #2 predicted fragment length is 89 bps 
+INFO  @ Fri, 03 May 2019 18:34:41: #2 alternative fragment length(s) may be 89 bps 
+INFO  @ Fri, 03 May 2019 18:34:41: #2.2 Generate R script for model : Peaks/ATAC_model.r 
+WARNING @ Fri, 03 May 2019 18:34:41: #2 Since the d (89) calculated from paired-peaks are smaller than 2*tag length, it may be influenced by unknown sequencing problem! 
+WARNING @ Fri, 03 May 2019 18:34:41: #2 You may need to consider one of the other alternative d(s): 89 
+WARNING @ Fri, 03 May 2019 18:34:41: #2 You can restart the process with --nomodel --extsize XXX with your choice or an arbitrary number. Nontheless, MACS will continute computing. 
+INFO  @ Fri, 03 May 2019 18:34:41: #3 Call peaks... 
+INFO  @ Fri, 03 May 2019 18:34:41: #3 Going to call summits inside each peak ... 
+INFO  @ Fri, 03 May 2019 18:34:41: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Fri, 03 May 2019 18:34:50: #3 Call peaks for each chromosome... 
+INFO  @ Fri, 03 May 2019 18:35:10: #4 Write output xls file... Peaks/ATAC_peaks.xls 
+INFO  @ Fri, 03 May 2019 18:35:10: #4 Write peak in narrowPeak format file... Peaks/ATAC_peaks.narrowPeak 
+INFO  @ Fri, 03 May 2019 18:36:07: #4 Write summits bed file... Peaks/ATAC_summits.bed 
+INFO  @ Fri, 03 May 2019 18:36:07: Done! 

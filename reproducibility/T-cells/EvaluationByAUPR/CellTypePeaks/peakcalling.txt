@@ -1,0 +1,140 @@
+INFO  @ Thu, 12 Nov 2020 16:41:48: 
+# Command line: callpeak -t ./Jurkat_T_cell/ATAC.bam -n Jurkat_T_cell --outdir Peaks -g hs -f BAMPE --keep-dup all -q 0.01
+# ARGUMENTS LIST:
+# name = Jurkat_T_cell
+# format = BAMPE
+# ChIP-seq file = ['./Jurkat_T_cell/ATAC.bam']
+# control file = None
+# effective genome size = 2.70e+09
+# band width = 300
+# model fold = [5, 50]
+# qvalue cutoff = 1.00e-02
+# The maximum gap between significant sites is assigned as the read length/tag size.
+# The minimum length of peaks is assigned as the predicted fragment length "d".
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 10000 bps
+# Broad region calling is off
+# Paired-End mode is on
+ 
+INFO  @ Thu, 12 Nov 2020 16:41:48: #1 read fragment files... 
+INFO  @ Thu, 12 Nov 2020 16:41:48: #1 read treatment fragments... 
+INFO  @ Thu, 12 Nov 2020 16:41:52:  1000000 
+INFO  @ Thu, 12 Nov 2020 16:41:56:  2000000 
+INFO  @ Thu, 12 Nov 2020 16:41:59:  3000000 
+INFO  @ Thu, 12 Nov 2020 16:41:59: 3042523 fragments have been read. 
+INFO  @ Thu, 12 Nov 2020 16:42:00: #1 mean fragment size is determined as 164.8 bp from treatment 
+INFO  @ Thu, 12 Nov 2020 16:42:00: #1 fragment size = 164.8 
+INFO  @ Thu, 12 Nov 2020 16:42:00: #1  total fragments in treatment: 3042523 
+INFO  @ Thu, 12 Nov 2020 16:42:00: #1 finished! 
+INFO  @ Thu, 12 Nov 2020 16:42:00: #2 Build Peak Model... 
+INFO  @ Thu, 12 Nov 2020 16:42:00: #2 Skipped... 
+INFO  @ Thu, 12 Nov 2020 16:42:00: #3 Call peaks... 
+INFO  @ Thu, 12 Nov 2020 16:42:00: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Thu, 12 Nov 2020 16:42:09: #3 Call peaks for each chromosome... 
+INFO  @ Thu, 12 Nov 2020 16:42:13: #4 Write output xls file... Peaks/Jurkat_T_cell_peaks.xls 
+INFO  @ Thu, 12 Nov 2020 16:42:13: #4 Write peak in narrowPeak format file... Peaks/Jurkat_T_cell_peaks.narrowPeak 
+INFO  @ Thu, 12 Nov 2020 16:42:13: #4 Write summits bed file... Peaks/Jurkat_T_cell_summits.bed 
+INFO  @ Thu, 12 Nov 2020 16:42:13: Done! 
+INFO  @ Thu, 12 Nov 2020 16:42:14: 
+# Command line: callpeak -t ./Memory_T_cell/ATAC.bam -n Memory_T_cell --outdir Peaks -g hs -f BAMPE --keep-dup all -q 0.01
+# ARGUMENTS LIST:
+# name = Memory_T_cell
+# format = BAMPE
+# ChIP-seq file = ['./Memory_T_cell/ATAC.bam']
+# control file = None
+# effective genome size = 2.70e+09
+# band width = 300
+# model fold = [5, 50]
+# qvalue cutoff = 1.00e-02
+# The maximum gap between significant sites is assigned as the read length/tag size.
+# The minimum length of peaks is assigned as the predicted fragment length "d".
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 10000 bps
+# Broad region calling is off
+# Paired-End mode is on
+ 
+INFO  @ Thu, 12 Nov 2020 16:42:14: #1 read fragment files... 
+INFO  @ Thu, 12 Nov 2020 16:42:14: #1 read treatment fragments... 
+INFO  @ Thu, 12 Nov 2020 16:42:15: 384233 fragments have been read. 
+INFO  @ Thu, 12 Nov 2020 16:42:15: #1 mean fragment size is determined as 164.7 bp from treatment 
+INFO  @ Thu, 12 Nov 2020 16:42:15: #1 fragment size = 164.7 
+INFO  @ Thu, 12 Nov 2020 16:42:15: #1  total fragments in treatment: 384233 
+INFO  @ Thu, 12 Nov 2020 16:42:15: #1 finished! 
+INFO  @ Thu, 12 Nov 2020 16:42:15: #2 Build Peak Model... 
+INFO  @ Thu, 12 Nov 2020 16:42:15: #2 Skipped... 
+INFO  @ Thu, 12 Nov 2020 16:42:15: #3 Call peaks... 
+INFO  @ Thu, 12 Nov 2020 16:42:15: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Thu, 12 Nov 2020 16:42:16: #3 Call peaks for each chromosome... 
+INFO  @ Thu, 12 Nov 2020 16:42:17: #4 Write output xls file... Peaks/Memory_T_cell_peaks.xls 
+INFO  @ Thu, 12 Nov 2020 16:42:17: #4 Write peak in narrowPeak format file... Peaks/Memory_T_cell_peaks.narrowPeak 
+INFO  @ Thu, 12 Nov 2020 16:42:17: #4 Write summits bed file... Peaks/Memory_T_cell_summits.bed 
+INFO  @ Thu, 12 Nov 2020 16:42:17: Done! 
+INFO  @ Thu, 12 Nov 2020 16:42:17: 
+# Command line: callpeak -t ./Naive_T_cell/ATAC.bam -n Naive_T_cell --outdir Peaks -g hs -f BAMPE --keep-dup all -q 0.01
+# ARGUMENTS LIST:
+# name = Naive_T_cell
+# format = BAMPE
+# ChIP-seq file = ['./Naive_T_cell/ATAC.bam']
+# control file = None
+# effective genome size = 2.70e+09
+# band width = 300
+# model fold = [5, 50]
+# qvalue cutoff = 1.00e-02
+# The maximum gap between significant sites is assigned as the read length/tag size.
+# The minimum length of peaks is assigned as the predicted fragment length "d".
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 10000 bps
+# Broad region calling is off
+# Paired-End mode is on
+ 
+INFO  @ Thu, 12 Nov 2020 16:42:17: #1 read fragment files... 
+INFO  @ Thu, 12 Nov 2020 16:42:17: #1 read treatment fragments... 
+INFO  @ Thu, 12 Nov 2020 16:42:21:  1000000 
+INFO  @ Thu, 12 Nov 2020 16:42:23: 1754059 fragments have been read. 
+INFO  @ Thu, 12 Nov 2020 16:42:24: #1 mean fragment size is determined as 146.2 bp from treatment 
+INFO  @ Thu, 12 Nov 2020 16:42:24: #1 fragment size = 146.2 
+INFO  @ Thu, 12 Nov 2020 16:42:24: #1  total fragments in treatment: 1754059 
+INFO  @ Thu, 12 Nov 2020 16:42:24: #1 finished! 
+INFO  @ Thu, 12 Nov 2020 16:42:24: #2 Build Peak Model... 
+INFO  @ Thu, 12 Nov 2020 16:42:24: #2 Skipped... 
+INFO  @ Thu, 12 Nov 2020 16:42:24: #3 Call peaks... 
+INFO  @ Thu, 12 Nov 2020 16:42:24: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Thu, 12 Nov 2020 16:42:29: #3 Call peaks for each chromosome... 
+INFO  @ Thu, 12 Nov 2020 16:42:31: #4 Write output xls file... Peaks/Naive_T_cell_peaks.xls 
+INFO  @ Thu, 12 Nov 2020 16:42:31: #4 Write peak in narrowPeak format file... Peaks/Naive_T_cell_peaks.narrowPeak 
+INFO  @ Thu, 12 Nov 2020 16:42:31: #4 Write summits bed file... Peaks/Naive_T_cell_summits.bed 
+INFO  @ Thu, 12 Nov 2020 16:42:31: Done! 
+INFO  @ Thu, 12 Nov 2020 16:42:32: 
+# Command line: callpeak -t ./Th17_T_cell/ATAC.bam -n Th17_T_cell --outdir Peaks -g hs -f BAMPE --keep-dup all -q 0.01
+# ARGUMENTS LIST:
+# name = Th17_T_cell
+# format = BAMPE
+# ChIP-seq file = ['./Th17_T_cell/ATAC.bam']
+# control file = None
+# effective genome size = 2.70e+09
+# band width = 300
+# model fold = [5, 50]
+# qvalue cutoff = 1.00e-02
+# The maximum gap between significant sites is assigned as the read length/tag size.
+# The minimum length of peaks is assigned as the predicted fragment length "d".
+# Larger dataset will be scaled towards smaller dataset.
+# Range for calculating regional lambda is: 10000 bps
+# Broad region calling is off
+# Paired-End mode is on
+ 
+INFO  @ Thu, 12 Nov 2020 16:42:32: #1 read fragment files... 
+INFO  @ Thu, 12 Nov 2020 16:42:32: #1 read treatment fragments... 
+INFO  @ Thu, 12 Nov 2020 16:42:34: 542680 fragments have been read. 
+INFO  @ Thu, 12 Nov 2020 16:42:34: #1 mean fragment size is determined as 121.4 bp from treatment 
+INFO  @ Thu, 12 Nov 2020 16:42:34: #1 fragment size = 121.4 
+INFO  @ Thu, 12 Nov 2020 16:42:34: #1  total fragments in treatment: 542680 
+INFO  @ Thu, 12 Nov 2020 16:42:34: #1 finished! 
+INFO  @ Thu, 12 Nov 2020 16:42:34: #2 Build Peak Model... 
+INFO  @ Thu, 12 Nov 2020 16:42:34: #2 Skipped... 
+INFO  @ Thu, 12 Nov 2020 16:42:34: #3 Call peaks... 
+INFO  @ Thu, 12 Nov 2020 16:42:34: #3 Pre-compute pvalue-qvalue table... 
+INFO  @ Thu, 12 Nov 2020 16:42:35: #3 Call peaks for each chromosome... 
+INFO  @ Thu, 12 Nov 2020 16:42:36: #4 Write output xls file... Peaks/Th17_T_cell_peaks.xls 
+INFO  @ Thu, 12 Nov 2020 16:42:36: #4 Write peak in narrowPeak format file... Peaks/Th17_T_cell_peaks.narrowPeak 
+INFO  @ Thu, 12 Nov 2020 16:42:36: #4 Write summits bed file... Peaks/Th17_T_cell_summits.bed 
+INFO  @ Thu, 12 Nov 2020 16:42:36: Done! 

@@ -1,0 +1,7 @@
+Rscript  --input=$1 --output=$2   59.56s  user 6.22s system 46% cpu 2:22.80 total
+avg shared (code):         0 KB
+avg unshared (data/stack): 0 KB
+total (sum):               0 KB
+max memory:                2268 MB
+page faults from disk:     348
+other page faults:         807068

@@ -1,0 +1,50 @@
+49344 genes, 765 cells
+Running SAVER with 4 worker(s)
+Calculating predictions for 49344 genes using 10549 genes and 765 cells...
+Start time: 2021-01-22 19:13:36
+Estimating finish time...
+Loading required package: SAVER
+loaded SAVER and set parent environment
+Loading required package: SAVER
+loaded SAVER and set parent environment
+Loading required package: SAVER
+loaded SAVER and set parent environment
+Loading required package: SAVER
+loaded SAVER and set parent environment
+Finished 8/49344 genes. Approximate finish time: 2021-01-22 19:27:16
+Calculating max cor cutoff...
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+Finished 100/49344 genes. Approximate finish time: 2021-01-22 19:34:09
+Calculating lambda coefficients...
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+Finished 815/49344 genes. Approximate finish time: 2021-01-22 19:41:31
+Predicting remaining genes...
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+Finished 12948/49344 genes. Approximate finish time: 2021-01-22 19:49:27
+Predicting remaining genes...
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+Done!
+Finish time: 2021-01-22 19:48:49
+Total time: 35.2236 mins
+Warning message:
+In if (!(grepl("matrix", class(x), ignore.case = TRUE))) { :
+  the condition has length > 1 and only the first element will be used
+Rscript  --input=$1 --outdir=$2   47.76s  user 2.54s system 2% cpu 36:00.51 total
+avg shared (code):         0 KB
+avg unshared (data/stack): 0 KB
+total (sum):               0 KB
+max memory:                2827 MB
+page faults from disk:     17
+other page faults:         549768

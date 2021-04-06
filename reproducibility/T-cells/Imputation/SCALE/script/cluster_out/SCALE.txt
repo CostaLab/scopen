@@ -1,0 +1,26 @@
+Loading  data ...
+Original data contains 765 cells x 49344 peaks
+Finished loading takes 0.03 min
+Estimate k 6
+
+**********************************************************************
+  SCALE: Single-Cell ATAC-seq Analysis via Latent feature Extraction
+**********************************************************************
+
+======== Parameters ========
+Cell number: 765
+Peak number: 49344
+n_centroids: 6
+max_iter: 30000
+batch_size: 32
+cell filter by peaks: 0.0
+rare peak filter: 0.0
+common peak filter: 0.9
+============================
+
+## Training Model ##
+EarlyStopping: run 3243 iteration
+outdir: ../
+Saving imputed data
+Plotting tSNE embedding
+It took 223 seconds

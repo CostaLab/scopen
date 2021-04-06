@@ -1,0 +1,10 @@
+Warning message:
+In impute(X, ncp = ncp, scale = scale, method = method, ind.sup = ind.sup,  :
+  Stopped after  1000  iterations
+Rscript  --input=$1 --output=$2   11472.54s  user 1880.43s system 186% cpu 1:59:16.87 total
+avg shared (code):         0 KB
+avg unshared (data/stack): 0 KB
+total (sum):               0 KB
+max memory:                4381 MB
+page faults from disk:     32
+other page faults:         236219915

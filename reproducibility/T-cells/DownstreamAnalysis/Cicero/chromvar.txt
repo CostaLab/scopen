@@ -1,0 +1,203 @@
+Loading required package: monocle
+Loading required package: Matrix
+Loading required package: Biobase
+Loading required package: BiocGenerics
+Loading required package: parallel
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which.max, which.min
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: VGAM
+Loading required package: stats4
+Loading required package: splines
+Loading required package: DDRTree
+Loading required package: irlba
+Loading required package: Gviz
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:Matrix’:
+
+    expand
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+Loading required package: GenomicRanges
+Loading required package: GenomeInfoDb
+Loading required package: grid
+Loading required package: SingleCellExperiment
+Loading required package: SummarizedExperiment
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: 'matrixStats'
+
+The following objects are masked from 'package:Biobase':
+
+    anyMissing, rowMedians
+
+
+Attaching package: 'MatrixGenerics'
+
+The following objects are masked from 'package:matrixStats':
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    colWeightedMeans, colWeightedMedians, colWeightedSds,
+    colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    rowWeightedSds, rowWeightedVars
+
+The following object is masked from 'package:Biobase':
+
+    rowMedians
+
+Registered S3 method overwritten by 'e1071':
+  method       from  
+  print.fclust fclust
+
+Attaching package: 'dplyr'
+
+The following object is masked from 'package:matrixStats':
+
+    count
+
+The following objects are masked from 'package:GenomicRanges':
+
+    intersect, setdiff, union
+
+The following object is masked from 'package:GenomeInfoDb':
+
+    intersect
+
+The following objects are masked from 'package:IRanges':
+
+    collapse, desc, intersect, setdiff, slice, union
+
+The following objects are masked from 'package:S4Vectors':
+
+    first, intersect, rename, setdiff, setequal, union
+
+The following object is masked from 'package:Biobase':
+
+    combine
+
+The following objects are masked from 'package:BiocGenerics':
+
+    combine, intersect, setdiff, union
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+Package 'mclust' version 5.4.7
+Type 'citation("mclust")' for citing this R package in publications.
+
+Attaching package: 'gridExtra'
+
+The following object is masked from 'package:dplyr':
+
+    combine
+
+The following object is masked from 'package:Biobase':
+
+    combine
+
+The following object is masked from 'package:BiocGenerics':
+
+    combine
+
+Using Peak as id variables
+Remove noise by PCA ...
+Reduce dimension by tSNE ...
+Overlap QC metrics:
+Cells per bin: 50
+Maximum shared cells bin-bin: 44
+Mean shared cells bin-bin: 4.04983502104904
+Median shared cells bin-bin: 0
+[1] "Starting Cicero"
+[1] "Calculating distance_parameter value"
+[1] "Running models"
+[1] "Assembling connections"
+[1] "Successful cicero models:  9534"
+[1] "Other models: "
+
+Zero or one element in range 
+                        2864 
+[1] "Models with errors:  0"
+[1] "Done"
+[1] "Generating fData ranges"
+[1] "Generating feature data ranges"
+[1] "Determining overlaps"
+[1] "Assigning labels"
+[1] "Merging to fData table"
+Using Peak as id variables
+Remove noise by PCA ...
+Reduce dimension by tSNE ...
+Overlap QC metrics:
+Cells per bin: 50
+Maximum shared cells bin-bin: 44
+Mean shared cells bin-bin: 3.79675503404317
+Median shared cells bin-bin: 0
+[1] "Starting Cicero"
+[1] "Calculating distance_parameter value"
+[1] "Running models"
+[1] "Assembling connections"
+[1] "Successful cicero models:  9534"
+[1] "Other models: "
+
+Zero or one element in range 
+                        2864 
+[1] "Models with errors:  0"
+[1] "Done"
+[1] "Generating fData ranges"
+[1] "Generating feature data ranges"
+[1] "Determining overlaps"
+[1] "Assigning labels"
+[1] "Merging to fData table"
+Warning messages:
+1: In if (isSparseMatrix(counts)) { :
+  the condition has length > 1 and only the first element will be used
+2: In if (isSparseMatrix(counts)) { :
+  the condition has length > 1 and only the first element will be used

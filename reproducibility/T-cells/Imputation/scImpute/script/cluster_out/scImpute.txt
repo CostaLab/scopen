@@ -1,0 +1,134 @@
+[1] "reading in raw count matrix ..."
+[1] "number of genes in raw count matrix 49344"
+[1] "number of cells in raw count matrix 765"
+[1] "reading finished!"
+[1] "imputation starts ..."
+[1] "searching candidate neighbors ... "
+[1] "inferring cell similarities ..."
+[1] "dimension reduction ..."
+[1] "calculating cell distances ..."
+[1] "cluster sizes:"
+[1]  77 215 153 253
+starting worker pid=164327 on localhost:11475 at 09:24:56.007
+starting worker pid=164325 on localhost:11475 at 09:24:56.007
+starting worker pid=164328 on localhost:11475 at 09:24:56.010
+starting worker pid=164326 on localhost:11475 at 09:24:56.012
+[1] "estimating dropout probability for type 1 ..."
+[1] 2000
+[1] 4000
+[1] 6000
+[1] 8000
+[1] 10000
+[1] 12000
+[1] 14000
+[1] 16000
+[1] 18000
+[1] 20000
+[1] 22000
+[1] 24000
+[1] 26000
+[1] 28000
+[1] 30000
+[1] 32000
+[1] 34000
+[1] 36000
+[1] 38000
+[1] 40000
+[1] 42000
+[1] 44000
+[1] 46000
+[1] 48000
+[1] "searching for valid genes ..."
+[1] "imputing dropout values for type 1 ..."
+[1] "estimating dropout probability for type 2 ..."
+[1] 2000
+[1] 4000
+[1] 6000
+[1] 8000
+[1] 10000
+[1] 12000
+[1] 14000
+[1] 16000
+[1] 18000
+[1] 20000
+[1] 22000
+[1] 24000
+[1] 26000
+[1] 28000
+[1] 30000
+[1] 32000
+[1] 34000
+[1] 36000
+[1] 38000
+[1] 40000
+[1] 42000
+[1] 44000
+[1] 46000
+[1] 48000
+[1] "searching for valid genes ..."
+[1] "imputing dropout values for type 2 ..."
+[1] 100
+[1] 200
+[1] "estimating dropout probability for type 3 ..."
+[1] 2000
+[1] 4000
+[1] 6000
+[1] 8000
+[1] 10000
+[1] 12000
+[1] 14000
+[1] 16000
+[1] 18000
+[1] 20000
+[1] 22000
+[1] 24000
+[1] 26000
+[1] 28000
+[1] 30000
+[1] 32000
+[1] 34000
+[1] 36000
+[1] 38000
+[1] 40000
+[1] 42000
+[1] 44000
+[1] 46000
+[1] 48000
+[1] "searching for valid genes ..."
+[1] "imputing dropout values for type 3 ..."
+[1] 100
+[1] "estimating dropout probability for type 4 ..."
+[1] 2000
+[1] 4000
+[1] 6000
+[1] 8000
+[1] 10000
+[1] 12000
+[1] 14000
+[1] 16000
+[1] 18000
+[1] 20000
+[1] 22000
+[1] 24000
+[1] 26000
+[1] 28000
+[1] 30000
+[1] 32000
+[1] 34000
+[1] 36000
+[1] 38000
+[1] 40000
+[1] 42000
+[1] 44000
+[1] 46000
+[1] 48000
+[1] "searching for valid genes ..."
+[1] "imputing dropout values for type 4 ..."
+[1] 100
+[1] 200
+[1] "writing imputed count matrix ..."
+ [1]  24  49  52  56 117 128 135 142 145 146 147 153 158 178 195 198 204 206 208
+[20] 210 378 458 472 477 481 483 484 485 498 500 502 504 507 509 512 515 520 529
+[39] 530 533 535 537 542 543 546 548 551 555 561 562 570 572 573 585 589 601 609
+[58] 610 611 614 694 705 716 717 732 742 759
+It took 374 seconds
