@@ -1,0 +1,5 @@
+Registered S3 method overwritten by 'e1071':
+  method       from  
+  print.fclust fclust
+Error: file.exists(opt$input) is not TRUE
+Execution halted

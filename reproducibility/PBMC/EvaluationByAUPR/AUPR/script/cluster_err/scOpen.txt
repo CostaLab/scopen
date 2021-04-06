@@ -1,0 +1,33 @@
+Registered S3 method overwritten by 'e1071':
+  method       from  
+  print.fclust fclust
+computing AUPR for cell type: naive_CD4_T_cells 
+
+computing AUPR for cell type: memory_CD4_T_cells 
+
+computing AUPR for cell type: non.classical_monocytes 
+
+computing AUPR for cell type: naive_CD8_T_cells 
+
+computing AUPR for cell type: CD56_.bright._NK_cells 
+
+computing AUPR for cell type: classical_monocytes 
+
+computing AUPR for cell type: effector_CD8_T_cells 
+
+computing AUPR for cell type: myeloid_DC 
+
+computing AUPR for cell type: intermediate_monocytes 
+
+computing AUPR for cell type: memory_B_cells 
+
+computing AUPR for cell type: MAIT_T_cells 
+
+computing AUPR for cell type: CD56_.dim._NK_cells 
+
+computing AUPR for cell type: naive_B_cells 
+
+computing AUPR for cell type: plasmacytoid_DC 
+
+Warning message:
+system call failed: Cannot allocate memory 
