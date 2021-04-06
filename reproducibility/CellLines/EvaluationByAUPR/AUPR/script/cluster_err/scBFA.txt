@@ -1,0 +1,15 @@
+Registered S3 method overwritten by 'e1071':
+  method       from  
+  print.fclust fclust
+computing AUPR for cell type: BJ 
+
+computing AUPR for cell type: GM12878 
+
+computing AUPR for cell type: H1ESC 
+
+computing AUPR for cell type: HL60 
+
+computing AUPR for cell type: K562 
+
+computing AUPR for cell type: TF1 
+
