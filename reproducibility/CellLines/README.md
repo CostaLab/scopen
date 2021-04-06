@@ -6,5 +6,9 @@
 6. DownstreamAnalysis ---> codes for scABC, Cicero and ChromVAR using either raw or scOpen imputed matrix as input
 7. EvaluationByAUPR ---> evaluate the imputation by using AUPR metric
 8. ClusteringImputation ---> evaluate the imputation by clustering
-9. SilhouetterScoreImputation ---> compute silhouette scores for imputation matrix
+9. SilhouetteScoreImputation ---> compute silhouette scores for imputation matrix
 10. Visualization ---> visualize imputation using UMAP
+11. SilhouetteScoreDimReduction ---> compute silhouette scores for dimension reduced matrix
+12. ClusteringDimReduction ---> evaluate the dimension reduced matrix using clustering
+13. SilhouetteScoreDownstreamAnalysis ---> compute silhouette scores for downstream analysis
+14. VisualizationDownstreamAnalysis ---> visualize the downstream analysis results using UMAP
