@@ -1,0 +1,39 @@
+Namespace(alpha=1, binary=False, estimate_rank=True, input='../../../TagCount/TagCount.txt', input_format='dense', max_iter=500, max_n_components=30, min_n_components=2, n_components=30, nc=4, output_dir='../', output_format='dense', output_prefix='scOpen', random_state=42, step_n_components=1, verbose=0)
+01/23/2021 10:47:44, detected 48 cpus, 4 of them are used.
+01/23/2021 10:47:44, loading data...
+01/23/2021 10:47:54, number of peaks: 125647; number of cells 1224
+01/23/2021 10:47:54, number of non-zeros before imputation: 5516980
+01/23/2021 10:47:54, sparsity: 0.9641269859104699
+01/23/2021 10:47:55, running tf-idf transformation...
+01/23/2021 10:47:57, running rank estimation...
+01/23/2021 10:48:22, ranks: 8, fitting error: 33.66932857908744
+01/23/2021 10:48:43, ranks: 9, fitting error: 33.65730502740916
+01/23/2021 10:49:31, ranks: 16, fitting error: 33.59533691851786
+01/23/2021 10:50:24, ranks: 17, fitting error: 33.589035575396075
+01/23/2021 10:52:20, ranks: 24, fitting error: 33.554862255744865
+01/23/2021 10:54:24, ranks: 25, fitting error: 33.552055267529084
+01/23/2021 10:48:07, ranks: 4, fitting error: 33.80472574794756
+01/23/2021 10:48:16, ranks: 5, fitting error: 33.751447578951584
+01/23/2021 10:48:50, ranks: 12, fitting error: 33.62353081162151
+01/23/2021 10:49:29, ranks: 13, fitting error: 33.61573335474852
+01/23/2021 10:51:02, ranks: 20, fitting error: 33.572886221660035
+01/23/2021 10:53:30, ranks: 21, fitting error: 33.57017456308298
+01/23/2021 10:55:44, ranks: 30, fitting error: 33.533377462155045
+01/23/2021 10:48:04, ranks: 2, fitting error: 33.99086131955021
+01/23/2021 10:48:09, ranks: 3, fitting error: 33.871149824508585
+01/23/2021 10:48:46, ranks: 10, fitting error: 33.643255617214535
+01/23/2021 10:49:21, ranks: 11, fitting error: 33.63688458008992
+01/23/2021 10:50:13, ranks: 18, fitting error: 33.58395488490519
+01/23/2021 10:51:08, ranks: 19, fitting error: 33.58008768367282
+01/23/2021 10:53:23, ranks: 26, fitting error: 33.546707060487236
+01/23/2021 10:56:13, ranks: 27, fitting error: 33.54324204982011
+01/23/2021 10:48:08, ranks: 6, fitting error: 33.71517588168722
+01/23/2021 10:48:30, ranks: 7, fitting error: 33.692552304621614
+01/23/2021 10:49:08, ranks: 14, fitting error: 33.60965125309341
+01/23/2021 10:49:56, ranks: 15, fitting error: 33.603080642046294
+01/23/2021 10:51:18, ranks: 22, fitting error: 33.56732904859449
+01/23/2021 10:52:37, ranks: 23, fitting error: 33.559952982977606
+01/23/2021 10:54:29, ranks: 28, fitting error: 33.5398582246573
+01/23/2021 10:56:32, ranks: 29, fitting error: 33.53701563120684
+01/23/2021 11:00:16, total time:  0.00h  12.00m  31.57s
+It took 762 seconds

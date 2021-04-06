@@ -1,0 +1,108 @@
+Loading required package: parallel
+Loading required package: penalized
+Loading required package: survival
+Welcome to penalized. For extended examples, see vignette("penalized").
+Loading required package: doParallel
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: scImpute
+Loading required package: parallel
+Loading required package: penalized
+Loading required package: survival
+Welcome to penalized. For extended examples, see vignette("penalized").
+Loading required package: doParallel
+Loading required package: foreach
+Loading required package: iterators
+loaded scImpute and set parent environment
+Loading required package: scImpute
+Loading required package: parallel
+Loading required package: penalized
+Loading required package: survival
+Welcome to penalized. For extended examples, see vignette("penalized").
+Loading required package: doParallel
+Loading required package: foreach
+Loading required package: iterators
+loaded scImpute and set parent environment
+Loading required package: scImpute
+Loading required package: parallel
+Loading required package: penalized
+Loading required package: survival
+Welcome to penalized. For extended examples, see vignette("penalized").
+Loading required package: doParallel
+Loading required package: foreach
+Loading required package: iterators
+loaded scImpute and set parent environment
+Loading required package: scImpute
+Loading required package: parallel
+Loading required package: penalized
+Loading required package: survival
+Welcome to penalized. For extended examples, see vignette("penalized").
+Loading required package: doParallel
+Loading required package: foreach
+Loading required package: iterators
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 93 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 107 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 99 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 106 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 85 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 91 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 102 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 65 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 101 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 107 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 108 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 93 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 98 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 105 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 90 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 72 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 51 from Lapack routine 'dtrtrs'
+Error in qr.coef(qr(a, LAPACK = TRUE), b) : 
+  error code 65 from Lapack routine 'dtrtrs'
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+loaded scImpute and set parent environment
+Warning message:
+In dir.create(out_dir, recursive = TRUE) : '..' already exists
+Rscript  --input=$1 --outdir=$2 --Kcluster=$3   1407.95s  user 55.35s system 90% cpu 26:53.78 total
+avg shared (code):         0 KB
+avg unshared (data/stack): 0 KB
+total (sum):               0 KB
+max memory:                10075 MB
+page faults from disk:     28
+other page faults:         37570132

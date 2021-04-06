@@ -1,0 +1,50 @@
+125647 genes, 1224 cells
+Running SAVER with 4 worker(s)
+Calculating predictions for 125647 genes using 23695 genes and 1224 cells...
+Start time: 2021-01-23 10:44:58
+Estimating finish time...
+Loading required package: SAVER
+loaded SAVER and set parent environment
+Loading required package: SAVER
+loaded SAVER and set parent environment
+Loading required package: SAVER
+loaded SAVER and set parent environment
+Loading required package: SAVER
+loaded SAVER and set parent environment
+Finished 8/125647 genes. Approximate finish time: 2021-01-23 12:03:33
+Calculating max cor cutoff...
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+Finished 100/125647 genes. Approximate finish time: 2021-01-23 15:13:06
+Calculating lambda coefficients...
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+Finished 404/125647 genes. Approximate finish time: 2021-01-23 16:16:12
+Predicting remaining genes...
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+Finished 31715/125647 genes. Approximate finish time: 2021-01-23 18:15:49
+Predicting remaining genes...
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+loaded SAVER and set parent environment
+Done!
+Finish time: 2021-01-23 18:09:33
+Total time: 7.409696 hours
+Warning message:
+In if (!(grepl("matrix", class(x), ignore.case = TRUE))) { :
+  the condition has length > 1 and only the first element will be used
+Rscript  --input=$1 --outdir=$2   180.86s  user 8.82s system 0% cpu 7:27:27.60 total
+avg shared (code):         0 KB
+avg unshared (data/stack): 0 KB
+total (sum):               0 KB
+max memory:                11193 MB
+page faults from disk:     17
+other page faults:         1861284

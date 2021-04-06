@@ -1,0 +1,97 @@
+(OK) Loading cuda 10.0.130
+(OK) Loading cudnn 7.4
+/home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/scanpy/api/__init__.py:7: FutureWarning: 
+
+In a future version of Scanpy, `scanpy.api` will be removed.
+Simply use `import scanpy as sc` and `import scanpy.external as sce` instead.
+
+  FutureWarning,
+Using TensorFlow backend.
+/home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/kopt/config.py:60: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  _config = yaml.load(open(_config_path))
+WARNING:tensorflow:From /home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/dca/train.py:98: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2021-01-25 09:24:43,611 [WARNING] From /home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/dca/train.py:98: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+WARNING:tensorflow:From /home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/dca/train.py:98: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+2021-01-25 09:24:43,612 [WARNING] From /home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/dca/train.py:98: The name tf.ConfigProto is deprecated. Please use tf.compat.v1.ConfigProto instead.
+
+2021-01-25 09:24:43.612682: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2021-01-25 09:24:43.620437: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2100000000 Hz
+2021-01-25 09:24:43.620678: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5580222919e0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-01-25 09:24:43.620730: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2021-01-25 09:24:43.633628: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2021-01-25 09:24:44.755481: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x558022293b20 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2021-01-25 09:24:44.755556: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2021-01-25 09:24:44.756314: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:61:00.0
+2021-01-25 09:24:44.760026: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2021-01-25 09:24:44.764266: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2021-01-25 09:24:44.768762: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2021-01-25 09:24:44.771828: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2021-01-25 09:24:44.776382: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2021-01-25 09:24:44.780800: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2021-01-25 09:24:44.787157: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2021-01-25 09:24:44.788258: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2021-01-25 09:24:44.788304: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2021-01-25 09:24:44.789331: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-01-25 09:24:44.789368: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2021-01-25 09:24:44.789380: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2021-01-25 09:24:44.790491: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15059 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:61:00.0, compute capability: 7.0)
+WARNING:tensorflow:From /home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/dca/train.py:103: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+
+2021-01-25 09:24:44,791 [WARNING] From /home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/dca/train.py:103: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+
+WARNING:tensorflow:From /home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+2021-01-25 09:25:06,997 [WARNING] From /home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+2021-01-25 09:25:07.834882: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:61:00.0
+2021-01-25 09:25:07.835054: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2021-01-25 09:25:07.835082: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2021-01-25 09:25:07.835104: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2021-01-25 09:25:07.835125: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2021-01-25 09:25:07.835145: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2021-01-25 09:25:07.835167: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2021-01-25 09:25:07.835188: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2021-01-25 09:25:07.836347: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2021-01-25 09:25:07.836400: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-01-25 09:25:07.836412: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2021-01-25 09:25:07.836422: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2021-01-25 09:25:07.837511: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15059 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:61:00.0, compute capability: 7.0)
+WARNING:tensorflow:From /home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/dca/loss.py:87: The name tf.lgamma is deprecated. Please use tf.math.lgamma instead.
+
+2021-01-25 09:25:07,852 [WARNING] From /home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/dca/loss.py:87: The name tf.lgamma is deprecated. Please use tf.math.lgamma instead.
+
+WARNING:tensorflow:From /home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/dca/loss.py:88: The name tf.log is deprecated. Please use tf.math.log instead.
+
+2021-01-25 09:25:07,857 [WARNING] From /home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/dca/loss.py:88: The name tf.log is deprecated. Please use tf.math.log instead.
+
+WARNING:tensorflow:From /home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/dca/loss.py:10: The name tf.is_nan is deprecated. Please use tf.math.is_nan instead.
+
+2021-01-25 09:25:07,864 [WARNING] From /home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/dca/loss.py:10: The name tf.is_nan is deprecated. Please use tf.math.is_nan instead.
+
+WARNING:tensorflow:From /home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/dca/loss.py:10: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2021-01-25 09:25:07,865 [WARNING] From /home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/dca/loss.py:10: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From /home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2021-01-25 09:25:40,277 [WARNING] From /home/rs619065/miniconda3/envs/r-4.0.3/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2021-01-25 09:25:40.918939: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+dca $1 $2   592.82s  user 15.81s system 81% cpu 12:24.39 total
+avg shared (code):         0 KB
+avg unshared (data/stack): 0 KB
+total (sum):               0 KB
+max memory:                6344 MB
+page faults from disk:     908
+other page faults:         1167267
