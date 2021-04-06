@@ -1,0 +1,6 @@
+Registered S3 method overwritten by 'e1071':
+  method       from  
+  print.fclust fclust
+Registered S3 method overwritten by 'e1071':
+  method       from  
+  print.fclust fclust
