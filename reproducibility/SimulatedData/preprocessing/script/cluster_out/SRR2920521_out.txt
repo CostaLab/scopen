@@ -1,0 +1,59 @@
+Sender: LSF System <lsfadmin@linuxbsc202>
+Subject: Job 44148849: <SRR2920521> in cluster <rcc> Done
+
+Job <SRR2920521> was submitted from host <login> by user <rs619065> in cluster <rcc> at Thu Aug 23 11:59:11 2018
+Job was executed on host(s) <linuxbsc202>, in queue <rwth>, as user <rs619065> in cluster <rcc> at Thu Aug 23 11:59:13 2018
+</home/rs619065> was used as the home directory.
+</hpcwork/izkf/projects/SingleCellOpenChromatin/data/ATAC/NatureGenetics2016/Runs/script> was used as the working directory.
+Started at Thu Aug 23 11:59:13 2018
+Terminated at Thu Aug 23 17:31:25 2018
+Results reported at Thu Aug 23 17:31:25 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+./run.zsh SRR2920521 /hpcwork/izkf/projects/SingleCellOpenChromatin/data/ATAC/NatureGenetics2016/Runs/CD8 /hpcwork/izkf/projects/SingleCellOpenChromatin/data/Bowtie2_indexes/hg19/hg19
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   309388.69 sec.
+    Max Memory :                                 5803 MB
+    Average Memory :                             1647.80 MB
+    Total Requested Memory :                     51200.00 MB
+    Delta Memory :                               45397.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                107
+    Run time :                                   19931 sec.
+    Turnaround time :                            19934 sec.
+
+The output (if any) follows:
+
+
+2018-08-23T09:59:19 prefetch.2.9.0: KClientHttpOpen - connected from '134.61.208.15' to www.ncbi.nlm.nih.gov (130.14.29.110) 
+2018-08-23T09:59:20 prefetch.2.9.0: KClientHttpOpen - verifying CA cert 
+2018-08-23T09:59:20 prefetch.2.9.0: KClientHttpOpen - connected from '134.61.208.15' to sra-download.ncbi.nlm.nih.gov (130.14.250.27) 
+2018-08-23T09:59:23 prefetch.2.9.0: KClientHttpOpen - verifying CA cert 
+2018-08-23T09:59:24 prefetch.2.9.0: 1) Downloading 'SRR2920521'...
+2018-08-23T09:59:24 prefetch.2.9.0:  Downloading via https...
+2018-08-23T09:59:24 prefetch.2.9.0: https://sra-download.ncbi.nlm.nih.gov/traces/sra35/SRR/002852/SRR2920521 -> /hpcwork/izkf/ncbi/sra/SRR2920521.sra.tmp.93627.tmp
+2018-08-23T09:59:24 prefetch.2.9.0: KClientHttpOpen - connected from '134.61.208.15' to sra-download.ncbi.nlm.nih.gov (130.14.250.25) 
+2018-08-23T09:59:25 prefetch.2.9.0: KClientHttpOpen - verifying CA cert 
+2018-08-23T10:05:29 prefetch.2.9.0: /hpcwork/izkf/ncbi/sra/SRR2920521.sra.tmp.93627.tmp (0)
+2018-08-23T10:05:29 prefetch.2.9.0: 1) 'SRR2920521' was downloaded successfully
+2018-08-23T10:05:29 prefetch.2.9.0: 'SRR2920521' has 0 unresolved dependencies
+2018-08-23T10:05:29 prefetch.2.9.0: 'SRR2920521' is not cSRA
+Read 59302159 spots for /hpcwork/izkf/ncbi/sra/SRR2920521.sra
+Written 59302159 spots for /hpcwork/izkf/ncbi/sra/SRR2920521.sra
+1.16
+15:44:42.948 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/lustren/hpcwork/izkf/jar/picard.jar!/com/intel/gkl/native/libgkl_compression.so
+
+
+PS:
+
+Read file <./cluster_err/SRR2920521_err.txt> for stderr output of this job.
+

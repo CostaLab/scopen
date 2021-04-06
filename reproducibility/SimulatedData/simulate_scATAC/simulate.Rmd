@@ -1,0 +1,312 @@
+---
+title: "simulate"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## load package
+```{r load_package}
+suppressPackageStartupMessages(library(data.table))
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(Matrix))
+suppressPackageStartupMessages(library(stringr))
+suppressPackageStartupMessages(library(cowplot))
+suppressPackageStartupMessages(library(BuenColors))
+suppressPackageStartupMessages(library(irlba))
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(BSgenome.Hsapiens.UCSC.hg19))
+suppressPackageStartupMessages(library(GenomicRanges))
+suppressPackageStartupMessages(library(chromstaR))
+#suppressPackageStartupMessages(library(BRGenomics))
+suppressPackageStartupMessages(library(patchwork))
+suppressPackageStartupMessages(library(doParallel))
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(Rtsne))
+registerDoParallel(cores = 48)
+```
+
+## define help function
+```{r help_function}
+# modified from https://github.com/GreenleafLab/10x-scATAC-2019/blob/master/code/02_Get_Peak_Set_hg19_v2.R
+
+countInsertions <- function(query, fragments, by = "RG"){
+    #Count By Fragments Insertions
+    inserts <- c(
+        GRanges(seqnames = seqnames(fragments), 
+                ranges = IRanges(start(fragments), start(fragments)), 
+                RG = mcols(fragments)[,by]),
+        GRanges(seqnames = seqnames(fragments), 
+                ranges = IRanges(end(fragments), end(fragments)), 
+                RG = mcols(fragments)[,by]))
+    by <- "RG"
+    overlapDF <- DataFrame(findOverlaps(query, inserts, ignore.strand = TRUE, 
+                                        maxgap=-1L, minoverlap=0L, type = "any"))
+    overlapDF$name <- mcols(inserts)[overlapDF[, 2], by]
+    overlapTDF <- transform(overlapDF, id = match(name, unique(name)))
+    #Calculate Overlap Stats
+    inPeaks <- table(overlapDF$name)
+    total <- table(mcols(inserts)[, by])
+    total <- total[names(inPeaks)]
+    frip <- inPeaks / total
+    #Summarize
+    sparseM <- Matrix::sparseMatrix(
+        i = overlapTDF[, 1], 
+        j = overlapTDF[, 4],
+        x = rep(1, nrow(overlapTDF)), 
+        dims = c(length(query), length(unique(overlapDF$name))))
+    colnames(sparseM) <- unique(overlapDF$name)
+    rownames(sparseM) <- paste0(seqnames(query), "_", 
+                                  start(query), "_", end(query))
+    
+    return(sparseM)
+}
+
+
+# modified from https://github.com/pinellolab/scATAC-benchmarking/blob/master/Synthetic_Data/Simulate_scATAC/BoneMarrow/simulate_bonemarrow_depth.ipynb
+simulate_scatac <- function(bulk, 
+                            n_cells, 
+                            which_celltypes, 
+                            nb_size,
+                            nb_mu,
+                            frip,
+                            rate_noise = 0, 
+                            seed = 100, 
+                            shuffle = FALSE){
+  
+  # Reproducibility
+  set.seed(seed)
+  which_celltypes <- sort(which_celltypes)
+  stopifnot(frip < 1)
+  stopifnot(rate_noise < 1)
+  n_peaks <- nrow(bulk)
+
+  #--
+  # Set up cell labels
+  #--
+  cell_labels <- sort(rep(which_celltypes, n_cells))
+  final_names <- paste0(cell_labels, "_", as.character(1:length(cell_labels)))
+  
+  
+  #-------------------
+  # Simulate true data
+  #-------------------
+  
+  # Generate cell-type specific peaks
+  lapply(which_celltypes, function(celltype){
+    
+    # Apply different rates per cell depending on group label for generating cell-type specific peaks
+    n_cells_this_celltype <- sum(cell_labels == celltype)
+    prob_per_peaks_in_bulk <- bulk[, celltype]/sum(bulk[, celltype])
+    
+    bins_idx <- rnbinom(n = n_cells_this_celltype, 
+                        size = nb_size,
+                        mu = nb_mu)
+
+    n_frags_per_cell <- do.call(rbind, 
+                         lapply(bins_idx, function(x) sample(seq(from = x*500,
+                                                       to = (x+1)*500,
+                                                       by = 1), size = 1, 
+                                                   replace = TRUE))) 
+    
+    print(mean(n_frags_per_cell))
+    
+    # use Frip to get number of fragments in peaks
+    n_frags_per_cell <- n_frags_per_cell * frip
+    print(mean(n_frags_per_cell))
+    
+    # Define probabilities
+    # Prob observting frag  
+    # Total number of fragments epxpected; the 0.5s are for two alleles that will be simulated/added later
+    for (i in 1:n_cells_this_celltype) {
+        prob_per_peaks <- prob_per_peaks_in_bulk * 
+            (n_frags_per_cell[i] * (1 - rate_noise)) + 
+            ((rate_noise * n_frags_per_cell[i]) / n_peaks) 
+    }
+    # Cap probabilities at something sensible
+    prob_per_peaks <- ifelse(prob_per_peaks > 0.9, 0.9, prob_per_peaks)
+    
+    # Represent the two haplotypes as two random draws
+    mat <- (matrix(rbinom(n_peaks*n_cells_this_celltype, 
+                           size = 1, 
+                           prob = prob_per_peaks),
+                    ncol = n_cells_this_celltype, 
+                    byrow = FALSE))
+    
+    Matrix(mat)
+  }) %>% do.call(what = "cbind") -> sparse_matrix
+  
+  colnames(sparse_matrix) <- final_names
+  rownames(sparse_matrix) <- rownames(bulk)
+  sparse_matrix
+}
+
+run_PCA <- function(df, rank.){
+    df.scale <- scale(df)
+    df.t <- t(df.scale)
+    df.pca <- prcomp(df.t, rank. = rank.)
+    x <- as.data.frame(df.pca$x)
+    return(x)
+}
+```
+
+
+## generate peak by cell type matrix
+```{r bulk_matrix}
+bulk_count_filename <- "./output/bulk_peak_celltype.txt"
+celltypes <- c('HSC', 'MPP', 'LMPP', 'CMP', 'GMP', 'MEP', 'Mono', 
+                   'CD4', 'CD8', 'NK', 'B', 'CLP', 'ERY')
+peakfile <- "../Bulk/Merged_peaks.narrowPeak"
+
+if(file.exists(bulk_count_filename)){
+    df_bulk <- read.table(bulk_count_filename, header = TRUE)
+} else{
+    peaks <- read.table(peakfile)
+    peaks <- GRanges(seqnames = peaks$V1,
+                     ranges = IRanges(start = peaks$V2, end = peaks$V3))
+    fragments_list <- vector(mode = "list", length = length(celltypes))
+    idx <- 1
+    for (celltype in celltypes) {
+        print(paste0("reading data from ", celltype))
+        bamfile <- paste0("../Bulk/Merged/", celltype, "/", "ATAC.bam")
+        fragments_list[[idx]] <- readBamFileAsGRanges(bamfile = bamfile,
+                                          pairedEndReads = TRUE,
+                                          max.fragment.width = 2000)
+        fragments_list[[idx]]$RG <- celltype 
+        idx <- idx + 1
+    }
+    fragments <- do.call(c, fragments_list)
+    mat <- countInsertions(query = peaks, fragments = fragments)
+    df_bulk <- as.data.frame(as.matrix(mat))
+    write.table(df_bulk, file = bulk_count_filename, quote = FALSE, sep = "\t")    
+}
+```
+
+## visulization of bulk data
+```{r, fig.height=8, fig.width=8}
+df_bulk_pca <- run_PCA(df_bulk, rank. = 2)
+df_bulk_pca$celltype <- rownames(df_bulk_pca)
+df_bulk_pca$celltype <- stringr::str_replace_all(df_bulk_pca$celltype,
+                                                 c("ERY" = "Ery",
+                                                   "Mono" = "mono"))
+
+p <- ggplot(data = df_bulk_pca, aes(x = PC1, y = PC2, color = celltype)) +
+    geom_point() +
+    scale_color_manual(values = jdb_color_maps) +
+    theme_cowplot() +
+    theme(legend.title = element_blank())
+
+print(p)
+```
+
+
+
+## visualization of number of fragments per cell in real scATAC-seq data
+```{r, fig.height=4, fig.width=8}
+df <- read.csv("./input/atac_v1_pbmc_10k_singlecell.csv")
+df <- subset(df, is__cell_barcode == 1 & passed_filters < 100000)
+df <- subset(df, select = c("barcode", "passed_filters"))
+
+print(mean(df$passed_filters))
+print(sd(df$passed_filters))
+
+df_count <- df %>%
+  group_by(group = passed_filters) %>%
+  summarise(n = n())
+
+p1 <- ggplot(data = df_count, aes(x = group, y = n)) +
+    geom_bar(stat = "identity") +
+        xlab("Number of fragments (raw)") + ylab("Count") +
+    theme_cowplot() +
+    theme(axis.text.x = element_blank(),
+          axis.ticks.x = element_blank())
+
+df_count <- df %>%
+  group_by(group = cut(passed_filters, breaks = seq(from = 500, 
+                                                    to = 100000,
+                                                    by = 500))) %>%
+  summarise(n = n())
+
+p2 <- ggplot(data = df_count, aes(x = group, y = n)) +
+    geom_bar(stat = "identity") +
+        xlab("Number of fragments (bined)") + ylab("Count") +
+    theme_cowplot() +
+    theme(axis.text.x = element_blank(),
+          axis.ticks.x = element_blank())
+
+p1 + p2
+
+```
+
+## model number of bined fragments
+```{r, fig.width=8, fig.height=4}
+library(fitdistrplus)
+number <- rep(1:nrow(df_count), df_count$n)
+
+fitp <- fitdist(number,"pois") 
+summary(fitp)
+plot(fitp)
+fitnb <- fitdist(number,"nbinom") 
+summary(fitnb)
+plot(fitnb)
+```
+
+## sampling of number of fragments using two setps
+```{r}
+bins_idx <- rnbinom(n = 8000, 
+                    size = fitnb$estimate[[1]], 
+                    mu = fitnb$estimate[[2]])
+
+# visualization of sampled bins
+df_bins <- data.frame(bins_idx)
+p1 <- ggplot(data = df_bins, aes(x = bins_idx)) +
+    geom_bar(stat = "count") +
+        xlab("Number of fragments (bined)") + ylab("Count") +
+    theme_cowplot() +
+    theme(axis.text.x = element_blank(),
+          axis.ticks.x = element_blank())
+
+p1
+
+num_fragments <- do.call(rbind, 
+                         lapply(bins_idx, 
+                                function(x) sample(seq(from = x*500,
+                                                       to = (x+1)*500,
+                                                       by = 1), size = 1, 
+                                                   replace = TRUE))) 
+
+df_sampling <- data.frame(num_fragments)
+```
+
+## simulate data
+```{r, fig.width=6, fig.height=6}
+n_cells_per_celltype <- 200
+output_filename <- "./output/simulated_mat_frip_%.1f_noise_%.1f_seed_%d.txt"
+rate_noise <- 0.6
+
+for(seed in c(1:10)){
+   foreach(frip = c(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9)) %dopar% {
+        mat <- simulate_scatac(bulk = df_bulk,
+                               n_cells =  n_cells_per_celltype,
+                               which_celltypes = celltypes,
+                               frip = frip,
+                               rate_noise = rate_noise,
+                               nb_size = fitnb$estimate[[1]],
+                               nb_mu = fitnb$estimate[[2]],
+                               seed = seed)
+        mat <- as.matrix(mat)
+        write.table(mat, 
+                    file = sprintf(output_filename, frip, rate_noise, seed), 
+                    sep = "\t", quote = FALSE)
+} 
+}
+```
+
+
+## Session information
+```{r}
+sessionInfo()
+```
+
