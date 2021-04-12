@@ -1,11 +1,8 @@
 import time
 import argparse
-from sklearn.neighbors import NearestNeighbors
 from sklearn.feature_extraction.text import TfidfTransformer
 from multiprocessing import Pool, cpu_count
 from kneed import KneeLocator
-import scipy.sparse as sp
-from sklearn.utils import check_array
 
 from .MF import NMF
 from .Utils import *
@@ -30,7 +27,7 @@ def parse_args():
     parser.add_argument("--n_components", type=int, default=30,
                         help="Number of components. "
                              "Default: 30")
-    parser.add_argument("--alpha", type=float, default=1,
+    parser.add_argument("--alpha", type=float, default=1.0,
                         help="Parameter for model regularization to prevent from over-fitting. "
                              "Default: 1")
     parser.add_argument("--max_iter", type=int, default=500,
@@ -49,20 +46,22 @@ def parse_args():
     parser.add_argument("--step_n_components", type=int, default=1,
                         help="Spacing between values"
                              "Default: 1")
-    parser.add_argument("--rho", type=float, default=0.9,
-                        help='Dropout rate per cell, must between 0 and 1. '
-                             'Default: 0.9')
-    parser.add_argument("--estimate_rho", default=False,
-                        action='store_true',
-                        help='If set, dropout rate will be estimated based on knn. '
-                             'Default: False')
-    parser.add_argument("--n_neighbors", type=int, default=5,
-                        help="Number of neighbors used for knn-based dropout rate estimation. "
-                             "Default: 1")
     parser.add_argument("--random_state", type=int, default=42,
                         help="Random state. Default: 42")
     parser.add_argument("--nc", type=int, metavar="INT", default=1,
                         help="The number of cores. DEFAULT: 1")
+    parser.add_argument("--no_impute", default=False,
+                        action='store_true',
+                        help='If set, scOpen will not save the imputed matrix. '
+                             'Set it if you only want to use the dimension reduced matrix. '
+                             'Default: False')
+    parser.add_argument("--binary", default=False,
+                        action='store_true',
+                        help='If set, a binary matrix will also be generated. '
+                             'Default: False')
+    parser.add_argument("--binary_quantile", type=float, default=0.5,
+                        help="The quantile value for binarize matrix."
+                             "Default: 0.5")
     parser.add_argument("--verbose", type=int, default=0)
 
     version_message = "Version: " + str(__version__)
@@ -71,49 +70,14 @@ def parse_args():
     return parser.parse_args()
 
 
-def detect_dropout_by_knn(data, k):
-    data = data.toarray()
-    neigh = NearestNeighbors(n_neighbors=k,
-                             algorithm='auto',
-                             n_jobs=-1, metric='cosine')
-    neigh.fit(np.transpose(data))
-    indices = neigh.kneighbors(return_distance=False)
-
-    rho = np.zeros(indices.shape[0])
-    for i in range(indices.shape[0]):
-        non_zeros = np.count_nonzero(data[:, indices[i]], axis=1)
-        dropout_idx = np.argwhere((non_zeros > k/2) & (data[:, i] == 0))
-        data[dropout_idx, i] = np.nan
-        rho[i] = len(dropout_idx) / (len(dropout_idx) + np.count_nonzero(data[:, i]))
-
-    data = check_array(data, accept_sparse=('csr', 'csc'), dtype=float,
-                       force_all_finite=False)
-
-    return rho, data
-
-
-def compute_rho_by_knn(data, k):
-    neigh = NearestNeighbors(n_neighbors=k,
-                             algorithm='auto',
-                             n_jobs=-1, metric='jaccard')
-    neigh.fit(np.transpose(data))
-    indices = neigh.kneighbors(return_distance=False)
-
-    data_y = np.zeros(data.shape)
-    rho = np.zeros(indices.shape[0])
-    for i in range(indices.shape[0]):
-        _y = np.greater(np.sum(data[:, indices[i]], axis=1), 0)
-        data_y[:, i] = np.greater(data[:, i] + _y, 0)
-        rho[i] = (np.count_nonzero(data_y[:, i]) - np.count_nonzero(data[:, i])) / np.count_nonzero(data_y[:, i])
-
-    return rho, data_y
-
-
 def tf_idf_transform(data):
     print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
           f"running tf-idf transformation...")
-    model = TfidfTransformer(smooth_idf=False)
-    tf_idf = np.transpose(model.fit_transform(np.transpose(data)))
+    model = TfidfTransformer(smooth_idf=False, norm="l2")
+    model = model.fit(np.transpose(data))
+    model.idf_ -= 1
+    tf_idf = np.transpose(model.transform(np.transpose(data)))
+
     return tf_idf
 
 
@@ -202,35 +166,8 @@ def main():
 
     plot_open_regions_density(data, args)
 
-    if args.estimate_rho:
-        print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
-              f"estimating dropout rate...")
-        rho, data_y = compute_rho_by_knn(data, k=args.n_neighbors)
-        filename = os.path.join(args.output_dir, "{}_y.txt".format(args.output_prefix))
-        write_data_to_dense_file(filename=filename, data=data_y, barcodes=barcodes, peaks=peaks)
-
-        plot_estimated_dropout(rho=rho, args=args)
-
-        df = pd.DataFrame({'barcodes': barcodes,
-                           'estimated_dropout': rho})
-
-        filename = os.path.join(args.output_dir, "{}_stat.txt".format(args.output_prefix))
-        df.to_csv(filename, index=False, sep="\t")
-
-    else:
-        rho = args.rho
-
-    # dropout rate
-    data = data[:, :] * (1 / (1 - rho))
-
     # tf-idf
     tf_idf = tf_idf_transform(data)
-
-    filename = os.path.join(args.output_dir, "{}_x_hat.txt".format(args.output_prefix))
-    write_data_to_dense_file(filename=filename,
-                             data=tf_idf.toarray(),
-                             barcodes=barcodes,
-                             peaks=peaks)
 
     if args.estimate_rank:
         w_hat, h_hat = estimate_rank(data=tf_idf, args=args)
@@ -238,14 +175,59 @@ def main():
     else:
         print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
               f"running NMF...")
-        arguments = (data, args.n_components, args.alpha,
+        arguments = (tf_idf, args.n_components, args.alpha,
                      args.max_iter, args.verbose,
                      args.random_state)
 
         res = run_nmf(arguments)
         w_hat, h_hat = res[0], res[1]
 
-    save_data(w=w_hat, h=h_hat, peaks=peaks, barcodes=barcodes, args=args)
+    df = pd.DataFrame(data=w_hat, index=peaks)
+    df.to_csv(os.path.join(args.output_dir, "{}_peaks.txt".format(args.output_prefix)), sep="\t")
+
+    df = pd.DataFrame(data=h_hat, columns=barcodes)
+    df.to_csv(os.path.join(args.output_dir, "{}_barcodes.txt".format(args.output_prefix)), sep="\t")
+
+    if not args.no_impute:
+
+        m_hat = np.dot(w_hat, h_hat).astype(np.float32)
+        m_hat_binary = None
+
+        if args.binary:
+            threshold = np.quantile(m_hat, args.binary_quantile)
+            m_hat_binary = (m_hat > threshold).astype(np.int8)
+
+        if args.output_format == "sparse":
+            filename = os.path.join(args.output_dir, "{}.txt".format(args.output_prefix))
+            write_data_to_sparse_file(filename=filename,
+                                      data=m_hat,
+                                      barcodes=barcodes,
+                                      peaks=peaks)
+            if m_hat_binary is not None:
+                filename = os.path.join(args.output_dir, "{}_binary.txt".format(args.output_prefix))
+                write_data_to_sparse_file(filename=filename,
+                                          data=m_hat_binary,
+                                          barcodes=barcodes,
+                                          peaks=peaks)
+
+        elif args.output_format == "dense":
+            filename = os.path.join(args.output_dir, "{}.txt".format(args.output_prefix))
+            write_data_to_dense_file(filename=filename,
+                                     data=m_hat,
+                                     barcodes=barcodes,
+                                     peaks=peaks)
+            if m_hat_binary is not None:
+                filename = os.path.join(args.output_dir, "{}_binary.txt".format(args.output_prefix))
+                write_data_to_dense_file(filename=filename,
+                                         data=m_hat_binary,
+                                         barcodes=barcodes,
+                                         peaks=peaks)
+
+        elif args.output_format == "10X":
+            write_data_to_10x(output_dir=args.output_dir,
+                              data=m_hat,
+                              barcodes=barcodes,
+                              peaks=peaks)
 
     secs = time.time() - start
     m, s = divmod(secs, 60)
