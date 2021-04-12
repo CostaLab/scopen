@@ -104,7 +104,6 @@ pbmc
 ### We next perform dimension reduction using scOpen. Note here we have to use reticulate package to allow us call python function in R.
 ```{r}
 library(reticulate)
-use_condaenv("r-scopen", required = TRUE)
 sc <- import("scopen")
 
 matDR <- t(as.matrix(sc$Main$scopen_dr(pbmc@assays$peaks@counts)))
