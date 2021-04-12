@@ -1,0 +1,17 @@
+---
+title: "Using scOpen in R"
+author: "Zhijian Li"
+date: 'Compiled: `r format(Sys.Date(), "%B %d, %Y")`'
+output: html_document
+---
+
+## Introduction
+
+### This tutorial will show you how to use scOpen in R, since many tools, e.g., Signac and ArchR, are developed using R.
+
+## Setting up
+```{r message=FALSE, warning=FALSE}
+library(reticulate)
+
+scv <- import("scopen")
+```
