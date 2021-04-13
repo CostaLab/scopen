@@ -33,3 +33,6 @@ used for downstream analysis, such as clustering, visualization.
 
 * `HematopoieticCells_scOpen_barcodes.txt` and `HematopoieticCells_scOpen_peaks.txt` contain low dimensional representation 
 for cells and peaks.
+  
+## How to use scOpen in R
+If you want to use scOpen in R, [here](https://github.com/CostaLab/scopen/blob/master/vignettes/signac.Rmd) is a tutorial. 

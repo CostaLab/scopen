@@ -1,8 +1,11 @@
 import time
 import argparse
+
+import numpy as np
 from sklearn.feature_extraction.text import TfidfTransformer
 from multiprocessing import Pool, cpu_count
 from kneed import KneeLocator
+from sklearn.base import BaseEstimator
 
 from .MF import NMF
 from .Utils import *
@@ -68,6 +71,13 @@ def parse_args():
     parser.add_argument('--version', action='version', version=version_message)
 
     return parser.parse_args()
+
+
+def scopen_dr(counts, n_components=30, alpha=1, max_iter=200, verbose=1, random_state=42):
+    tf_idf = tf_idf_transform(data=counts)
+    w_hat, h_hat, err = run_nmf(arguments=(tf_idf, n_components, alpha, max_iter, verbose, random_state))
+
+    return h_hat
 
 
 def tf_idf_transform(data):

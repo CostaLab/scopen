@@ -64,5 +64,6 @@ setup(
                       'scipy',
                       'tables',
                       'matplotlib',
-                      'scikit-learn']
+                      'scikit-learn',
+                      'kneed']
 )
