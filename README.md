@@ -35,4 +35,4 @@ used for downstream analysis, such as clustering, visualization.
 for cells and peaks.
   
 ## How to use scOpen in R
-If you want to use scOpen in R, [here](https://github.com/CostaLab/scopen/blob/master/vignettes/signac.Rmd) is a tutorial. 
+If you want to use scOpen in R, [here](https://github.com/CostaLab/scopen/blob/master/vignettes/signac_pbmc.Rmd) is a tutorial. 
