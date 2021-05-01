@@ -1,11 +1,9 @@
 import time
 import argparse
 
-import numpy as np
 from sklearn.feature_extraction.text import TfidfTransformer
 from multiprocessing import Pool, cpu_count
 from kneed import KneeLocator
-from sklearn.base import BaseEstimator
 
 from .MF import NMF
 from .Utils import *
@@ -164,17 +162,20 @@ def main():
 
     data, barcodes, peaks = load_data(args=args)
 
-    data = np.greater(data, 0)
+    # binarize the input matrix
+    data[data > 0] = 1
     (m, n) = data.shape
+
+    n_non_zeros = data.count_nonzero()
 
     print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
           f"number of peaks: {m}; number of cells {n}")
     print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
-          f"number of non-zeros before imputation: {np.count_nonzero(data)}")
+          f"number of non-zeros before imputation: {n_non_zeros}")
     print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, "
-          f"sparsity: {1 - np.count_nonzero(data) / (m * n)}")
+          f"sparsity: {1 - n_non_zeros / (m * n)}")
 
-    plot_open_regions_density(data, args)
+    # plot_open_regions_density(data, args)
 
     # tf-idf
     tf_idf = tf_idf_transform(data)

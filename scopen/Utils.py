@@ -51,7 +51,9 @@ def get_data_from_sparse_file(filename):
             cell = ll[1]
             df.at[peak, cell] = int(ll[2])
 
-    data = df.values.astype(np.float16)
+    data = df.values.astype(np.int8)
+    data = sp_sparse.csr_matrix(data)
+
     barcodes = df.columns.values.tolist()
     peaks = df.index.values
 
@@ -63,7 +65,9 @@ def get_data_from_sparse_file(filename):
 def get_data_from_dense_file(filename):
     df = pd.read_csv(filename, delimiter="\t", index_col=0)
 
-    data = df.values.astype(np.float16)
+    data = df.values.astype(np.int8)
+    data = sp_sparse.csr_matrix(data)
+
     barcodes = df.columns.values.tolist()
     peaks = df.index.values
 
@@ -77,7 +81,9 @@ def get_data_from_10x(input_dir):
     barcodes_file = os.path.join(input_dir, "barcodes.tsv")
     peaks_file = os.path.join(input_dir, "peaks.bed")
 
-    data = mmread(matrix_file).todense(order='F')
+    # use sparse matrix to save memory
+    data = mmread(matrix_file).astype(dtype=np.int8)
+    data = sp_sparse.csr_matrix(data)
     barcodes = list()
     peaks = list()
 
@@ -91,7 +97,7 @@ def get_data_from_10x(input_dir):
             ll = line.strip().split("\t")
             peaks.append(ll[0] + ":" + ll[1] + "-" + ll[2])
 
-    return np.asarray(data, dtype=np.float16), barcodes, peaks
+    return data, barcodes, peaks
 
 
 def get_data_from_10x_h5(filename):
@@ -110,9 +116,9 @@ def get_data_from_10x_h5(filename):
         indices = getattr(group, 'indices').read()
         indptr = getattr(group, 'indptr').read()
         shape = getattr(group, 'shape').read()
-        matrix = sp_sparse.csc_matrix((data, indices, indptr), shape=shape).todense(order='F')
+        matrix = sp_sparse.csr_matrix((data, indices, indptr), shape=shape)
 
-        return np.asarray(matrix, dtype=np.float16), barcodes, names
+        return matrix, barcodes, names
 
 
 def write_data_to_sparse_file(filename, data, barcodes, peaks):
