@@ -31,9 +31,10 @@ scopen --input TagCount.txt --input_format dense --output_dir ./ --output_prefix
 This matrix contains raw ATAC-seq reads number with each row representing a peak and each column a cell. 
 We also support different input format, such as scATAC-seq from 10X Genomics.
 
-Check more information by: \
-`$ scopen --help`
-
+Check more information by:
+```commandline
+scopen --help
+```
 
 ## Outputs
 After the command is done, you can find 5 output files in current directory:
