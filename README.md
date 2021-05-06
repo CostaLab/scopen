@@ -1,4 +1,4 @@
-# scOpen: chromatin-accessibility estimation of single-cell ATAC data
+# scOpen: chromatin-accessibility estimation for single-cell ATAC data
 
 ## Installation
 First some dependencies \
@@ -8,7 +8,7 @@ Then install scopen with all other dependencies \
 `$ pip install scopen`
 
 Alternatively (but not recommended), you can clone this repository: \
-`$ git clone git@github.com:CostaLab/scopen.git`
+`$ git clone https://github.com/CostaLab/scopen.git`
 
 and install manually \
 `$ cd scopen` \
