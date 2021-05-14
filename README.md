@@ -22,9 +22,9 @@ pip install ./
 ```
 
 ## Usage
-Download [here](https://costalab.ukaachen.de/open_data/scOpen/HematopoieticCells/RawData/TagCount.txt) the count matrix from human 
-hematopoietic cell and run scOpen:
+Download [here](https://www.dropbox.com/s/pp45n1pcbldeqlq/TagCount.txt.gz?dl=0) the count matrix from human hematopoietic cell and run scOpen:
 ```commandline
+gzip -d TagCount.txt.gz
 scopen --input TagCount.txt --input_format dense --output_dir ./ --output_prefix scOpen --output_format dense --verbose 0 --estimate_rank --nc 4
 ```
 This matrix contains raw ATAC-seq reads number with each row representing a peak and each column a cell. 
