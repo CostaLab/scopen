@@ -23,8 +23,8 @@ See our [manuscript](https://www.biorxiv.org/content/10.1101/865931v3) for more 
 [scikit-learn](https://scikit-learn.org/stable/)   
 [kneed](https://github.com/arvkevi/kneed)
 
-
-The easiest way to install scopen is using `pip`
+### User installation
+The easiest way to install scopen and the required packages is using `pip`
 ```commandline
 pip install scopen
 ```
@@ -34,6 +34,7 @@ To upgrade to a newer release use the `--upgrade` option:
 pip install --upgrade scopen
 ```
 
+Or you can install it from github, first clone the repository:
 ```commandline
 git clone https://github.com/CostaLab/scopen.git
 ```
