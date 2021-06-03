@@ -10,35 +10,38 @@ changes in the development of fibrosis in the kidney.
 
 See our [manuscript](https://www.biorxiv.org/content/10.1101/865931v3) for more details.
 
+## System Requirements
+
+
+
 ## Installation
-`scopen` has been test with Python 3.6, 3.7, 3.8 and 3.9.  
+`scopen` has been test with Python 3.6, 3.7, 3.8 and 3.9.
+We recommend to use [Miniconda](https://docs.conda.io/en/latest/miniconda.html) to setup
+the environment.
 
 ### Dependencies
-[numpy](https://numpy.org/)  
-[scipy](https://www.scipy.org/)  
-[h5py](https://www.h5py.org/) 
-[pandas](https://pandas.pydata.org/)  
-[PyTables](http://www.pytables.org/) 
-[matplotlib](https://matplotlib.org/)  
-[scikit-learn](https://scikit-learn.org/stable/)   
-[kneed](https://github.com/arvkevi/kneed)
+[numpy](https://numpy.org/) (>=1.20.3)  
+[scipy](https://www.scipy.org/) (>=1.6.3)  
+[h5py](https://www.h5py.org/) (>=3.2.1)  
+[pandas](https://pandas.pydata.org/) (>=1.2.4) 
+[PyTables](http://www.pytables.org/) (>=3.6.1) 
+[matplotlib](https://matplotlib.org/) (>=3.4.2) 
+[scikit-learn](https://scikit-learn.org/stable/) (>=0.24.2)   
+[kneed](https://github.com/arvkevi/kneed) (>=0.7.0)
 
 ### User installation
 The easiest way to install scopen and the required packages is using `pip`
 ```commandline
 pip install scopen
 ```
-
 To upgrade to a newer release use the `--upgrade` option:
 ```commandline
 pip install --upgrade scopen
 ```
-
 Or you can install it from github, first clone the repository:
 ```commandline
 git clone https://github.com/CostaLab/scopen.git
 ```
-
 and install manually
 ```commandline
 cd scopen
@@ -57,12 +60,13 @@ each column is a cell. For example, you can download
 the count matrix from human hematopoietic cells, and uncompress the file:
 ```commandline
 gzip -d TagCount.txt.gz
-scopen --input TagCount.txt --input_format dense --output_dir ./ --output_prefix scOpen --output_format dense --verbose 0 --estimate_rank --nc 4
 ```
 We also support different input format, such as scATAC-seq from 10X Genomics.
 
 ### Run scopen
-
+```commandline
+scopen --input TagCount.txt --input_format dense --output_dir ./ --output_prefix scOpen --output_format dense --verbose 0 --estimate_rank --nc 4
+```
 
 
 Check more information by:
