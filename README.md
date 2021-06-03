@@ -1,5 +1,15 @@
 # scOpen: chromatin-accessibility estimation for single-cell ATAC data
 
+## Overview
+Single cell ATAC-seq is sparse and high-dimensional, we here propose scOpen to impute
+and quantify the open chromatin status of regulatory regions from scATAC-seq data. Moreover,
+scOpen provides a low-dimensional matrix for clustering and visualisation.
+We show that scOpen improves crucial down-stream analysis steps of scATAC-seq data as clustering, visualisation, 
+cis-regulatory DNA interactions and delineation of regulatory features. We demonstrate the power of scOpen to dissect regulatory 
+changes in the development of fibrosis in the kidney.
+
+See our [manuscript](https://www.biorxiv.org/content/10.1101/865931v3) for more details.
+
 ## Installation
 First some dependencies
 ```commandline
