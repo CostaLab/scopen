@@ -61,17 +61,17 @@ the count matrix from human hematopoietic cells, and uncompress the file:
 ```commandline
 gzip -d TagCount.txt.gz
 ```
+
+`scopen` also supports using output of cellranger, see more information:
+```commandline
+scopen --help
+```
+
 We also support different input format, such as scATAC-seq from 10X Genomics.
 
 ### Run scopen
 ```commandline
 scopen --input TagCount.txt --input_format dense --output_dir ./ --output_prefix scOpen --output_format dense --verbose 0 --estimate_rank --nc 4
-```
-
-
-Check more information by:
-```commandline
-scopen --help
 ```
 
 ## Outputs
