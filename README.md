@@ -23,10 +23,10 @@ the environment.
 [numpy](https://numpy.org/) (>=1.20.3)  
 [scipy](https://www.scipy.org/) (>=1.6.3)  
 [h5py](https://www.h5py.org/) (>=3.2.1)  
-[pandas](https://pandas.pydata.org/) (>=1.2.4) 
-[PyTables](http://www.pytables.org/) (>=3.6.1) 
-[matplotlib](https://matplotlib.org/) (>=3.4.2) 
-[scikit-learn](https://scikit-learn.org/stable/) (>=0.24.2)   
+[pandas](https://pandas.pydata.org/) (>=1.2.4)  
+[PyTables](http://www.pytables.org/) (>=3.6.1)  
+[matplotlib](https://matplotlib.org/) (>=3.4.2)   
+[scikit-learn](https://scikit-learn.org/stable/) (>=0.24.2)     
 [kneed](https://github.com/arvkevi/kneed) (>=0.7.0)
 
 ### User installation
