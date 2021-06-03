@@ -46,13 +46,24 @@ pip install ./
 ```
 
 ## Usage
-Download [here](https://www.dropbox.com/s/pp45n1pcbldeqlq/TagCount.txt.gz?dl=0) the count matrix from human hematopoietic cell and run scOpen:
+We here describe how to run `scopen`  
+
+### Input data
+`scopen` performs imputation and dimensionality reduction based on peak by 
+cell matrix and it allows different input formats. The simplest one is a 
+text file where each row represent a peak, and
+each column is a cell. For example, you can download 
+[here](https://www.dropbox.com/s/pp45n1pcbldeqlq/TagCount.txt.gz?dl=0)
+the count matrix from human hematopoietic cells, and uncompress the file:
 ```commandline
 gzip -d TagCount.txt.gz
 scopen --input TagCount.txt --input_format dense --output_dir ./ --output_prefix scOpen --output_format dense --verbose 0 --estimate_rank --nc 4
 ```
-This matrix contains raw ATAC-seq reads number with each row representing a peak and each column a cell. 
 We also support different input format, such as scATAC-seq from 10X Genomics.
+
+### Run scopen
+
+
 
 Check more information by:
 ```commandline
