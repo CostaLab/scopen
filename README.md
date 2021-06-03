@@ -11,14 +11,27 @@ changes in the development of fibrosis in the kidney.
 See our [manuscript](https://www.biorxiv.org/content/10.1101/865931v3) for more details.
 
 ## Installation
-First some dependencies
-```commandline
-pip install cython numpy scipy
-```
+`scopen` has been test with Python 3.6, 3.7, 3.8 and 3.9.  
 
-Then install scopen with all other dependencies
+### Dependencies
+[numpy](https://numpy.org/)  
+[scipy](https://www.scipy.org/)  
+[h5py](https://www.h5py.org/) 
+[pandas](https://pandas.pydata.org/)  
+[PyTables](http://www.pytables.org/) 
+[matplotlib](https://matplotlib.org/)  
+[scikit-learn](https://scikit-learn.org/stable/)   
+[kneed](https://github.com/arvkevi/kneed)
+
+
+The easiest way to install scopen is using `pip`
 ```commandline
 pip install scopen
+```
+
+To upgrade to a newer release use the `--upgrade` option:
+```commandline
+pip install --upgrade scopen
 ```
 
 ```commandline
