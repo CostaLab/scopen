@@ -94,9 +94,16 @@ represent barcodes and the third one is the number of reads
 ## How to use scOpen in R
 scOpen is implemented in python, while many popular tools for analysis scATAC-seq, such as 
 [Signac](https://satijalab.org/signac/), are developed using R.
-If you are dedicated to R, we also provide a tutorial under `vignettes` to 
+If you are dedicated to R, we also provide a tutorial 
+[here](https://github.com/CostaLab/scopen/blob/master/vignettes/signac_pbmc.Rmd) to 
 show you how use `scopen` as a dimension reduction method in R to analyze scATAC-seq data 
 from human peripheral blood mononuclear cells (PBMCs) dataset.
+
+## How to combine scOpen and (epi)scanpy
+Python is gaining popularity in single-cell data analysis. 
+Two examples are scanpy (for scRNA-seq) and episcanpy (for single cell epigenomic data, e.g., scATAC-seq).
+To ensure `scopen` is usable in this context, we provide a [jupyter notebook](https://github.com/CostaLab/scopen/blob/master/vignettes/epiScanpy.ipynb) to
+show you how to combine scOpen and (epi)scanpy to analysis scATAC-seq data.
 
 ## Reproduction
 For reproducibility, we provide all scripts and data [here](https://github.com/CostaLab/scopen-reproducibility).
