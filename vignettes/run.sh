@@ -12,6 +12,7 @@
 #SBATCH --mem=100G -c 96
 
 source ~/.bashrc
-conda activate r-4.0.3
+conda activate scopen
 
-Rscript -e rmarkdown::render"('signac_pbmc.Rmd',output_file='signac_pbmc.html',clean=TRUE)"
+#Rscript -e rmarkdown::render"('signac_pbmc.Rmd',output_file='signac_pbmc.html',clean=TRUE)"
+jupyter nbconvert --to html --execute ./epiScanpy.ipynb --output-dir ./

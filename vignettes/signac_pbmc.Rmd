@@ -23,11 +23,11 @@ set.seed(1234)
 ## Dimension reduction using scOpen
 
 ### We first download the data using following commands
-```{bash}
-wget https://cf.10xgenomics.com/samples/cell-atac/1.0.1/atac_v1_pbmc_10k/atac_v1_pbmc_10k_filtered_peak_bc_matrix.h5
-wget https://cf.10xgenomics.com/samples/cell-atac/1.0.1/atac_v1_pbmc_10k/atac_v1_pbmc_10k_singlecell.csv
-wget https://cf.10xgenomics.com/samples/cell-atac/1.0.1/atac_v1_pbmc_10k/atac_v1_pbmc_10k_fragments.tsv.gz
-wget https://cf.10xgenomics.com/samples/cell-atac/1.0.1/atac_v1_pbmc_10k/atac_v1_pbmc_10k_fragments.tsv.gz.tbi
+```{bash, echo=FALSE}
+wget --no-verbose https://cf.10xgenomics.com/samples/cell-atac/1.0.1/atac_v1_pbmc_10k/atac_v1_pbmc_10k_filtered_peak_bc_matrix.h5
+wget --no-verbose https://cf.10xgenomics.com/samples/cell-atac/1.0.1/atac_v1_pbmc_10k/atac_v1_pbmc_10k_singlecell.csv
+wget --no-verbose https://cf.10xgenomics.com/samples/cell-atac/1.0.1/atac_v1_pbmc_10k/atac_v1_pbmc_10k_fragments.tsv.gz
+wget --no-verbose https://cf.10xgenomics.com/samples/cell-atac/1.0.1/atac_v1_pbmc_10k/atac_v1_pbmc_10k_fragments.tsv.gz.tbi
 ```
 
 ### We then create a Seurat object for ATAC-seq data after quality control
@@ -150,8 +150,9 @@ FeaturePlot(
 )
 ```
 
-```{bash}
-wget https://www.dropbox.com/s/zn6khirjafoyyxl/pbmc_10k_v3.rds
+### Download scRNA-seq data
+```{bash, echo=FALSE}
+wget --no-verbose https://www.dropbox.com/s/zn6khirjafoyyxl/pbmc_10k_v3.rds
 ```
 
 
