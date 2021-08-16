@@ -52,6 +52,9 @@ def parse_args():
     parser.add_argument("--step_n_components", type=int, default=1,
                         help="Spacing between values"
                              "Default: 1")
+    parser.add_argument("--init", type=str, default="nndsvd",
+                        help="Method used to initialize the procedure."
+                             "Default: nndsvd")
     parser.add_argument("--random_state", type=int, default=42,
                         help="Random state. Default: 42")
     parser.add_argument("--nc", type=int, metavar="INT", default=1,
@@ -76,9 +79,9 @@ def parse_args():
     return parser.parse_args()
 
 
-def scopen_dr(counts, n_components=30, alpha=1, max_iter=200, verbose=1, random_state=42):
+def scopen_dr(counts, n_components=30, alpha=1, max_iter=200, verbose=1, random_state=42, init='nndsvd'):
     tf_idf = tf_idf_transform(data=counts)
-    w_hat, h_hat, err = run_nmf(arguments=(tf_idf, n_components, alpha, max_iter, verbose, random_state))
+    w_hat, h_hat, err = run_nmf(arguments=(tf_idf, n_components, alpha, max_iter, verbose, random_state, init))
 
     return h_hat
 
@@ -95,14 +98,14 @@ def tf_idf_transform(data):
 
 
 def run_nmf(arguments):
-    data, n_components, alpha, max_iter, verbose, random_state = arguments
+    data, n_components, alpha, max_iter, verbose, random_state, init = arguments
     model = NMF(n_components=n_components,
                 random_state=random_state,
+                init=init,
                 alpha=alpha,
                 l1_ratio=0,
                 max_iter=max_iter,
-                verbose=verbose,
-                solver="cd")
+                verbose=verbose)
 
     w_hat = model.fit_transform(X=data)
     h_hat = model.components_
@@ -126,7 +129,7 @@ def estimate_rank(data, args):
         for n_components in n_components_list:
             arguments = (data, n_components, args.alpha,
                          args.max_iter, args.verbose,
-                         args.random_state)
+                         args.random_state. args.init)
 
             res = run_nmf(arguments)
             w_hat_dict[n_components] = res[0]
@@ -136,7 +139,7 @@ def estimate_rank(data, args):
     elif args.nc > 1:
         arguments_list = list()
         for n_components in n_components_list:
-            arguments = (data, n_components, args.alpha, args.max_iter, args.verbose, args.random_state)
+            arguments = (data, n_components, args.alpha, args.max_iter, args.verbose, args.random_state, args.init)
             arguments_list.append(arguments)
 
         with Pool(processes=args.nc) as pool:
@@ -193,7 +196,7 @@ def main():
               f"running NMF...")
         arguments = (tf_idf, args.n_components, args.alpha,
                      args.max_iter, args.verbose,
-                     args.random_state)
+                     args.random_state, args.init)
 
         res = run_nmf(arguments)
         w_hat, h_hat = res[0], res[1]
