@@ -129,7 +129,7 @@ def estimate_rank(data, args):
         for n_components in n_components_list:
             arguments = (data, n_components, args.alpha,
                          args.max_iter, args.verbose,
-                         args.random_state. args.init)
+                         args.random_state, args.init)
 
             res = run_nmf(arguments)
             w_hat_dict[n_components] = res[0]
@@ -139,7 +139,9 @@ def estimate_rank(data, args):
     elif args.nc > 1:
         arguments_list = list()
         for n_components in n_components_list:
-            arguments = (data, n_components, args.alpha, args.max_iter, args.verbose, args.random_state, args.init)
+            arguments = (data, n_components, args.alpha,
+                         args.max_iter, args.verbose,
+                         args.random_state, args.init)
             arguments_list.append(arguments)
 
         with Pool(processes=args.nc) as pool:

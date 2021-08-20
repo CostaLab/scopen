@@ -198,7 +198,7 @@ def _compute_regularization(alpha, l1_ratio, regularization):
     return l1_reg_W, l1_reg_H, l2_reg_W, l2_reg_H
 
 
-def _loss(X, W, H, square_root=False):
+def _loss(X, W, H):
     """Compute the Frobenius *squared* norm of X - dot(W, H).
     Parameters
     ----------
@@ -206,13 +206,10 @@ def _loss(X, W, H, square_root=False):
         Numpy masked arrays or arrays containing NaN are accepted.
     W : float or dense array-like, shape (n_samples, n_components)
     H : float or dense array-like, shape (n_components, n_features)
-    square_root : boolean, default False
-        If True, return np.sqrt(2 * res)
-        For beta == 2, it corresponds to the Frobenius norm.
     Returns
     -------
         res : float
-            Beta divergence of X and np.dot(X, H)
+            Frobenius norm of X and np.dot(X, H)
     """
     # The method can be called with scalars
     if not sp.issparse(X):
@@ -232,10 +229,7 @@ def _loss(X, W, H, square_root=False):
 
     assert not np.isnan(res)
     assert res >= 0
-    if square_root:
-        return np.sqrt(res * 2)
-    else:
-        return res
+    return np.sqrt(res * 2)
 
 
 def _initialize_nmf(X, n_components, init=None, eps=1e-6,
@@ -522,7 +516,7 @@ def _fit_coordinate_descent(X, W, H, tol=1e-4, max_iter=200, l1_reg_W=0,
                   f"violation: {_violation: .8f}")
 
         elif verbose == 2:
-            err = _loss(X, W, Ht.T, square_root=True)
+            err = _loss(X, W, Ht.T)
             print(f"{datetime.now().strftime('%m/%d/%Y %H:%M:%S')}, iteration: {n_iter: }, "
                   f"violation: {_violation: .8f}, error: {err: .8f}")
 
@@ -688,7 +682,6 @@ def non_negative_factorization(X, W=None, H=None, n_components=None,
     W, H, n_iter = _fit_coordinate_descent(X, W, H, tol, max_iter,
                                            l1_reg_W, l1_reg_H,
                                            l2_reg_W, l2_reg_H,
-                                           update_H=True,
                                            verbose=verbose,
                                            shuffle=shuffle,
                                            random_state=random_state)
@@ -876,7 +869,7 @@ class NMF(BaseEstimator, TransformerMixin):
             random_state=self.random_state, verbose=self.verbose,
             shuffle=self.shuffle)
 
-        self.reconstruction_err_ = _loss(X, W, H, square_root=True)
+        self.reconstruction_err_ = _loss(X, W, H)
 
         self.n_components_ = H.shape[0]
         self.components_ = H
