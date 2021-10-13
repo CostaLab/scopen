@@ -7,9 +7,7 @@ import pandas as pd
 input_matrix_file = sys.argv[1]
 output_file = sys.argv[2]
 
-df = pd.read_csv(input_matrix_file, sep="\t", index_col=0)
-
-print(df.index.values)
+df = pd.read_csv(input_matrix_file, sep="\s+", index_col=0)
 
 with open(output_file, "w") as output_f:
     for peak in df.index.values.tolist():
