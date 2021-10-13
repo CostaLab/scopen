@@ -24,7 +24,7 @@ the environment.
 ### User installation
 The easiest way to install scopen and the required packages is using `pip`
 ```commandline
-pip install ./
+pip install scopen
 ```
 
 The installation will take ~20 seconds.
