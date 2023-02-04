@@ -1,0 +1,39 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "scopen"
+version = "1.0.1"
+description = "scOpen: single-cell open chromatin analysis via NMF modelling"
+authors = [
+    {name = "Zhijian Li", email = "lzj1769@gmail.com"}
+]
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Intended Audience :: Science/Research"
+]
+requires-python = ">= 3.6"
+dependencies = [
+    "numpy",
+    "h5py",
+    "six",
+    "pandas",
+    "scipy",
+    "tables",
+    "matplotlib",
+    "scikit-learn",
+    "kneed"
+]
+
+[project.scripts]
+scopen = "scopen.Main:main"
+
+[project.urls]
+Source = "https://github.com/lzj1769/pychromVAR"
+Documentation = "https://pychromvar.readthedocs.io/en/latest/"

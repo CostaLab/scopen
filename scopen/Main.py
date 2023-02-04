@@ -2,11 +2,12 @@ import time
 import argparse
 
 from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.decomposition import NMF
 from multiprocessing import Pool, cpu_count
 from kneed import KneeLocator
 
-from .MF import NMF
-from .Utils import *
+
+from .utils import *
 from .__version__ import __version__
 
 
